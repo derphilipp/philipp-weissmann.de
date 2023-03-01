@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bash on Philipp Weißmann</title><link>/tags/bash/</link><description>Recent content in bash on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sat, 09 Mar 2019 12:34:23 +0000</lastBuildDate><atom:link href="/tags/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>Skripte schöner abbrechen</title><link>/skripte-schoener-abbrechen/</link><pubDate>Sat, 09 Mar 2019 12:34:23 +0000</pubDate><guid>/skripte-schoener-abbrechen/</guid><description>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:
+Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!</description><content>&lt;p>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!&lt;/p>
+&lt;!-- raw HTML omitted --></content></item></channel></rss>

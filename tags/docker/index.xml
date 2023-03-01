@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Philipp Weißmann</title><link>/tags/docker/</link><description>Recent content in Docker on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Thu, 21 Dec 2017 21:05:32 +0000</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker services via docker-compose und systemd template</title><link>/docker-compose_mit_systemd/</link><pubDate>Thu, 21 Dec 2017 21:05:32 +0000</pubDate><guid>/docker-compose_mit_systemd/</guid><description>Docker ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.
+Wie kann man jedoch einen logischen Verbund an Diensten mit dem System zusammen starten?
+Mit der Hilfe von Docker können Anforderungen eines Dienstes (z.B. Gitlab) an die Distribution innerhalb eines Containers befriedigt werden. Das ausführende System aussenherum bleibt davon unberührt und kann auch eine inkompatible Distribution sein.
+In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Diese können mit dem Tool docker-compose beschrieben und gestartet werden.</description><content>&lt;p>&lt;a href="https://www.docker.com/">Docker&lt;/a> ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.&lt;/p>
+&lt;p>Wie kann man jedoch einen logischen Verbund an Diensten mit dem System zusammen starten?&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Mit der Hilfe von Docker können Anforderungen eines Dienstes (z.B. &lt;a href="https://gitlab.com">Gitlab&lt;/a>) an die Distribution innerhalb eines Containers befriedigt werden. Das ausführende System aussenherum bleibt davon unberührt und kann auch eine inkompatible Distribution sein.&lt;/p>
+&lt;p>In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Diese können mit dem Tool &lt;a href="https://docs.docker.com/compose/">docker-compose&lt;/a> beschrieben und gestartet werden.&lt;/p>
+&lt;p>Will man nun Dienste via docker-compose mit dem System zusammen starten, bietet sich folgende Vorgehensweise an:&lt;/p>
+&lt;p>Als erstes definieren wir ein Dienst-Template in einer neuen Datei &lt;code>/etc/systemd/system/dc@.service&lt;/code>&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Wir gehen dabei davon aus, dass alle docker-compose Konfigurationsdateien in &lt;code>/opt/dockerfile/DIENSTNAME&lt;/code> liegen und sich &lt;code>docker-compose&lt;/code> im Verzeichnis &lt;code>/usr/local/bin&lt;/code> liegt.&lt;/p>
+&lt;p>Nun legen wir unsere docker-compose.yml Datei z.B. in &lt;code>/opt/dockerfile/gitlab/docker-compose.yml&lt;/code> ab.&lt;/p>
+&lt;p>Nun weisen wir systemd an, das Template zu instanziieren:&lt;/p>
+&lt;p>&lt;code>sudo systemctl enable dc@gitlab&lt;/code>&lt;/p>
+&lt;p>Ab sofort ist der Dienst vorhanden und kann auch direkt gestartet werden:&lt;/p>
+&lt;p>&lt;code>sudo systemctl start dc@gitlab&lt;/code>&lt;/p>
+&lt;p>Beim starten des Dienstes wird auch das Image aktualisiert - ist dies nicht gewünscht, muss lediglich die entsprechende Zeile im Template entfernt werden.&lt;/p>
+&lt;p>Viel Spaß!&lt;/p></content></item></channel></rss>

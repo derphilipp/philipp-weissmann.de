@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ansible on Philipp Weißmann</title><link>/tags/ansible/</link><description>Recent content in Ansible on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Fri, 03 Jun 2016 06:52:45 +0000</lastBuildDate><atom:link href="/tags/ansible/index.xml" rel="self" type="application/rss+xml"/><item><title>Homebrew Cask mit Ansible</title><link>/homebrew-cask-mit-ansible/</link><pubDate>Fri, 03 Jun 2016 06:52:45 +0000</pubDate><guid>/homebrew-cask-mit-ansible/</guid><description>&lt;p>Paketmanager auf modernen Betriebssystemen sind ein wahrer Segen: Programme&lt;br>
+können einfach installiert, auf den aktuellsten Stand gebracht und restlos&lt;br>
+deinstalliert werden.&lt;br>
+Auch können mit einfachen Mitteln definierte Installationen bzw.&lt;br>
+Systemkonfigurationen erstellt werden.&lt;/p></description><content>&lt;p>Paketmanager auf modernen Betriebssystemen sind ein wahrer Segen: Programme&lt;br>
+können einfach installiert, auf den aktuellsten Stand gebracht und restlos&lt;br>
+deinstalliert werden.&lt;br>
+Auch können mit einfachen Mitteln definierte Installationen bzw.&lt;br>
+Systemkonfigurationen erstellt werden.&lt;/p>
+&lt;p>Unter OS X steht derzeit &lt;a href="http://brew.sh/">Homebrew&lt;/a> als Paketmanager mit&lt;br>
+tausenden von (zumeist vorkompilierten) Paketen hoch in der Gunst der Nutzer.&lt;/p>
+&lt;p>Doch was, wenn Benutzer Software wie&lt;br>
+&lt;a href="https://de.wikipedia.org/wiki/Adobe_Photoshop">Photoshop&lt;/a>,&lt;br>
+&lt;a href="https://www.omnigroup.com/omnigraffle">Omnigraffle&lt;/a> oder&lt;br>
+&lt;a href="https://www.jetbrains.com/pycharm/">Pycharm&lt;/a> installiert brauchen?&lt;br>
+Auch hier hilft Homebrew weiter: Mit der Erweiterung &lt;a href="https://github.com/Caskroom">HomebrewCask&lt;/a> kann Software aus externen Installern&lt;br>
+auf das eigene System gebracht werden - automatisiert und nachvollziehbar.&lt;/p>
+&lt;p>Hierzu ist nach der Installation von Homebrew lediglich ein Einbinden des&lt;br>
+Homebrew Cask Repository notwendig:&lt;/p>
+&lt;pre>&lt;code>brew tap caskroom/cask
+&lt;/code>&lt;/pre>
+&lt;p>Schon ist mit dem Befehl &lt;code>brew cask install firefox&lt;/code> der Firefox Browser im&lt;br>
+eigenen System installiert werden.&lt;br>
+Ist man auf &lt;em>nightly builds&lt;/em> oder &lt;em>alte&lt;/em> Versionen einer Software angewiesen,&lt;br>
+hilft zu dem das optionale Repository &lt;code>caskroom/versions&lt;/code>.&lt;/p>
+&lt;pre>&lt;code>brew tap caskroom/versions
+&lt;/code>&lt;/pre>
+&lt;p>Mit der Hilfe von &lt;a href="https://www.ansible.com/">Ansible&lt;/a> kann dieser Prozess&lt;br>
+(sowie die Installation der Software) nun zentral erfolgen.&lt;/p>
+&lt;p>Wir legen uns eine Konfiguration an.&lt;br>
+Hierzu erstellen wir einen Tasks zur Installation von Homebrew Cask und allen Applikationen:&lt;br>
+&lt;code>roles/apps/tasks/main.yml&lt;/code>&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Ansible installiert beim Aufruf nun alle aufgezählten Applikationen.&lt;br>
+Aber Achtung: Da Homebrew als Nutzer ausgeführt werden sollte, die Installation&lt;br>
+mancher Applikationen jedoch Administrator-Rechte verlangt, ist es hier&lt;br>
+sinnvoll, die beiden Tasks &lt;code>homebrew&lt;/code> und &lt;code>homebrew_tab&lt;/code> als Nutzer laufen zu&lt;br>
+lassen, den &lt;code>homebrew_cask&lt;/code> Prozess jedoch als Administrator (Siehe&lt;br>
+&lt;a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html">become&lt;/a>).&lt;/p>
+&lt;p>Nun haben wir die Möglichkeit zentral, dokumentiert und nachvollziehbar&lt;br>
+Software zu installieren, die aus Installern stammt.&lt;/p></content></item></channel></rss>

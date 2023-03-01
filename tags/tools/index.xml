@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on Philipp Weißmann</title><link>/tags/tools/</link><description>Recent content in Tools on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sun, 29 Nov 2020 18:24:12 +0000</lastBuildDate><atom:link href="/tags/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Dateien bereinigen mit fd und sd</title><link>/dateien-bereinigen-mit-fd-und-sd/</link><pubDate>Sun, 29 Nov 2020 18:24:12 +0000</pubDate><guid>/dateien-bereinigen-mit-fd-und-sd/</guid><description>Das Problem In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
+Ob der uneinheitliche Zeilenumbruch, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.
+Die Werkzeuge Dabei kann das Projekt Editorconfig helfen.
+Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.</description><content>&lt;h2 id="das-problem">Das Problem&lt;/h2>
+&lt;p>In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.&lt;br>
+Ob der uneinheitliche &lt;a href="https://de.wikipedia.org/wiki/Zeilenumbruch#Codierung_des_Zeilenumbruchs">Zeilenumbruch&lt;/a>, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.&lt;/p>
+&lt;h2 id="die-werkzeuge">Die Werkzeuge&lt;/h2>
+&lt;p>Dabei kann das Projekt &lt;a href="https://editorconfig.org/">Editorconfig&lt;/a> helfen.&lt;br>
+Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.&lt;/p>
+&lt;p>Was passiert aber mit den bereits vorhandenen Dateien?&lt;br>
+Hier helfen ein paar einfache Kommandozeilenbefehle.&lt;br>
+Ich verwende dabei &lt;a href="https://github.com/chmln/sd">sd&lt;/a> und &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a>, die für viele System verfügbar sind.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="beispiele">Beispiele&lt;/h2>
+&lt;p>Allen Javascript Dateien die fehlende lezte Newline hinzufügen&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>(Erklärung der Regular Expression: &amp;ldquo;Finde ein Nicht-Zeilenende vor dem Dateiende. Ersetze dies durch den gleichen Inhalt wie zuvor, aber füge ein Newline am Ende ein&amp;rdquo;)&lt;/p>
+&lt;p>Alle Javascript Dateien &amp;ldquo;trailing whitespaces&amp;rdquo; löschen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>(Erklärung der Regular Expression: &amp;ldquo;Finde ein (oder mehrere) Leerzeichen vor einem Newline. Ersetze das gefundene durch eine Newline&amp;rdquo;)&lt;/p>
+&lt;p>Alle Javascript Dateien in &amp;ldquo;unix-style&amp;rdquo; Zeilenumbrüche setzen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="weitere-schritte">Weitere Schritte&lt;/h2>
+&lt;p>Für die Zukunft könnten wir einen editor-config checker in unsere CI-Pipeline einbauen, der Änderungen auf unseren Standard gegenprüft.&lt;/p>
+&lt;p>Für jede Sprache sollte jetzt noch ein Linter zur Einhaltung des gleichen Formatierungsstandards eingesetzt werden.&lt;/p>
+&lt;h2 id="fazit">Fazit&lt;/h2>
+&lt;p>Mit den kleinen Reparaturen können wir unser Projekt auf einen einheitlichen Standard heben. Das Editorconfig-Projekt hilft uns diese in der Zukunft einzuhalten.&lt;/p></content></item><item><title>Umbenennen mit dem Lieblingseditor</title><link>/umbenennen-mit-dem-lieblingseditor/</link><pubDate>Sat, 14 Sep 2019 08:11:33 +0000</pubDate><guid>/umbenennen-mit-dem-lieblingseditor/</guid><description>Dateien umbenennen ist oft mühsam.
+Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.
+Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.
+Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.
+Hier kommt die Werkzeugsammlung renameutils zum Einsatz.
+Installation Benutzung Nun gibt es die Befehle: qmv und qcp, mit denen Dateien umbenannt, bzw. kopiert werden können.
+Beispiel:
+ls *.txt Ausgabe:
+Kopie von hallo.</description><content>&lt;p>Dateien umbenennen ist oft mühsam.&lt;br>
+Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.&lt;br>
+Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.&lt;br>
+Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.&lt;/p>
+&lt;p>Hier kommt die Werkzeugsammlung &lt;code>renameutils&lt;/code> zum Einsatz.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="benutzung">Benutzung&lt;/h2>
+&lt;p>Nun gibt es die Befehle: &lt;code>qmv&lt;/code> und &lt;code>qcp&lt;/code>, mit denen Dateien umbenannt, bzw. kopiert werden können.&lt;/p>
+&lt;p>Beispiel:&lt;/p>
+&lt;pre>&lt;code>ls *.txt
+&lt;/code>&lt;/pre>
+&lt;p>Ausgabe:&lt;/p>
+&lt;pre>&lt;code>Kopie von hallo.txt
+Kopie von gutentag.txt
+Kopie von abrechnung.txt
+&lt;/code>&lt;/pre>
+&lt;p>Nun verwenden wir unser neues Werkzeug:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Nun öffnet sich unser eingestellter Editor mit einer Dateiliste und wir können die Datei-Umbenennungen direkt im Editor vornehmen.&lt;/p>
+&lt;h2 id="fazit">Fazit&lt;/h2>
+&lt;p>Das Verwenden von Shell-Kommandos zum Umbennen ist oft schnell.&lt;br>
+So geht das Umbenennen aller &lt;code>.txt&lt;/code> Dateien in &lt;code>.md&lt;/code> schnell von der Hand.&lt;/p>
+&lt;p>Für komplexe Fälle können wir &lt;code>qmv&lt;/code> verwenden. Damit können wir unseren vertrauten Editor und alle darin vorhandenen Funktionen nutzen.&lt;br>
+Insbesondere, wenn wir keine einfachen Regeln zum Umbenennen formulieren können, helfen uns die &lt;code>renameutils&lt;/code> hier stark weiter.&lt;/p>
+&lt;p>So ist bei mir der Alias&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>fest in meine Werkzeugkiste eingezogen.&lt;/p></content></item><item><title>yay mit archarm nutzen</title><link>/yay-mit-archarm-nutzen/</link><pubDate>Tue, 27 Aug 2019 18:28:54 +0000</pubDate><guid>/yay-mit-archarm-nutzen/</guid><description>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.
+Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.
+Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: Rolling Releases statt großer Versionssprünge erleichtern den Entwickleralltag.
+Auch auf dem Raspberry Pi läuft diese Distribution.
+Aus der Community getrieben Pakete können aus dem AUR mit einem beliebigen Tool installiert werden.
+Derzeit verwende ich dafür gerne yay.</description><content>&lt;p>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.&lt;br>
+Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.&lt;/p>
+&lt;p>Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: &lt;a href="https://de.wikipedia.org/wiki/Rolling_Release" title="Rolling Releases">Rolling Releases&lt;/a> statt großer Versionssprünge erleichtern den Entwickleralltag.&lt;br>
+Auch auf dem Raspberry Pi läuft diese Distribution.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Aus der Community getrieben Pakete können aus dem &lt;a href="https://wiki.archlinux.org/title/Arch_User_Repository" title="AUR">AUR&lt;/a> mit einem beliebigen Tool installiert werden.&lt;br>
+Derzeit verwende ich dafür gerne &lt;a href="https://github.com/Jguer/yay">yay&lt;/a>.&lt;/p>
+&lt;p>Um &lt;code>yay&lt;/code> auf dem Raspberry Pi zu installieren, sind folgende Schritte notwendig:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Dann steht der Installation von Paketen aus dem AUR nichts mehr im Wege.&lt;/p></content></item><item><title>Simples deployment via git</title><link>/simples-deployment-via-git/</link><pubDate>Tue, 16 Apr 2019 19:59:37 +0000</pubDate><guid>/simples-deployment-via-git/</guid><description>Das Problem Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute git.
+Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.
+Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:
+Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.</description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
+&lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
+&lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="ausgangssituation">Ausgangssituation&lt;/h1>
+&lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).&lt;br>
+Auf Github befindet sich unser Projekt.&lt;br>
+Auf Laptop wie auch auf dem Server haben wir uns mit &lt;code>git clone&lt;/code> das Projekt eingerichtet.&lt;/p>
+&lt;h1 id="vorgehen">Vorgehen&lt;/h1>
+&lt;p>Das Projekt auf dem Server soll beim Empfangen neuer Dateien diese auch in das &amp;ldquo;Working Directory&amp;rdquo; schreiben. Dies aktivieren wir mit :&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Nun müssen wir unserem Projekt auf dem Laptop das neue Ziel beibringen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Unsere Änderungen können wir weiterhin zu Github schieben:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Aber nun auch neu: Auf dem Server direkt ausrollen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Es ist sogar möglich mittels &lt;code>push-url&lt;/code> mehrere Ziele auf einmal zu definieren.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Natürlich ersetzt unser kleiner Workflow keinen Build-Server oder ausgetüftelte Deployment Prozesse. Aber für Kleinst-Projekte kann das vorgehen mit &lt;code>updateInstead&lt;/code> sehr praktisch sein.&lt;/p>
+&lt;p>&lt;strong>Aber Achtung&lt;/strong>: Verwenden wir diese Möglichkeit um Webseiten zu versionieren: Nicht vergessen, den &lt;code>.git&lt;/code> Ordner nicht auszuliefern.&lt;/p></content></item><item><title>Dateien finden mit fd</title><link>/dateien-finden-mit-fd/</link><pubDate>Thu, 11 Apr 2019 16:00:10 +0000</pubDate><guid>/dateien-finden-mit-fd/</guid><description>Das Tool find ist ein praktisches Programm und Dateien und Ordner zu finden.
+Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.
+Hier kommt fd ins Spiel:
+Das Open-Source Programm erledigt nahezu alle Aufgaben von find, ist aber einfacher zu bedienen.
+Beispiel1 Finde alle Dateien mit der Zeichenfolge schuh im Namen:
+find:
+fd:
+Beispiel 2 Finde alle .jpg Dateien:
+find:
+fd:</description><content>&lt;p>Das Tool &lt;a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html">find&lt;/a> ist ein praktisches Programm und Dateien und Ordner zu finden.&lt;br>
+Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.&lt;/p>
+&lt;p>Hier kommt &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a> ins Spiel:&lt;/p>
+&lt;p>Das Open-Source Programm erledigt nahezu alle Aufgaben von &lt;code>find&lt;/code>, ist aber einfacher zu bedienen.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="beispiel1">Beispiel1&lt;/h1>
+&lt;p>Finde alle Dateien mit der Zeichenfolge &lt;em>schuh&lt;/em> im Namen:&lt;/p>
+&lt;p>find:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>fd:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="beispiel-2">Beispiel 2&lt;/h1>
+&lt;p>Finde alle .jpg Dateien:&lt;/p>
+&lt;p>find:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>fd:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="beispiel-3">Beispiel 3&lt;/h1>
+&lt;p>Finde alle .png Dateien und konvertiere diese in .jpg Dateien:&lt;/p>
+&lt;p>find:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>fd:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="fazit">Fazit:&lt;/h1>
+&lt;p>Wer &lt;code>find&lt;/code> in- und auswendig beherrscht hat keinen Zwang zu wechseln. Der bequeme Syntax von &lt;code>fd&lt;/code> macht das Leben jedoch leichter. Die Möglichkeit parallel mehrere Dateien zu verarbeiten ist ungemein praktisch. Daher ist &lt;code>fd&lt;/code> für jeden Kommandozeilen-Fan absolut empfehlenswert.&lt;/p></content></item><item><title>Windows auf Schlafentzug</title><link>/windows-auf-schlafentzug/</link><pubDate>Tue, 13 Dec 2016 08:59:09 +0000</pubDate><guid>/windows-auf-schlafentzug/</guid><description>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
+Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
+Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p></description><content>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
+Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
+Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p>
+&lt;p>Zwar verhindert manche Präsentationssoftware die lästige Sperre, aber spätestens bei Präsentationen aus PDF Dateien oder im Browser schlägt die Sperre erneut zu.&lt;/p>
+&lt;p>Abhilfe verschafft ein kleines Snippet, welches Tastatureingaben simuliert:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Einfach als &lt;code>schlaflos.vbs&lt;/code> abspeichern und ausführen. Nun wird alle sechs Sekunden die &lt;code>Numlock&lt;/code> zwei Mal gedrückt.&lt;br>
+Nun haben wir ein schlafloses Windows, welches nach dem Beenden des Skriptes, spätestens aber zum nächsten Neustart auch wieder schlafen darf.&lt;/p>
+&lt;p>Gute Nacht Windows!&lt;/p></content></item><item><title>Wget wiederaufnehmen</title><link>/wget-wiederaufnehmen/</link><pubDate>Wed, 13 Apr 2016 05:46:16 +0000</pubDate><guid>/wget-wiederaufnehmen/</guid><description>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.
+Mit dem Download-Werkzeug wget ist dies einfach mit der Kommandozeilenoption -r möglich.
+Damit man jedoch nicht immer daran denken muss, lässt sie dies auch als Standardverhalten einstellen.
+Hierzu tragen wir die die Datei ~/.wgetrc folgendes ein:
+continue = on Ab sofort nimmt wget Downloads automatisch wieder auf.</description><content>&lt;p>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.&lt;/p>
+&lt;p>Mit dem Download-Werkzeug &lt;code>wget&lt;/code> ist dies einfach mit der Kommandozeilenoption &lt;code>-r&lt;/code> möglich.&lt;/p>
+&lt;p>Damit man jedoch nicht immer daran denken muss, lässt sie dies auch als Standardverhalten einstellen.&lt;/p>
+&lt;p>Hierzu tragen wir die die Datei &lt;code>~/.wgetrc&lt;/code> folgendes ein:&lt;/p>
+&lt;pre>&lt;code>continue = on
+&lt;/code>&lt;/pre>
+&lt;p>Ab sofort nimmt &lt;code>wget&lt;/code> Downloads automatisch wieder auf.&lt;/p></content></item><item><title>Vollbackup mit rsync</title><link>/vollbackup-mit-rsync/</link><pubDate>Tue, 12 Apr 2016 13:04:04 +0000</pubDate><guid>/vollbackup-mit-rsync/</guid><description>&lt;p>Das Tool Nummer eins um Daten von A nach B zu spiegeln ist &lt;code>rsync&lt;/code>.&lt;br>
+Es kann über Rechnergrenzen hinweg eingesetzt werden (z.B. via &lt;code>ssh&lt;/code>), beherrscht inkrementelles Kopieren und vieles mehr.&lt;/p></description><content>&lt;p>Das Tool Nummer eins um Daten von A nach B zu spiegeln ist &lt;code>rsync&lt;/code>.&lt;br>
+Es kann über Rechnergrenzen hinweg eingesetzt werden (z.B. via &lt;code>ssh&lt;/code>), beherrscht inkrementelles Kopieren und vieles mehr.&lt;/p>
+&lt;p>Um einen (Linux) Rechner vollständig zu sichern nutze ich zumeist:&lt;/p>
+&lt;pre>&lt;code>rsync -aAXv --exclude={\
+&amp;quot;/dev/*&amp;quot;,&amp;quot;/proc/*&amp;quot;,&amp;quot;/sys/*&amp;quot;,&amp;quot;/tmp/*&amp;quot;,\
+&amp;quot;/run/*&amp;quot;,&amp;quot;/mnt/*&amp;quot;,&amp;quot;/media/*&amp;quot;,&amp;quot;/lost+found&amp;quot;\
+} / /path/to/backup/folder
+&lt;/code>&lt;/pre>
+&lt;p>Der Befehl kopiert alle Dateien (mit Ausnahme der Verzeichnisse in der Aufzählung) - und das inkrementell.&lt;br>
+Abbrechen und Wiederaufnehmen ist also problemlos möglich.&lt;/p>
+&lt;p>Damit wird rsync zum perfekten Tool um eine Vollsicherung vor einer Neuinstallation vorzunehmen.&lt;/p></content></item><item><title>Sharpkeys</title><link>/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
+Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &amp;ldquo;SharpKeys&amp;rdquo; behelfen.
+Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.
+Tipp: Die Feststelltaste einfach mit Strg (Ctrl) belegen.</description><content>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
+Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &lt;a href="https://github.com/randyrants/sharpkeys">&amp;ldquo;SharpKeys&amp;rdquo;&lt;/a> behelfen.&lt;/p>
+&lt;p>Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.&lt;/p>
+&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></content></item></channel></rss>

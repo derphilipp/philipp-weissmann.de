@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TFS on Philipp Weißmann</title><link>/tags/tfs/</link><description>Recent content in TFS on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Wed, 22 Apr 2015 19:11:48 +0000</lastBuildDate><atom:link href="/tags/tfs/index.xml" rel="self" type="application/rss+xml"/><item><title>Git-tfs</title><link>/git-tfs/</link><pubDate>Wed, 22 Apr 2015 19:11:48 +0000</pubDate><guid>/git-tfs/</guid><description>&lt;h1 id="git-statt-tfs">Git statt TFS?&lt;/h1>
+&lt;p>Wer gerne mit &lt;a href="http://git-scm.com/">git&lt;/a> arbeitet, wünscht sich oft eine Brücke von anderen Versionsmanagement-Werkzeugen zu git.&lt;br>
+So gibt es zur Nutzung von &lt;a href="https://subversion.apache.org/">Subversion (snv)&lt;/a> die Möglichkeit &lt;a href="http://git-scm.com/docs/git-svn">git-svn&lt;/a> zu nutzen.&lt;br>
+Was aber, wenn die Serverseite &lt;a href="http://de.wikipedia.org/wiki/Team_Foundation_Server">TFS&lt;/a>{.broken_link} anbietet?&lt;/p></description><content>&lt;h1 id="git-statt-tfs">Git statt TFS?&lt;/h1>
+&lt;p>Wer gerne mit &lt;a href="http://git-scm.com/">git&lt;/a> arbeitet, wünscht sich oft eine Brücke von anderen Versionsmanagement-Werkzeugen zu git.&lt;br>
+So gibt es zur Nutzung von &lt;a href="https://subversion.apache.org/">Subversion (snv)&lt;/a> die Möglichkeit &lt;a href="http://git-scm.com/docs/git-svn">git-svn&lt;/a> zu nutzen.&lt;br>
+Was aber, wenn die Serverseite &lt;a href="http://de.wikipedia.org/wiki/Team_Foundation_Server">TFS&lt;/a>{.broken_link} anbietet?&lt;/p>
+&lt;h1 id="installation">Installation&lt;/h1>
+&lt;p>&lt;a href="http://git-scm.com/download/win">Git für Windows&lt;/a> wird einfach via Installer in das System gebracht.&lt;br>
+Eine Brücke zu TFS fehlt jedoch noch.&lt;/p>
+&lt;p>Abhilfe schafft hier das Werkzeug &lt;a href="https://github.com/git-tfs/git-tfs">git-tfs&lt;/a>.&lt;br>
+Zur Installation muss lediglich die Datei heruntergeladen und entpackt werden.&lt;br>
+Anschließend fügen wir das Verzeichnis der &lt;code>PATH&lt;/code> Variable hinzu.&lt;/p>
+&lt;p>Nun kann das installierte &lt;code>git&lt;/code> einen weiteren Befehl: &lt;code>git tfs&lt;/code>&lt;/p>
+&lt;h1 id="klonen">Klonen&lt;/h1>
+&lt;p>Als erstes schauen wir uns an, welche TFS Projekte/Branches auf dem Server liegen:&lt;/p>
+&lt;pre>&lt;code>git tfs list-remote-branches http://MEIN-TFS-SERVER:8080/tfs/
+&lt;/code>&lt;/pre>
+&lt;p>Wenn wir das Projekt gefunden haben, das wir brauchen, klonen wir es uns - und zwar mit allen Branches:&lt;/p>
+&lt;pre>&lt;code>git tfs clone --with-branches http://MEIN-TFS-SERVER:8080/tfs/ $/MeinProjekt
+&lt;/code>&lt;/pre>
+&lt;p>Je nach Projektgröße, kann dieser Schritt einige Zeit dauern.&lt;/p>
+&lt;h1 id="arbeiten-mit-git">Arbeiten mit git&lt;/h1>
+&lt;p>Die Arbeit mit &lt;code>git&lt;/code> erfolgt wie gewohnt, lediglich das &amp;ldquo;pushen&amp;rdquo; auf den Server bzw. das &amp;ldquo;pullen&amp;rdquo; entfällt.&lt;br>
+Hierzu müssen wir abermals &lt;code>git-tfs&lt;/code> aufrufen:&lt;/p>
+&lt;h1 id="tfs-nach-git">TFS nach Git&lt;/h1>
+&lt;p>Wenn wir uns die Änderungen von Teamkollegen abholen wollen, erfolgt dies mit folgendem Befehl:&lt;/p>
+&lt;pre>&lt;code>git tfs pull
+&lt;/code>&lt;/pre>
+&lt;p>Um dies für alle Branches durchzuführen, nutzen wir:&lt;/p>
+&lt;pre>&lt;code>git tfs pull --all
+&lt;/code>&lt;/pre>
+&lt;p>Um dabei statt eines Merge einen &lt;a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Rebase&lt;/a> durchzuführen, nutzen wir:&lt;/p>
+&lt;pre>&lt;code>git tfs pull --rebase
+&lt;/code>&lt;/pre>
+&lt;h1 id="git-nach-tfs">Git nach TFS&lt;/h1>
+&lt;p>Nachdem wir eine (oder mehrere) Aufgaben erledigt haben wollen wir unsere Commits auch an den TFS übertragen.&lt;br>
+Gerade bei TFS Konfigurationen, die Anforderungen an einen Checkin haben (z.B. &amp;ldquo;muss mit einem Task verbunden sein&amp;rdquo;) bietet sich das &amp;ldquo;Checkintool&amp;rdquo; an.&lt;br>
+Diese Programm erlaubt es komfortabel Git-Commits auf den TFS Server zu bringen und dabei TFS Elemente (z.B. Tasks) zu verlinken.&lt;/p>
+&lt;pre>&lt;code>git tfs checkintool
+&lt;/code>&lt;/pre>
+&lt;h1 id="alternativen">Alternativen&lt;/h1>
+&lt;p>Wer unter einem anderen Betriebssystem als Windows arbeitet, kann Microsofts&lt;br>
+eigene Brücke namens &lt;a href="https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=&amp;amp;ved=2ahUKEwiVy7SR1Nb7AhUJQvEDHUS3DWQQFnoECA4QAQ&amp;amp;url=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2FA%2FE%2F2%2FAE23B059-5727-445B-91CC-15B7A078A7F4%2FGit-TF_GettingStarted.html">git-tf&lt;/a>(!) nutzen.&lt;br>
+Diese in Java geschriebene Brücke funktioniert ähnlich git-tfs, bietet jedoch&lt;br>
+kein &amp;ldquo;Checkintool&amp;rdquo;.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Git-tfs erlaubt es extrem einfach eine transparente Brücke zwischen TFS und Git zu nutzen.&lt;br>
+Wer Nicht-Windows Betriebssysteme nutzt, kann mit git-tf ebenfalls mit einem TFS zusammen arbeiten.&lt;/p></content></item></channel></rss>

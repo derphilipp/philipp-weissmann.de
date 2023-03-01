@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Uncategorized on Philipp Weißmann</title><link>/categories/uncategorized/</link><description>Recent content in Uncategorized on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sun, 29 Nov 2020 18:24:12 +0000</lastBuildDate><atom:link href="/categories/uncategorized/index.xml" rel="self" type="application/rss+xml"/><item><title>Dateien bereinigen mit fd und sd</title><link>/dateien-bereinigen-mit-fd-und-sd/</link><pubDate>Sun, 29 Nov 2020 18:24:12 +0000</pubDate><guid>/dateien-bereinigen-mit-fd-und-sd/</guid><description>Das Problem In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
+Ob der uneinheitliche Zeilenumbruch, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.
+Die Werkzeuge Dabei kann das Projekt Editorconfig helfen.
+Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.</description><content>&lt;h2 id="das-problem">Das Problem&lt;/h2>
+&lt;p>In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.&lt;br>
+Ob der uneinheitliche &lt;a href="https://de.wikipedia.org/wiki/Zeilenumbruch#Codierung_des_Zeilenumbruchs">Zeilenumbruch&lt;/a>, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.&lt;/p>
+&lt;h2 id="die-werkzeuge">Die Werkzeuge&lt;/h2>
+&lt;p>Dabei kann das Projekt &lt;a href="https://editorconfig.org/">Editorconfig&lt;/a> helfen.&lt;br>
+Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.&lt;/p>
+&lt;p>Was passiert aber mit den bereits vorhandenen Dateien?&lt;br>
+Hier helfen ein paar einfache Kommandozeilenbefehle.&lt;br>
+Ich verwende dabei &lt;a href="https://github.com/chmln/sd">sd&lt;/a> und &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a>, die für viele System verfügbar sind.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="beispiele">Beispiele&lt;/h2>
+&lt;p>Allen Javascript Dateien die fehlende lezte Newline hinzufügen&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>(Erklärung der Regular Expression: &amp;ldquo;Finde ein Nicht-Zeilenende vor dem Dateiende. Ersetze dies durch den gleichen Inhalt wie zuvor, aber füge ein Newline am Ende ein&amp;rdquo;)&lt;/p>
+&lt;p>Alle Javascript Dateien &amp;ldquo;trailing whitespaces&amp;rdquo; löschen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>(Erklärung der Regular Expression: &amp;ldquo;Finde ein (oder mehrere) Leerzeichen vor einem Newline. Ersetze das gefundene durch eine Newline&amp;rdquo;)&lt;/p>
+&lt;p>Alle Javascript Dateien in &amp;ldquo;unix-style&amp;rdquo; Zeilenumbrüche setzen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="weitere-schritte">Weitere Schritte&lt;/h2>
+&lt;p>Für die Zukunft könnten wir einen editor-config checker in unsere CI-Pipeline einbauen, der Änderungen auf unseren Standard gegenprüft.&lt;/p>
+&lt;p>Für jede Sprache sollte jetzt noch ein Linter zur Einhaltung des gleichen Formatierungsstandards eingesetzt werden.&lt;/p>
+&lt;h2 id="fazit">Fazit&lt;/h2>
+&lt;p>Mit den kleinen Reparaturen können wir unser Projekt auf einen einheitlichen Standard heben. Das Editorconfig-Projekt hilft uns diese in der Zukunft einzuhalten.&lt;/p></content></item><item><title>Umbenennen mit dem Lieblingseditor</title><link>/umbenennen-mit-dem-lieblingseditor/</link><pubDate>Sat, 14 Sep 2019 08:11:33 +0000</pubDate><guid>/umbenennen-mit-dem-lieblingseditor/</guid><description>Dateien umbenennen ist oft mühsam.
+Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.
+Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.
+Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.
+Hier kommt die Werkzeugsammlung renameutils zum Einsatz.
+Installation Benutzung Nun gibt es die Befehle: qmv und qcp, mit denen Dateien umbenannt, bzw. kopiert werden können.
+Beispiel:
+ls *.txt Ausgabe:
+Kopie von hallo.</description><content>&lt;p>Dateien umbenennen ist oft mühsam.&lt;br>
+Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.&lt;br>
+Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.&lt;br>
+Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.&lt;/p>
+&lt;p>Hier kommt die Werkzeugsammlung &lt;code>renameutils&lt;/code> zum Einsatz.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="benutzung">Benutzung&lt;/h2>
+&lt;p>Nun gibt es die Befehle: &lt;code>qmv&lt;/code> und &lt;code>qcp&lt;/code>, mit denen Dateien umbenannt, bzw. kopiert werden können.&lt;/p>
+&lt;p>Beispiel:&lt;/p>
+&lt;pre>&lt;code>ls *.txt
+&lt;/code>&lt;/pre>
+&lt;p>Ausgabe:&lt;/p>
+&lt;pre>&lt;code>Kopie von hallo.txt
+Kopie von gutentag.txt
+Kopie von abrechnung.txt
+&lt;/code>&lt;/pre>
+&lt;p>Nun verwenden wir unser neues Werkzeug:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Nun öffnet sich unser eingestellter Editor mit einer Dateiliste und wir können die Datei-Umbenennungen direkt im Editor vornehmen.&lt;/p>
+&lt;h2 id="fazit">Fazit&lt;/h2>
+&lt;p>Das Verwenden von Shell-Kommandos zum Umbennen ist oft schnell.&lt;br>
+So geht das Umbenennen aller &lt;code>.txt&lt;/code> Dateien in &lt;code>.md&lt;/code> schnell von der Hand.&lt;/p>
+&lt;p>Für komplexe Fälle können wir &lt;code>qmv&lt;/code> verwenden. Damit können wir unseren vertrauten Editor und alle darin vorhandenen Funktionen nutzen.&lt;br>
+Insbesondere, wenn wir keine einfachen Regeln zum Umbenennen formulieren können, helfen uns die &lt;code>renameutils&lt;/code> hier stark weiter.&lt;/p>
+&lt;p>So ist bei mir der Alias&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>fest in meine Werkzeugkiste eingezogen.&lt;/p></content></item><item><title>ip statt ifconfig unter macOS</title><link>/ip-statt-ifconfig-unter-macos/</link><pubDate>Wed, 28 Aug 2019 12:41:55 +0000</pubDate><guid>/ip-statt-ifconfig-unter-macos/</guid><description>Viele moderne Linux Distributionen bieten mit iproute2 eine einfache Möglichkeit Netzwerkkonfiguration durchzuführen.
+So zeigt z.B.
+die IP Adresse der Netzwerkschnittstellen an.
+MacOS bietet dieses Tool aber nicht an. Also müssen wir auf ifconfig ausweichen. Blöd, wenn wir zwischen den Systemen wechseln und immer umdenken müssen.
+Installieren wir mit der Hilfe von Homebrew ein kleines Hilfsscript:
+Nun können wir auch mit
+die konfiguierten Netzwerkgeräte anzeigen. Wunderbar!</description><content>&lt;p>Viele moderne Linux Distributionen bieten mit &lt;a href="https://de.wikipedia.org/wiki/Iproute2">iproute2&lt;/a> eine einfache Möglichkeit Netzwerkkonfiguration durchzuführen.&lt;/p>
+&lt;p>So zeigt z.B.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>die IP Adresse der Netzwerkschnittstellen an.&lt;/p>
+&lt;p>MacOS bietet dieses Tool aber nicht an. Also müssen wir auf &lt;code>ifconfig&lt;/code> ausweichen. Blöd, wenn wir zwischen den Systemen wechseln und immer umdenken müssen.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Installieren wir mit der Hilfe von Homebrew ein kleines Hilfsscript:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Nun können wir auch mit&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>die konfiguierten Netzwerkgeräte anzeigen. Wunderbar!&lt;/p></content></item><item><title>yay mit archarm nutzen</title><link>/yay-mit-archarm-nutzen/</link><pubDate>Tue, 27 Aug 2019 18:28:54 +0000</pubDate><guid>/yay-mit-archarm-nutzen/</guid><description>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.
+Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.
+Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: Rolling Releases statt großer Versionssprünge erleichtern den Entwickleralltag.
+Auch auf dem Raspberry Pi läuft diese Distribution.
+Aus der Community getrieben Pakete können aus dem AUR mit einem beliebigen Tool installiert werden.
+Derzeit verwende ich dafür gerne yay.</description><content>&lt;p>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.&lt;br>
+Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.&lt;/p>
+&lt;p>Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: &lt;a href="https://de.wikipedia.org/wiki/Rolling_Release" title="Rolling Releases">Rolling Releases&lt;/a> statt großer Versionssprünge erleichtern den Entwickleralltag.&lt;br>
+Auch auf dem Raspberry Pi läuft diese Distribution.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Aus der Community getrieben Pakete können aus dem &lt;a href="https://wiki.archlinux.org/title/Arch_User_Repository" title="AUR">AUR&lt;/a> mit einem beliebigen Tool installiert werden.&lt;br>
+Derzeit verwende ich dafür gerne &lt;a href="https://github.com/Jguer/yay">yay&lt;/a>.&lt;/p>
+&lt;p>Um &lt;code>yay&lt;/code> auf dem Raspberry Pi zu installieren, sind folgende Schritte notwendig:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Dann steht der Installation von Paketen aus dem AUR nichts mehr im Wege.&lt;/p></content></item><item><title>Simples deployment via git</title><link>/simples-deployment-via-git/</link><pubDate>Tue, 16 Apr 2019 19:59:37 +0000</pubDate><guid>/simples-deployment-via-git/</guid><description>Das Problem Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute git.
+Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.
+Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:
+Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.</description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
+&lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
+&lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="ausgangssituation">Ausgangssituation&lt;/h1>
+&lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).&lt;br>
+Auf Github befindet sich unser Projekt.&lt;br>
+Auf Laptop wie auch auf dem Server haben wir uns mit &lt;code>git clone&lt;/code> das Projekt eingerichtet.&lt;/p>
+&lt;h1 id="vorgehen">Vorgehen&lt;/h1>
+&lt;p>Das Projekt auf dem Server soll beim Empfangen neuer Dateien diese auch in das &amp;ldquo;Working Directory&amp;rdquo; schreiben. Dies aktivieren wir mit :&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Nun müssen wir unserem Projekt auf dem Laptop das neue Ziel beibringen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Unsere Änderungen können wir weiterhin zu Github schieben:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Aber nun auch neu: Auf dem Server direkt ausrollen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Es ist sogar möglich mittels &lt;code>push-url&lt;/code> mehrere Ziele auf einmal zu definieren.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Natürlich ersetzt unser kleiner Workflow keinen Build-Server oder ausgetüftelte Deployment Prozesse. Aber für Kleinst-Projekte kann das vorgehen mit &lt;code>updateInstead&lt;/code> sehr praktisch sein.&lt;/p>
+&lt;p>&lt;strong>Aber Achtung&lt;/strong>: Verwenden wir diese Möglichkeit um Webseiten zu versionieren: Nicht vergessen, den &lt;code>.git&lt;/code> Ordner nicht auszuliefern.&lt;/p></content></item><item><title>Geräte unter eigenem Namen: udev rules</title><link>/geraete-unter-eigenem-namen-udev-rules/</link><pubDate>Sat, 13 Apr 2019 18:32:50 +0000</pubDate><guid>/geraete-unter-eigenem-namen-udev-rules/</guid><description>Das Problem Unter Linux wird jedem verbundenen Gerät ein Pfad zugeordnet.
+So erscheint z.B. ein verbundener Esp8266 Microcontroller als (serielle) Schnittstelle /dev/ttyUSB0.
+Sind noch mehr Geräte verbunden, so erscheinen diese als /dev/ttyUSB1, /dev/ttyUSB2 usw.
+Welches Gerät ist aber nun welche Schnittstelle? Und sind diese nach dem Reboot noch gleich?
+Die Lösung: udev rules Um dies sicher zu stellen erstellt man eine Regel mit udev:
+Zunächst identifizieren wir, welches Gerät wir haben wollen.</description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>Unter Linux wird jedem verbundenen Gerät ein Pfad zugeordnet.&lt;br>
+So erscheint z.B. ein verbundener Esp8266 Microcontroller als (serielle) Schnittstelle &lt;code>/dev/ttyUSB0&lt;/code>.&lt;br>
+Sind noch mehr Geräte verbunden, so erscheinen diese als &lt;code>/dev/ttyUSB1&lt;/code>, &lt;code>/dev/ttyUSB2&lt;/code> usw.&lt;/p>
+&lt;p>Welches Gerät ist aber nun welche Schnittstelle? Und sind diese nach dem Reboot noch gleich?&lt;br>
+&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;h1 id="die-lösung-udev-rules">Die Lösung: udev rules&lt;/h1>
+&lt;p>Um dies sicher zu stellen erstellt man eine Regel mit &lt;em>udev&lt;/em>:&lt;/p>
+&lt;p>Zunächst identifizieren wir, welches Gerät wir haben wollen. Als Beispiel nutzen wir hier einen Microcontroller, der unter &lt;code>/dev/ttyUSB0&lt;/code> eingehängt ist.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Aus der Ausgabe von &lt;code>udevadm&lt;/code> suchen wir uns einige Werte heraus: Die von &lt;code>ATTRS{idVendor}&lt;/code>, &lt;code>ATTRS{idProduct}&lt;/code> und &lt;code>ATTRS{serial}&lt;/code>.&lt;br>
+Dies sollte zum eindeutigen Identifizieren des Gerätes ausreichen.&lt;/p>
+&lt;p>Nun legen wir uns eine Regel-Datei an:&lt;/p>
+&lt;p>Eine neu erstellte &lt;code>/etc/udev/rules.d/20-mydevice.rules&lt;/code> füllen wir nun mit den gesammelten Informationen. Natürlich müssen hier echte Werte eingesetzt werden:&lt;/p>
+&lt;pre>&lt;code>SUBSYSTEM==&amp;quot;tty&amp;quot;, ATTRS{idVendor}==&amp;quot;1234&amp;quot;, ATTRS{idProduct}==&amp;quot;abcd&amp;quot;, ATTRS{serial}==&amp;quot;01010101010101010101010101010&amp;quot;, SYMLINK+=&amp;quot;ttyUSB_mydevice&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;p>Nun noch die neuen Regeln anlegen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>und den &lt;code>udev&lt;/code> Dienst neu starten:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Nun sollte unsere Regel angewendet werden und ein neuer Eintrag &lt;code>/dev/ttyUSB_mydevice&lt;/code> angelegt sein. Dieser ist ein Link auf das &amp;ldquo;echte&amp;rdquo; Gerät. Somit können wir uns immer auf den selbstgewählten Namen verlassen - auch wenn sich der automatisch Vergebene Name nach einem Neustart ändern kann.&lt;/p></content></item><item><title>Dateien finden mit fd</title><link>/dateien-finden-mit-fd/</link><pubDate>Thu, 11 Apr 2019 16:00:10 +0000</pubDate><guid>/dateien-finden-mit-fd/</guid><description>Das Tool find ist ein praktisches Programm und Dateien und Ordner zu finden.
+Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.
+Hier kommt fd ins Spiel:
+Das Open-Source Programm erledigt nahezu alle Aufgaben von find, ist aber einfacher zu bedienen.
+Beispiel1 Finde alle Dateien mit der Zeichenfolge schuh im Namen:
+find:
+fd:
+Beispiel 2 Finde alle .jpg Dateien:
+find:
+fd:</description><content>&lt;p>Das Tool &lt;a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html">find&lt;/a> ist ein praktisches Programm und Dateien und Ordner zu finden.&lt;br>
+Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.&lt;/p>
+&lt;p>Hier kommt &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a> ins Spiel:&lt;/p>
+&lt;p>Das Open-Source Programm erledigt nahezu alle Aufgaben von &lt;code>find&lt;/code>, ist aber einfacher zu bedienen.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="beispiel1">Beispiel1&lt;/h1>
+&lt;p>Finde alle Dateien mit der Zeichenfolge &lt;em>schuh&lt;/em> im Namen:&lt;/p>
+&lt;p>find:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>fd:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="beispiel-2">Beispiel 2&lt;/h1>
+&lt;p>Finde alle .jpg Dateien:&lt;/p>
+&lt;p>find:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>fd:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="beispiel-3">Beispiel 3&lt;/h1>
+&lt;p>Finde alle .png Dateien und konvertiere diese in .jpg Dateien:&lt;/p>
+&lt;p>find:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>fd:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="fazit">Fazit:&lt;/h1>
+&lt;p>Wer &lt;code>find&lt;/code> in- und auswendig beherrscht hat keinen Zwang zu wechseln. Der bequeme Syntax von &lt;code>fd&lt;/code> macht das Leben jedoch leichter. Die Möglichkeit parallel mehrere Dateien zu verarbeiten ist ungemein praktisch. Daher ist &lt;code>fd&lt;/code> für jeden Kommandozeilen-Fan absolut empfehlenswert.&lt;/p></content></item><item><title>Skripte schöner abbrechen</title><link>/skripte-schoener-abbrechen/</link><pubDate>Sat, 09 Mar 2019 12:34:23 +0000</pubDate><guid>/skripte-schoener-abbrechen/</guid><description>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:
+Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!</description><content>&lt;p>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!&lt;/p>
+&lt;!-- raw HTML omitted --></content></item><item><title>Docker services via docker-compose und systemd template</title><link>/docker-compose_mit_systemd/</link><pubDate>Thu, 21 Dec 2017 21:05:32 +0000</pubDate><guid>/docker-compose_mit_systemd/</guid><description>Docker ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.
+Wie kann man jedoch einen logischen Verbund an Diensten mit dem System zusammen starten?
+Mit der Hilfe von Docker können Anforderungen eines Dienstes (z.B. Gitlab) an die Distribution innerhalb eines Containers befriedigt werden. Das ausführende System aussenherum bleibt davon unberührt und kann auch eine inkompatible Distribution sein.
+In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Diese können mit dem Tool docker-compose beschrieben und gestartet werden.</description><content>&lt;p>&lt;a href="https://www.docker.com/">Docker&lt;/a> ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.&lt;/p>
+&lt;p>Wie kann man jedoch einen logischen Verbund an Diensten mit dem System zusammen starten?&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Mit der Hilfe von Docker können Anforderungen eines Dienstes (z.B. &lt;a href="https://gitlab.com">Gitlab&lt;/a>) an die Distribution innerhalb eines Containers befriedigt werden. Das ausführende System aussenherum bleibt davon unberührt und kann auch eine inkompatible Distribution sein.&lt;/p>
+&lt;p>In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Diese können mit dem Tool &lt;a href="https://docs.docker.com/compose/">docker-compose&lt;/a> beschrieben und gestartet werden.&lt;/p>
+&lt;p>Will man nun Dienste via docker-compose mit dem System zusammen starten, bietet sich folgende Vorgehensweise an:&lt;/p>
+&lt;p>Als erstes definieren wir ein Dienst-Template in einer neuen Datei &lt;code>/etc/systemd/system/dc@.service&lt;/code>&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Wir gehen dabei davon aus, dass alle docker-compose Konfigurationsdateien in &lt;code>/opt/dockerfile/DIENSTNAME&lt;/code> liegen und sich &lt;code>docker-compose&lt;/code> im Verzeichnis &lt;code>/usr/local/bin&lt;/code> liegt.&lt;/p>
+&lt;p>Nun legen wir unsere docker-compose.yml Datei z.B. in &lt;code>/opt/dockerfile/gitlab/docker-compose.yml&lt;/code> ab.&lt;/p>
+&lt;p>Nun weisen wir systemd an, das Template zu instanziieren:&lt;/p>
+&lt;p>&lt;code>sudo systemctl enable dc@gitlab&lt;/code>&lt;/p>
+&lt;p>Ab sofort ist der Dienst vorhanden und kann auch direkt gestartet werden:&lt;/p>
+&lt;p>&lt;code>sudo systemctl start dc@gitlab&lt;/code>&lt;/p>
+&lt;p>Beim starten des Dienstes wird auch das Image aktualisiert - ist dies nicht gewünscht, muss lediglich die entsprechende Zeile im Template entfernt werden.&lt;/p>
+&lt;p>Viel Spaß!&lt;/p></content></item><item><title>Python auf dem ESP8266</title><link>/python-auf-dem-esp8266/</link><pubDate>Fri, 20 Jan 2017 17:00:02 +0000</pubDate><guid>/python-auf-dem-esp8266/</guid><description>&lt;p>Der &lt;a href="https://de.wikipedia.org/wiki/ESP8266">ESP8266&lt;/a> ist ein kleiner Mikrocontroller, den es für kleines Geld in verschiedenen Ausführungen und von verschiedensten Herstellern gibt.&lt;br>
+Das kleine 32-Bit Board besticht neben einfacher Zugänglichkeit, niedrigem Preis und einem on-board WLAN Modul.&lt;/p>
+&lt;p>Für viele Zwecke lohnt sich ein Blick auf &lt;a href="https://micropython.org/">Micropython&lt;/a> als Alternative zu &amp;ldquo;klassischer&amp;rdquo; Arduino C++ Entwicklung für das kleine Wunderwerk.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Diese auf Python 3 basierende, spezialisierte Version von Python bringt vieles mit, was man sich auf einer Entwicklungsplattform wünscht:&lt;/p>
+&lt;ul>
+&lt;li>Interaktive Programmierung/Nutzung des Geräts mit &lt;a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL&lt;/a>&lt;/li>
+&lt;li>Bibliotheken für Netzwerkkonfiguration&lt;/li>
+&lt;li>Bibliotheken für Schnittstellen (Pins, I2C, SPI, &amp;hellip;)&lt;/li>
+&lt;/ul></description><content>&lt;p>Der &lt;a href="https://de.wikipedia.org/wiki/ESP8266">ESP8266&lt;/a> ist ein kleiner Mikrocontroller, den es für kleines Geld in verschiedenen Ausführungen und von verschiedensten Herstellern gibt.&lt;br>
+Das kleine 32-Bit Board besticht neben einfacher Zugänglichkeit, niedrigem Preis und einem on-board WLAN Modul.&lt;/p>
+&lt;p>Für viele Zwecke lohnt sich ein Blick auf &lt;a href="https://micropython.org/">Micropython&lt;/a> als Alternative zu &amp;ldquo;klassischer&amp;rdquo; Arduino C++ Entwicklung für das kleine Wunderwerk.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Diese auf Python 3 basierende, spezialisierte Version von Python bringt vieles mit, was man sich auf einer Entwicklungsplattform wünscht:&lt;/p>
+&lt;ul>
+&lt;li>Interaktive Programmierung/Nutzung des Geräts mit &lt;a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL&lt;/a>&lt;/li>
+&lt;li>Bibliotheken für Netzwerkkonfiguration&lt;/li>
+&lt;li>Bibliotheken für Schnittstellen (Pins, I2C, SPI, &amp;hellip;)&lt;/li>
+&lt;/ul>
+&lt;p>Für den einfachen Einstieg mit dem ESP8266 laden wir uns zunächst die aktuellste (stable) Version für das Board &lt;a href="https://micropython.org/download">hier&lt;/a> herunter.&lt;/p>
+&lt;p>Als nächstes installieren wir uns das Tool &lt;a href="https://github.com/espressif/esptool">esptool&lt;/a>, welches zum Flashen des Microcontrollers mit unserem Micropython-Image genutzt wird.&lt;br>
+Dies geschieht am einfachsten mit&lt;/p>
+&lt;pre>&lt;code>pip3 install esptool
+&lt;/code>&lt;/pre>
+&lt;p>bzw.&lt;/p>
+&lt;pre>&lt;code>sudo -H pip3 install esptool
+&lt;/code>&lt;/pre>
+&lt;p>falls notwendig.&lt;/p>
+&lt;p>Unter Windows und OS X ist es nun notwendig, den passenden Treiber für das Board zu installieren. Dieser sorgt dafür, dass das Gerät als serielle Schnittstelle auftaucht - unter aktuellen GNU/Linux Versionen ist dies in der Regel nicht notwendig.&lt;/p>
+&lt;p>Nun sollte das Gerät beim Anschliessen via USB auftauchen:&lt;br>
+So meldet sich der ESP8266 der Variante &amp;ldquo;Nodemcu&amp;rdquo; als&lt;br>
+&lt;code>/dev/cu.SLAB_USBtoUART&lt;/code> bzw &lt;code>/dev/tty.SLAB_USBtoUART&lt;/code>.&lt;/p>
+&lt;p>Dies unterscheidet sich nach Treiber und Betriebssystem.&lt;/p>
+&lt;p>&lt;strong>Bei allen folgenden Beispielen muss &lt;code>/dev/cu.SLAB_USBtoUART&lt;/code> mit dem passenden Pfad ersetzt werden.&lt;/strong>&lt;/p>
+&lt;p>Zunächst löschen wir den vorhandenen Flash des Geräts vollständig:&lt;/p>
+&lt;pre>&lt;code>esptool.py --port /dev/cu.SLAB_USBtoUART erase_flash
+&lt;/code>&lt;/pre>
+&lt;p>Dann schreiben wir das heruntergeladene Image auf unser Board.&lt;/p>
+&lt;pre>&lt;code>esptool.py \
+--port /dev/cu.SLAB_USBtoUART \
+-b 460800 \
+write_flash \
+--flash_size=detect --flash_mode=dio 0 \
+/Pfad/Zu/Image/esp8266-20170108-v1.8.7.bin --verify
+&lt;/code>&lt;/pre>
+&lt;!-- raw HTML omitted -->
+&lt;p>Bei Problemen kann die Baud-Rate (hier: 460800) verringert werden. Zudem&lt;br>
+sollte man dringend auf die Spannungsversorgung des Geräts achten. Schlechte&lt;br>
+USB Hubs können hier für viel Ärger sorgen.&lt;/p>
+&lt;p>Nun können wir bereits mit dem ESP8266 kommunizieren:&lt;/p>
+&lt;pre>&lt;code>screen /dev/cu.SLAB_USBtoUART -b 115200
+&lt;/code>&lt;/pre>
+&lt;p>Wir sehen (spätestens beim Drücken des Reset-Buttons des ESPs) unsere vertrauten Python REPL, welche nun interaktive Benutzung auf dem Gerät zulässt.&lt;/p>
+&lt;p>Entwickelt man jedoch etwas länger für das Gerät, möchte man natürlich seine gewohnte Entwicklungsumgebung/Editor einsetzen. Nun kommt das Tool &lt;a href="https://github.com/adafruit/ampy">ampy&lt;/a> ins Spiel:&lt;/p>
+&lt;p>Dieses kleine Helferlein erlaubt es uns Dateien von und auf den ESP8266 zu&lt;br>
+kopieren und ein Skript auszuführen. Zur Installation kommt abermals kommt pip zum Einsatz:&lt;/p>
+&lt;pre>&lt;code>pip3 install adafruit-ampy
+&lt;/code>&lt;/pre>
+&lt;p>bzw.&lt;/p>
+&lt;pre>&lt;code>sudo -H pip3 install adafruit-ampy
+&lt;/code>&lt;/pre>
+&lt;p>Nun können wir unsere Bibliotheken-Dateien auf den ESP kopieren.&lt;/p>
+&lt;p>Auch unser Hauptprogramm (auf dem Gerät immer &lt;code>main.py&lt;/code>) können wir so auf das Gerät bringen.&lt;br>
+Dieses startet bei jedem Neustart des Geräts automatisch.&lt;/p>
+&lt;pre>&lt;code>ampy -p /dev/cu.SLAB_USBtoUART put main.py
+&lt;/code>&lt;/pre>
+&lt;p>Wollen wir das Programm gleich ohne Reset starten, können wir auch dies einfach mit &lt;code>ampy&lt;/code> erledigen:&lt;/p>
+&lt;pre>&lt;code>ampy -p /dev/cu.SLAB_USBtoUART run -n main.py
+&lt;/code>&lt;/pre>
+&lt;p>Mit diesen Werkzeugen ist es nun möglich in wenigen Sekunden automatisiert neue Versionen von Software auf das Gerät aufzuspielen um diese auszuprobieren.&lt;br>
+Dies verringert die Zeit des klassischen Workflows von &amp;ldquo;Programmieren, (Cross)-Kompilieren, Flashen&amp;rdquo; drastisch und erlaubt Fans von Python ein komfortables Arbeiten mit dem ESP8266.&lt;/p>
+&lt;p>Viel Spaß!&lt;/p></content></item><item><title>Windows auf Schlafentzug</title><link>/windows-auf-schlafentzug/</link><pubDate>Tue, 13 Dec 2016 08:59:09 +0000</pubDate><guid>/windows-auf-schlafentzug/</guid><description>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
+Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
+Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p></description><content>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
+Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
+Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p>
+&lt;p>Zwar verhindert manche Präsentationssoftware die lästige Sperre, aber spätestens bei Präsentationen aus PDF Dateien oder im Browser schlägt die Sperre erneut zu.&lt;/p>
+&lt;p>Abhilfe verschafft ein kleines Snippet, welches Tastatureingaben simuliert:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Einfach als &lt;code>schlaflos.vbs&lt;/code> abspeichern und ausführen. Nun wird alle sechs Sekunden die &lt;code>Numlock&lt;/code> zwei Mal gedrückt.&lt;br>
+Nun haben wir ein schlafloses Windows, welches nach dem Beenden des Skriptes, spätestens aber zum nächsten Neustart auch wieder schlafen darf.&lt;/p>
+&lt;p>Gute Nacht Windows!&lt;/p></content></item><item><title>SD Karte beschreiben mit „flash“</title><link>/sd-karte-beschreiben-mit-flash/</link><pubDate>Tue, 29 Nov 2016 08:30:27 +0000</pubDate><guid>/sd-karte-beschreiben-mit-flash/</guid><description>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.
+Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.
+Unter Windows bietet sich Win32 Disk Imager an,
+unter macOS das Tool ApplePi Baker und unter Linux nutzt man einfach dd.
+Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.
+Genau das erledigt das Tool flash.</description><content>&lt;p>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.&lt;br>
+Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.&lt;/p>
+&lt;p>Unter Windows bietet sich &lt;a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager&lt;/a> an,&lt;br>
+unter macOS das Tool &lt;a href="http://www.tweaking4all.com/software/macosx-software/macosx-apple-pi-baker/">ApplePi Baker&lt;/a> und unter Linux nutzt man einfach &lt;code>dd&lt;/code>.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.&lt;/p>
+&lt;p>Genau das erledigt das Tool &lt;a href="https://github.com/hypriot/flash">flash&lt;/a>.&lt;br>
+Das in &lt;a href="https://de.wikipedia.org/wiki/Bash_(Shell)">bash&lt;/a> geschrieben Werkzeug ist schnell installiert:&lt;/p>
+&lt;pre>&lt;code>curl -O https://raw.githubusercontent.com/hypriot/flash/master/$(uname -s)/flash
+chmod +x flash
+sudo mv flash /usr/local/bin/flash
+&lt;/code>&lt;/pre>
+&lt;p>Wie in der &lt;a href="https://github.com/hypriot/flash">Installationsanleitung auf Github&lt;/a> zu sehen, sind noch optionale Abhängigkeiten auf einige Tools zu installieren (u.a. &lt;code>curl&lt;/code>, &lt;code>pv&lt;/code>, &lt;code>unzip&lt;/code>).&lt;br>
+Nach erfolgreicher Installation durch den Paketmanager des Vertrauens, können Raspberry Images geschrieben werden:&lt;/p>
+&lt;pre>&lt;code>flash jessie-light.zip
+&lt;/code>&lt;/pre>
+&lt;p>Dabei übernimmt &lt;code>flash&lt;/code> das entpacken (bzw. Download) der Datei und fordert den Benutzer anschließend auf, die SD Karte einzulegen. Nach Identifizieren des Speichermediums braucht man lediglich selbiges zu bestätigen und der Schreibeprozess beginnt.&lt;/p>
+&lt;p>Zum Abschluss des Ganzen werden auch alle Dateisystem ausgehängt und die Speicherkarte kann in den Raspberry Pi wandern.&lt;/p>
+&lt;p>Für mich ist &lt;code>flash&lt;/code> &lt;em>das&lt;/em> Werkzeug zum Schreiben von SD Karten geworden.&lt;br>
+Minimalistisch, komfortabel und einfach zu handhaben erleichtert mit das kleine Helferlein den Alltag.&lt;/p></content></item><item><title>Homebrew Cask mit Ansible</title><link>/homebrew-cask-mit-ansible/</link><pubDate>Fri, 03 Jun 2016 06:52:45 +0000</pubDate><guid>/homebrew-cask-mit-ansible/</guid><description>&lt;p>Paketmanager auf modernen Betriebssystemen sind ein wahrer Segen: Programme&lt;br>
+können einfach installiert, auf den aktuellsten Stand gebracht und restlos&lt;br>
+deinstalliert werden.&lt;br>
+Auch können mit einfachen Mitteln definierte Installationen bzw.&lt;br>
+Systemkonfigurationen erstellt werden.&lt;/p></description><content>&lt;p>Paketmanager auf modernen Betriebssystemen sind ein wahrer Segen: Programme&lt;br>
+können einfach installiert, auf den aktuellsten Stand gebracht und restlos&lt;br>
+deinstalliert werden.&lt;br>
+Auch können mit einfachen Mitteln definierte Installationen bzw.&lt;br>
+Systemkonfigurationen erstellt werden.&lt;/p>
+&lt;p>Unter OS X steht derzeit &lt;a href="http://brew.sh/">Homebrew&lt;/a> als Paketmanager mit&lt;br>
+tausenden von (zumeist vorkompilierten) Paketen hoch in der Gunst der Nutzer.&lt;/p>
+&lt;p>Doch was, wenn Benutzer Software wie&lt;br>
+&lt;a href="https://de.wikipedia.org/wiki/Adobe_Photoshop">Photoshop&lt;/a>,&lt;br>
+&lt;a href="https://www.omnigroup.com/omnigraffle">Omnigraffle&lt;/a> oder&lt;br>
+&lt;a href="https://www.jetbrains.com/pycharm/">Pycharm&lt;/a> installiert brauchen?&lt;br>
+Auch hier hilft Homebrew weiter: Mit der Erweiterung &lt;a href="https://github.com/Caskroom">HomebrewCask&lt;/a> kann Software aus externen Installern&lt;br>
+auf das eigene System gebracht werden - automatisiert und nachvollziehbar.&lt;/p>
+&lt;p>Hierzu ist nach der Installation von Homebrew lediglich ein Einbinden des&lt;br>
+Homebrew Cask Repository notwendig:&lt;/p>
+&lt;pre>&lt;code>brew tap caskroom/cask
+&lt;/code>&lt;/pre>
+&lt;p>Schon ist mit dem Befehl &lt;code>brew cask install firefox&lt;/code> der Firefox Browser im&lt;br>
+eigenen System installiert werden.&lt;br>
+Ist man auf &lt;em>nightly builds&lt;/em> oder &lt;em>alte&lt;/em> Versionen einer Software angewiesen,&lt;br>
+hilft zu dem das optionale Repository &lt;code>caskroom/versions&lt;/code>.&lt;/p>
+&lt;pre>&lt;code>brew tap caskroom/versions
+&lt;/code>&lt;/pre>
+&lt;p>Mit der Hilfe von &lt;a href="https://www.ansible.com/">Ansible&lt;/a> kann dieser Prozess&lt;br>
+(sowie die Installation der Software) nun zentral erfolgen.&lt;/p>
+&lt;p>Wir legen uns eine Konfiguration an.&lt;br>
+Hierzu erstellen wir einen Tasks zur Installation von Homebrew Cask und allen Applikationen:&lt;br>
+&lt;code>roles/apps/tasks/main.yml&lt;/code>&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Ansible installiert beim Aufruf nun alle aufgezählten Applikationen.&lt;br>
+Aber Achtung: Da Homebrew als Nutzer ausgeführt werden sollte, die Installation&lt;br>
+mancher Applikationen jedoch Administrator-Rechte verlangt, ist es hier&lt;br>
+sinnvoll, die beiden Tasks &lt;code>homebrew&lt;/code> und &lt;code>homebrew_tab&lt;/code> als Nutzer laufen zu&lt;br>
+lassen, den &lt;code>homebrew_cask&lt;/code> Prozess jedoch als Administrator (Siehe&lt;br>
+&lt;a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html">become&lt;/a>).&lt;/p>
+&lt;p>Nun haben wir die Möglichkeit zentral, dokumentiert und nachvollziehbar&lt;br>
+Software zu installieren, die aus Installern stammt.&lt;/p></content></item><item><title>Systemdateien editieren mit sudoedit</title><link>/systemdateien-editieren-mit-sudoedit/</link><pubDate>Wed, 18 May 2016 11:44:20 +0000</pubDate><guid>/systemdateien-editieren-mit-sudoedit/</guid><description>&lt;p>Praktisch jeder Entwickler und jeder Administrator hat seine eigene Editor-Konfiguration.&lt;br>
+Ob Farbschema, Plugins, eigene Kürzel oder Optionen - kaum ein Werkzeug wird&lt;br>
+so intensiv den eigenen Vorstellungen, Wünschen und Vorlieben angepasst wie ein&lt;br>
+Editor.&lt;/p>
+&lt;p>Muss jedoch eine Datei editiert werden, die nicht dem Benutzer &amp;ldquo;gehört&amp;rdquo; (z.B.&lt;br>
+Konfigurationsdateien eines Webservers), funktioniert der &amp;ldquo;eigene&amp;rdquo; Editor nicht&lt;br>
+mehr.&lt;/p></description><content>&lt;p>Praktisch jeder Entwickler und jeder Administrator hat seine eigene Editor-Konfiguration.&lt;br>
+Ob Farbschema, Plugins, eigene Kürzel oder Optionen - kaum ein Werkzeug wird&lt;br>
+so intensiv den eigenen Vorstellungen, Wünschen und Vorlieben angepasst wie ein&lt;br>
+Editor.&lt;/p>
+&lt;p>Muss jedoch eine Datei editiert werden, die nicht dem Benutzer &amp;ldquo;gehört&amp;rdquo; (z.B.&lt;br>
+Konfigurationsdateien eines Webservers), funktioniert der &amp;ldquo;eigene&amp;rdquo; Editor nicht&lt;br>
+mehr.&lt;/p>
+&lt;p>So öffnet sich beim Aufruf via &lt;code>sudo vim /etc/nginx/nginx.conf&lt;/code> zwar der Editor&lt;br>
+vim, aber die schöne eigene Konfiguration wird nicht geladen, da ja der Editor&lt;br>
+unter einem anderen Benutzer gestartet wird.&lt;/p>
+&lt;p>Abhilfe schafft hier das auf modernen Systemen installierte &lt;code>sudoedit&lt;/code>.&lt;br>
+Dieses Helferlein öffnet den präferierten Editor des Benutzers (setzen mit&lt;br>
+Umgebungsvariable &lt;code>EDITOR&lt;/code>) unter dessen Kontext.&lt;/p>
+&lt;p>So kann mit &lt;code>sudoedit /etc/nginx/nginx.conf&lt;/code>, wie zuvor mit &lt;code>sudo&lt;/code>,&lt;br>
+die Konfigurationsdatei des Webservers editiert werden - und das mit den&lt;br>
+Editor-Einstellungen des Benutzers.&lt;/p></content></item><item><title>Kommandozeile mit FZF</title><link>/kommandozeile-mit-fzf/</link><pubDate>Fri, 22 Apr 2016 08:01:39 +0000</pubDate><guid>/kommandozeile-mit-fzf/</guid><description>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.&lt;br>
+So stöbert man in &lt;code>bash&lt;/code> bzw. &lt;code>zsh&lt;/code>mit &lt;code>Ctrl+R&lt;/code> in der Eingabe-History, sucht mit &lt;code>find&lt;/code> Dateien in einem gegeben Pfad - und so weiter und so fort.&lt;/p>
+&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt&lt;br>
+ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&lt;/p></description><content>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.&lt;br>
+So stöbert man in &lt;code>bash&lt;/code> bzw. &lt;code>zsh&lt;/code>mit &lt;code>Ctrl+R&lt;/code> in der Eingabe-History, sucht mit &lt;code>find&lt;/code> Dateien in einem gegeben Pfad - und so weiter und so fort.&lt;/p>
+&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt&lt;br>
+ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&lt;/p>
+&lt;p>In &lt;a href="http://golang.org">Go&lt;/a> geschrieben und fix installiert (z.B. via Arch Linux Aur, zu Fuß oder als via Vim-Plugin) kann das Werkzeug händisch genutzt werden oder in Verbindung mit &lt;code>tmux&lt;/code> auch die oben genannten Tastaturkürzel übernehmen.&lt;/p>
+&lt;p>Und so sieht das ganze aus:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Jetzt erlaubt das Tool interaktiv und komfortabel nach Dateien zu suchen, alte Befehle aufzufinden und damit den Komfort des Arbeitens auf der Kommandozeile deutlich zu steigern.&lt;/p></content></item><item><title>Editor für Hugo</title><link>/editor-fuer-hugo/</link><pubDate>Wed, 13 Apr 2016 14:26:13 +0000</pubDate><guid>/editor-fuer-hugo/</guid><description>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu
+erstellen.
+Die in Go geschriebene Software ermöglicht das einfache
+Nutzen von Templates für neue Beiträge. Ein neuer Beitrag wird auch leichter
+Hand angelegt, z.B. hugo new post/hugo_editor.md.
+Die Datei enthält danach alle Einträge des Templates - teilweise auch schon
+ausgefüllt.
+Eine interessante Konfigurationseinstellung in der config.toml (bzw.
+config.yaml, config.json) ist der Eintrag newContentEditor:
+Gesetzt auf den Editor öffnet sich dieser dem Anlegen der Datei die Schreiberei</description><content>&lt;p>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu&lt;br>
+erstellen.&lt;/p>
+&lt;p>Die in &lt;a href="https://golang.org/">Go&lt;/a> geschriebene Software ermöglicht das einfache&lt;br>
+Nutzen von Templates für neue Beiträge. Ein neuer Beitrag wird auch leichter&lt;br>
+Hand angelegt, z.B. &lt;code>hugo new post/hugo_editor.md&lt;/code>.&lt;/p>
+&lt;p>Die Datei enthält danach alle Einträge des Templates - teilweise auch schon&lt;br>
+ausgefüllt.&lt;/p>
+&lt;p>Eine interessante Konfigurationseinstellung in der &lt;code>config.toml&lt;/code> (bzw.&lt;br>
+&lt;code>config.yaml&lt;/code>, &lt;code>config.json&lt;/code>) ist der Eintrag &lt;code>newContentEditor&lt;/code>:&lt;br>
+Gesetzt auf den Editor öffnet sich dieser dem Anlegen der Datei die Schreiberei&lt;br>
+kann beginnen.&lt;/p>
+&lt;pre>&lt;code>newContentEditor = &amp;quot;vim&amp;quot;
+&lt;/code>&lt;/pre></content></item><item><title>Wget wiederaufnehmen</title><link>/wget-wiederaufnehmen/</link><pubDate>Wed, 13 Apr 2016 05:46:16 +0000</pubDate><guid>/wget-wiederaufnehmen/</guid><description>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.
+Mit dem Download-Werkzeug wget ist dies einfach mit der Kommandozeilenoption -r möglich.
+Damit man jedoch nicht immer daran denken muss, lässt sie dies auch als Standardverhalten einstellen.
+Hierzu tragen wir die die Datei ~/.wgetrc folgendes ein:
+continue = on Ab sofort nimmt wget Downloads automatisch wieder auf.</description><content>&lt;p>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.&lt;/p>
+&lt;p>Mit dem Download-Werkzeug &lt;code>wget&lt;/code> ist dies einfach mit der Kommandozeilenoption &lt;code>-r&lt;/code> möglich.&lt;/p>
+&lt;p>Damit man jedoch nicht immer daran denken muss, lässt sie dies auch als Standardverhalten einstellen.&lt;/p>
+&lt;p>Hierzu tragen wir die die Datei &lt;code>~/.wgetrc&lt;/code> folgendes ein:&lt;/p>
+&lt;pre>&lt;code>continue = on
+&lt;/code>&lt;/pre>
+&lt;p>Ab sofort nimmt &lt;code>wget&lt;/code> Downloads automatisch wieder auf.&lt;/p></content></item><item><title>Vollbackup mit rsync</title><link>/vollbackup-mit-rsync/</link><pubDate>Tue, 12 Apr 2016 13:04:04 +0000</pubDate><guid>/vollbackup-mit-rsync/</guid><description>&lt;p>Das Tool Nummer eins um Daten von A nach B zu spiegeln ist &lt;code>rsync&lt;/code>.&lt;br>
+Es kann über Rechnergrenzen hinweg eingesetzt werden (z.B. via &lt;code>ssh&lt;/code>), beherrscht inkrementelles Kopieren und vieles mehr.&lt;/p></description><content>&lt;p>Das Tool Nummer eins um Daten von A nach B zu spiegeln ist &lt;code>rsync&lt;/code>.&lt;br>
+Es kann über Rechnergrenzen hinweg eingesetzt werden (z.B. via &lt;code>ssh&lt;/code>), beherrscht inkrementelles Kopieren und vieles mehr.&lt;/p>
+&lt;p>Um einen (Linux) Rechner vollständig zu sichern nutze ich zumeist:&lt;/p>
+&lt;pre>&lt;code>rsync -aAXv --exclude={\
+&amp;quot;/dev/*&amp;quot;,&amp;quot;/proc/*&amp;quot;,&amp;quot;/sys/*&amp;quot;,&amp;quot;/tmp/*&amp;quot;,\
+&amp;quot;/run/*&amp;quot;,&amp;quot;/mnt/*&amp;quot;,&amp;quot;/media/*&amp;quot;,&amp;quot;/lost+found&amp;quot;\
+} / /path/to/backup/folder
+&lt;/code>&lt;/pre>
+&lt;p>Der Befehl kopiert alle Dateien (mit Ausnahme der Verzeichnisse in der Aufzählung) - und das inkrementell.&lt;br>
+Abbrechen und Wiederaufnehmen ist also problemlos möglich.&lt;/p>
+&lt;p>Damit wird rsync zum perfekten Tool um eine Vollsicherung vor einer Neuinstallation vorzunehmen.&lt;/p></content></item><item><title>Sharpkeys</title><link>/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
+Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &amp;ldquo;SharpKeys&amp;rdquo; behelfen.
+Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.
+Tipp: Die Feststelltaste einfach mit Strg (Ctrl) belegen.</description><content>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
+Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &lt;a href="https://github.com/randyrants/sharpkeys">&amp;ldquo;SharpKeys&amp;rdquo;&lt;/a> behelfen.&lt;/p>
+&lt;p>Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.&lt;/p>
+&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></content></item><item><title>Linux Pakete mit fpm bauen</title><link>/linux-pakete-mit-fpm-bauen/</link><pubDate>Tue, 19 May 2015 19:15:13 +0000</pubDate><guid>/linux-pakete-mit-fpm-bauen/</guid><description>Software installieren Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager
+installiert.
+Gerade in der Software-Entwicklung kommt es aber immer wieder dazu, dass
+man selbstkompilierte oder selbstentwickelte Software installieren muss.
+Der übliche &amp;ldquo;Installationsmechanismus&amp;rdquo; via
+./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install führt jedoch dazu, dass die Software unversioniert installiert wird und eine
+Deinstallation nur in mühseliger Handarbeit möglich ist.
+Auch die Installation auf mehreren Rechner erfordert immer wieder den selben</description><content>&lt;h1 id="software-installieren">Software installieren&lt;/h1>
+&lt;p>Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager&lt;br>
+installiert.&lt;br>
+Gerade in der Software-Entwicklung kommt es aber immer wieder dazu, dass&lt;br>
+man selbstkompilierte oder selbstentwickelte Software installieren muss.&lt;/p>
+&lt;p>Der übliche &amp;ldquo;Installationsmechanismus&amp;rdquo; via&lt;/p>
+&lt;pre>&lt;code>./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install
+&lt;/code>&lt;/pre>
+&lt;p>führt jedoch dazu, dass die Software unversioniert installiert wird und eine&lt;br>
+Deinstallation nur in mühseliger Handarbeit möglich ist.&lt;br>
+Auch die Installation auf mehreren Rechner erfordert immer wieder den selben&lt;br>
+Aufwand und eine Updatemöglichkeit gibt es ebenfalls nicht.&lt;/p>
+&lt;h1 id="pakete">Pakete&lt;/h1>
+&lt;p>Die optimale Lösung für unser Problem ist natürlich die Erstellung eines&lt;br>
+eigenen Pakets:&lt;br>
+Das Paket wird ein einziges Mal gebaut, kann jederzeit deinstalliert werden&lt;br>
+und die Version des Pakets ist ebenfalls protokolliert, so dass später Updates&lt;br>
+möglich sind.&lt;/p>
+&lt;p>Das Problem daran ist, dass das Entwickeln von Paketen recht Aufwändig ist.&lt;br>
+Eine Abhilfe schafft hierbei das&lt;br>
+Werkzeug &lt;a href="https://github.com/jordansissel/fpm">fpm&lt;/a>.&lt;/p>
+&lt;h1 id="installation">Installation&lt;/h1>
+&lt;p>Zunächst stellen wir sicher, dass auf unserem Rechner das Paket &lt;code>ruby-dev&lt;/code>&lt;br>
+installiert ist:&lt;/p>
+&lt;p>Bei auf Debian basierenden Systemen (z.B. Ubuntu):&lt;/p>
+&lt;pre>&lt;code>sudo apt-get install install ruby-dev
+&lt;/code>&lt;/pre>
+&lt;p>Bei auf RedHat basierenden Systemen (z.B. CentOS):&lt;/p>
+&lt;pre>&lt;code>sudo yum install fpm
+&lt;/code>&lt;/pre>
+&lt;p>Nun können wir mit dem Ruby Paketinstaller &lt;code>gem&lt;/code> das Programm installieren:&lt;/p>
+&lt;pre>&lt;code>gem install fpm
+&lt;/code>&lt;/pre>
+&lt;p>Nun sollte das Programm &lt;code>fpm&lt;/code> auf der Kommandozeile zur Verfügung stehen.&lt;/p>
+&lt;h1 id="paket-bauen">Paket bauen&lt;/h1>
+&lt;p>Wir haben nun unsere Software wie zuvor und bauen diese - jedoch mit einem&lt;br>
+Präfix, z.B.:&lt;/p>
+&lt;pre>&lt;code>mkdir /tmp/place_to_install
+./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install DESTDIR=/tmp/place_to_install
+&lt;/code>&lt;/pre>
+&lt;p>Wenn wir nun an den Ort &lt;code>/tmp/place_to_install&lt;/code> schauen, sehen wir dort die&lt;br>
+installierten Daten. Diese sollen nun in unser Paket kommen.&lt;br>
+Diese bauen wir mit:&lt;/p>
+&lt;pre>&lt;code>fpm -s dir -t rpm -n myprogram -v 0.1.2 -C /tmp/place_to_install bin lib
+&lt;/code>&lt;/pre>
+&lt;p>Hierbei stehen die Parameter für:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-s dir&lt;/code>: Das Paket wird aus einem Verzeichnis gebaut (andere Möglichkeiten u.a. Python Module, rpm Dateien usw.)&lt;/li>
+&lt;li>&lt;code>-t rpm&lt;/code>: Es soll ein rpm-Paket gebaut werden. Auch deb-Pakete sind möglich&lt;/li>
+&lt;li>&lt;code>-n myprogram&lt;/code>: Der Name des Pakets&lt;/li>
+&lt;li>&lt;code>-v 0.1.2&lt;/code>: Die Version des Pakets&lt;/li>
+&lt;li>&lt;code>-C /tmp/place_to_install&lt;/code>: Das Verzeichnis, in dem sich die Dateien befinden&lt;/li>
+&lt;li>&lt;code>bin lib&lt;/code>: Die Dateien/Verzeichnisse in dem Verzeichnis, welche auch wirklich im Zielsystem installiert werden sollen&lt;/li>
+&lt;/ul>
+&lt;p>Nach kurzer Wartezeit purzelt aus dem Werkzeugs ein installierbares Paket heraus.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Mit fpm lassen sich bequem, schnell und einfach Pakete bauen.&lt;br>
+Natürlich berücksichtigt das hier erstellte Paket keinerlei Abhängigkeiten und&lt;br>
+es werden auch nicht alle Möglichkeiten und Funktionen des Paketmanagements genutzt, aber&lt;br>
+in der Praxis erleichtert dies die Installation von Software - gerade in Teams&lt;br>
+ungemein.&lt;/p>
+&lt;p>Jetzt nur noch ein Repository-Server aufgesetzt - und schon hat man im Team&lt;br>
+eine komfortablen Weg Software bereit zu stellen.&lt;/p></content></item><item><title>Myrepos: Alle meine Repositories</title><link>/myrepos-alle-meine-repositories/</link><pubDate>Sun, 17 May 2015 13:15:05 +0000</pubDate><guid>/myrepos-alle-meine-repositories/</guid><description>&lt;h1 id="repository-zentrale">Repository-Zentrale&lt;/h1>
+&lt;p>Dank VCSH habe ich all meine Dotfiles hübsch in Git-Repositories verpackt.&lt;br>
+Das Einbinden eines einzelnen Repositories geht nun zwar schnell von der Hand,&lt;br>
+aber wenn nun für &lt;code>vim&lt;/code> und &lt;code>mutt&lt;/code> und &lt;code>emacs&lt;/code> und und und &amp;hellip; lauter&lt;br>
+Repositories vorliegen wird es unbequem.&lt;br>
+Auch das updaten (&lt;code>pull&lt;/code>) jedes einzelnen Repos ist sehr mühselig und damit&lt;br>
+fehleranfällig.&lt;/p>
+&lt;p>Abhilfe schafft hier &lt;a href="https://myrepos.branchable.com/">myrepos&lt;/a> (kurz &lt;code>mr&lt;/code>),&lt;br>
+dass es erlaubt Aktionen auf mehreren Repositories auszuführen.&lt;/p></description><content>&lt;h1 id="repository-zentrale">Repository-Zentrale&lt;/h1>
+&lt;p>Dank VCSH habe ich all meine Dotfiles hübsch in Git-Repositories verpackt.&lt;br>
+Das Einbinden eines einzelnen Repositories geht nun zwar schnell von der Hand,&lt;br>
+aber wenn nun für &lt;code>vim&lt;/code> und &lt;code>mutt&lt;/code> und &lt;code>emacs&lt;/code> und und und &amp;hellip; lauter&lt;br>
+Repositories vorliegen wird es unbequem.&lt;br>
+Auch das updaten (&lt;code>pull&lt;/code>) jedes einzelnen Repos ist sehr mühselig und damit&lt;br>
+fehleranfällig.&lt;/p>
+&lt;p>Abhilfe schafft hier &lt;a href="https://myrepos.branchable.com/">myrepos&lt;/a> (kurz &lt;code>mr&lt;/code>),&lt;br>
+dass es erlaubt Aktionen auf mehreren Repositories auszuführen.&lt;/p>
+&lt;h1 id="installation">Installation&lt;/h1>
+&lt;p>Wir installieren uns das Paket &lt;code>myrepos&lt;/code> via &lt;code>apt-get&lt;/code> oder &lt;code>yaourt&lt;/code>&lt;/p>
+&lt;p>Installation unter Debian/Ubuntu:&lt;/p>
+&lt;pre>&lt;code>sudo apt-get install myrepos
+&lt;/code>&lt;/pre>
+&lt;p>oder unter Arch Linux&lt;/p>
+&lt;pre>&lt;code>yaourt -S myrepos
+&lt;/code>&lt;/pre>
+&lt;h1 id="basis-konfiguration">Basis-Konfiguration&lt;/h1>
+&lt;p>Wir legen eine Konfigurationsdatei mit dem Namen &lt;code>~/.mrconfig&lt;/code> an mit folgendem&lt;br>
+Inhalt:&lt;/p>
+&lt;pre>&lt;code>[DEFAULT]
+git_gc = git gc &amp;quot;$@&amp;quot;
+jobs = 1
+include = cat ~/.config/mr/config.d/*
+&lt;/code>&lt;/pre>
+&lt;p>Wenn nach allen Schritten die Konfiguration zuverlässig installiert können wir&lt;br>
+die Anzahl der parallelen Jobs auf z.B. 4 erhöhen.&lt;/p>
+&lt;p>Nun legen wir folgende Verzeichnisse an:&lt;/p>
+&lt;pre>&lt;code>mkdir -p ~/.config/mr/config.d
+mkdir ~/.config/mr/available.d
+&lt;/code>&lt;/pre>
+&lt;p>In das Verzeichnis &lt;code>available.d&lt;/code> legen wir alle Konfigurationsdateien ab.&lt;/p>
+&lt;p>Eine solche Konfigurationsdatei enthält den Ort Zielort des Repositories&lt;br>
+und auch die Anweisung, woher die Quelle kommt.&lt;/p>
+&lt;p>Die Datei für eine &lt;code>vim&lt;/code>-VCSH-Konfiguration könnte z.B. so aussehen:&lt;/p>
+&lt;p>Dateiname: &lt;code>vim.vcsh&lt;/code>&lt;/p>
+&lt;pre>&lt;code>[$HOME/.config/vcsh/repo.d/vim.git]
+checkout = vcsh clone git@MEINGITSERVER:vim vim
+&lt;/code>&lt;/pre>
+&lt;p>Dabei kann myrepos vcsh oder direkt git oder auch subversion (u.v.m.) nutzen.&lt;/p>
+&lt;p>Nun linke (&lt;code>ln -s&lt;/code>) ich noch alle die Konfigurationsdateien nach &lt;code>available.d&lt;/code>,&lt;br>
+die auch wirklich auf all meinen Systemen nutzen möchte.&lt;/p>
+&lt;p>Mit dem Aufruf&lt;/p>
+&lt;pre>&lt;code>mr up
+&lt;/code>&lt;/pre>
+&lt;p>Aktualisiere (z.B. bei git: pull) ich nun alle Repositories, die ich via&lt;br>
+myrepos verwalte. Somit kann ich beim Wechsel von Rechnern einfach meine&lt;br>
+Konfiguration aktualisieren.&lt;/p>
+&lt;p>Auch pushen von allen Repositories ist möglich:&lt;/p>
+&lt;pre>&lt;code>mr push
+&lt;/code>&lt;/pre>
+&lt;p>usw.&lt;/p>
+&lt;h1 id="myrepos-in-vcsh">Myrepos in VCSH&lt;/h1>
+&lt;p>Auch die Konfiguration von myrepos selbst verwalte ich mit vcsh (und&lt;br>
+wiederum mit Datei-Eintrag in myrepos), so dass sich auch beim Hinzukommen&lt;br>
+von neuen Repositories ich diese auf meinen Geräten erhalte.&lt;/p>
+&lt;h1 id="neuer-rechner---einfacher-schritt">Neuer Rechner - einfacher Schritt&lt;/h1>
+&lt;p>Bei einem neuen Rechner sind nun extrem wenige Schritte notwendig:&lt;/p>
+&lt;ol>
+&lt;li>Installieren von vcsh und myrepos (gibt es zumeist im Paketmanager)&lt;/li>
+&lt;li>Klonen des myrepos vcsh repositories (d.h. &lt;code>vcsh clone git@MEINGITSERVER:mr mr&lt;/code>)&lt;/li>
+&lt;li>Klonen aller weiteren Repos via &lt;code>mr up&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h1 id="sonderfälle">Sonderfälle&lt;/h1>
+&lt;p>Auch einfache Programme (z.B. &lt;a href="https://rg3.github.io/youtube-dl/">youtube-dl&lt;/a>)&lt;br>
+installiere (und update) ich via myrepos: Hierzu leg ich ich wieder eine&lt;br>
+Konfigurationsdatei an (z.B. &lt;code>youtube-dl.git&lt;/code>) mit folgendem Inhalt:&lt;/p>
+&lt;pre>&lt;code>[$HOME/.local/opt/youtube-dl.git]
+checkout = git clone https://github.com/rg3/youtube-dl.git $HOME/.local/opt/youtube-dl.git
+push = echo &amp;quot;No pushing to public repo&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;p>Der &lt;code>push&lt;/code> Befehl wird hier explizit überschrieben und gibt bei &lt;code>mr push&lt;/code> einfach die&lt;br>
+Nachricht aus, dass ich in dieses Repository nicht pushen möchte.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Myrepos ermöglicht das einfache und bequeme Verwalten und Nutzen von vielen&lt;br>
+Repositories. Gerade das Updaten oder initiale Klonen wird damit deutlich&lt;br>
+bequemer. Insbesondere im Zusammenspiel mit VCSH wird eine extrem komfortable&lt;br>
+Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>OS X Keyboard Layout</title><link>/keyboard-layout/</link><pubDate>Sun, 26 Apr 2015 13:35:47 +0000</pubDate><guid>/keyboard-layout/</guid><description>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>Als Entwickler nutze ich stetig Sonderzeichen und Symbole wie {, ] oder auch `.&lt;/p>
+&lt;p>Doch welches Tastaturlayout soll ich einsetzen?&lt;br>
+Zwar ist ein englisches Tastaturlayout sehr attraktiv, da dort sämtliche Sonderzeichen gut erreichbar sind. Als Entwickler im deutschsprachigen Raum benötige ich jedoch ständig Umlaute und das &lt;em>ß&lt;/em>-Zeichen.&lt;/p></description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>Als Entwickler nutze ich stetig Sonderzeichen und Symbole wie {, ] oder auch `.&lt;/p>
+&lt;p>Doch welches Tastaturlayout soll ich einsetzen?&lt;br>
+Zwar ist ein englisches Tastaturlayout sehr attraktiv, da dort sämtliche Sonderzeichen gut erreichbar sind. Als Entwickler im deutschsprachigen Raum benötige ich jedoch ständig Umlaute und das &lt;em>ß&lt;/em>-Zeichen.&lt;/p>
+&lt;p>Bei der Nutzung eines deutschen Tastaturlayout finde ich jedoch Symbole wie &lt;em>{&lt;/em> extrem Umständlich zu erreichen.&lt;/p>
+&lt;p>Sonderbelegungen wie &lt;a href="https://de.wikipedia.org/wiki/Dvorak-Tastaturbelegung">Dvorak&lt;/a> sind zwar reizvoll, scheitern aber für mich an der Tatsache, dass die&lt;br>
+Umgewöhnung bei der Nutzung eines fremden Rechners zu hoch wäre.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="lösung">Lösung&lt;/h1>
+&lt;p>Daher habe ich mir für OS X ein eigenes Tastaturlayout gebaut.&lt;br>
+Dieses nutzt als Basis das US-Englische Layout, nutzt jedoch die Alt-Taste für &amp;ldquo;deutsche&amp;rdquo; Sonderzeichen.&lt;/p>
+&lt;p>So erzeugt &lt;code>Alt + [&lt;/code> das &lt;em>ü&lt;/em> Zeichen.&lt;br>
+Ich drücke also genau die Taste, die bei einem deutschen Keyboard ebenfalls das &lt;em>ü&lt;/em> erzeugt.&lt;/p>
+&lt;p>Somit fällt die Umgewöhnung auf die neue Eingabeform extrem leicht.&lt;/p>
+&lt;h1 id="installation">Installation&lt;/h1>
+&lt;p>Das Layout ist einfach zu installieren - es kann direkt von der &lt;a href="https://github.com/derphilipp/english_keyboard_for_germans/releases">Projektseite auf Github&lt;/a> herunterladen werden.&lt;/p>
+&lt;p>Wie in der &lt;a href="https://github.com/derphilipp/english_keyboard_for_germans/">Anleitung&lt;/a> beschrieben, muss nach dem Entpacken der Datei diese lediglich in das Verzeichnis&lt;/p>
+&lt;pre>&lt;code>~/Library/Keyboard Layouts
+&lt;/code>&lt;/pre>
+&lt;p>kopiert werden und in dem Punkt&lt;br>
+&lt;em>Systemeinstellungen&lt;/em> -&amp;gt; &lt;em>Tastatur&lt;/em> -&amp;gt; &lt;em>Eingabequellen&lt;/em>&lt;br>
+aktiviert werden.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Nach kurzer Umgewöhnungszeit ist es mir nun möglich das komfortable englische Tastaturlayout zu nutzen, ohne jedoch auf die native Eingabemöglichkeit Umlauten und Co zu verzichten.&lt;/p></content></item><item><title>Git-tfs</title><link>/git-tfs/</link><pubDate>Wed, 22 Apr 2015 19:11:48 +0000</pubDate><guid>/git-tfs/</guid><description>&lt;h1 id="git-statt-tfs">Git statt TFS?&lt;/h1>
+&lt;p>Wer gerne mit &lt;a href="http://git-scm.com/">git&lt;/a> arbeitet, wünscht sich oft eine Brücke von anderen Versionsmanagement-Werkzeugen zu git.&lt;br>
+So gibt es zur Nutzung von &lt;a href="https://subversion.apache.org/">Subversion (snv)&lt;/a> die Möglichkeit &lt;a href="http://git-scm.com/docs/git-svn">git-svn&lt;/a> zu nutzen.&lt;br>
+Was aber, wenn die Serverseite &lt;a href="http://de.wikipedia.org/wiki/Team_Foundation_Server">TFS&lt;/a>{.broken_link} anbietet?&lt;/p></description><content>&lt;h1 id="git-statt-tfs">Git statt TFS?&lt;/h1>
+&lt;p>Wer gerne mit &lt;a href="http://git-scm.com/">git&lt;/a> arbeitet, wünscht sich oft eine Brücke von anderen Versionsmanagement-Werkzeugen zu git.&lt;br>
+So gibt es zur Nutzung von &lt;a href="https://subversion.apache.org/">Subversion (snv)&lt;/a> die Möglichkeit &lt;a href="http://git-scm.com/docs/git-svn">git-svn&lt;/a> zu nutzen.&lt;br>
+Was aber, wenn die Serverseite &lt;a href="http://de.wikipedia.org/wiki/Team_Foundation_Server">TFS&lt;/a>{.broken_link} anbietet?&lt;/p>
+&lt;h1 id="installation">Installation&lt;/h1>
+&lt;p>&lt;a href="http://git-scm.com/download/win">Git für Windows&lt;/a> wird einfach via Installer in das System gebracht.&lt;br>
+Eine Brücke zu TFS fehlt jedoch noch.&lt;/p>
+&lt;p>Abhilfe schafft hier das Werkzeug &lt;a href="https://github.com/git-tfs/git-tfs">git-tfs&lt;/a>.&lt;br>
+Zur Installation muss lediglich die Datei heruntergeladen und entpackt werden.&lt;br>
+Anschließend fügen wir das Verzeichnis der &lt;code>PATH&lt;/code> Variable hinzu.&lt;/p>
+&lt;p>Nun kann das installierte &lt;code>git&lt;/code> einen weiteren Befehl: &lt;code>git tfs&lt;/code>&lt;/p>
+&lt;h1 id="klonen">Klonen&lt;/h1>
+&lt;p>Als erstes schauen wir uns an, welche TFS Projekte/Branches auf dem Server liegen:&lt;/p>
+&lt;pre>&lt;code>git tfs list-remote-branches http://MEIN-TFS-SERVER:8080/tfs/
+&lt;/code>&lt;/pre>
+&lt;p>Wenn wir das Projekt gefunden haben, das wir brauchen, klonen wir es uns - und zwar mit allen Branches:&lt;/p>
+&lt;pre>&lt;code>git tfs clone --with-branches http://MEIN-TFS-SERVER:8080/tfs/ $/MeinProjekt
+&lt;/code>&lt;/pre>
+&lt;p>Je nach Projektgröße, kann dieser Schritt einige Zeit dauern.&lt;/p>
+&lt;h1 id="arbeiten-mit-git">Arbeiten mit git&lt;/h1>
+&lt;p>Die Arbeit mit &lt;code>git&lt;/code> erfolgt wie gewohnt, lediglich das &amp;ldquo;pushen&amp;rdquo; auf den Server bzw. das &amp;ldquo;pullen&amp;rdquo; entfällt.&lt;br>
+Hierzu müssen wir abermals &lt;code>git-tfs&lt;/code> aufrufen:&lt;/p>
+&lt;h1 id="tfs-nach-git">TFS nach Git&lt;/h1>
+&lt;p>Wenn wir uns die Änderungen von Teamkollegen abholen wollen, erfolgt dies mit folgendem Befehl:&lt;/p>
+&lt;pre>&lt;code>git tfs pull
+&lt;/code>&lt;/pre>
+&lt;p>Um dies für alle Branches durchzuführen, nutzen wir:&lt;/p>
+&lt;pre>&lt;code>git tfs pull --all
+&lt;/code>&lt;/pre>
+&lt;p>Um dabei statt eines Merge einen &lt;a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Rebase&lt;/a> durchzuführen, nutzen wir:&lt;/p>
+&lt;pre>&lt;code>git tfs pull --rebase
+&lt;/code>&lt;/pre>
+&lt;h1 id="git-nach-tfs">Git nach TFS&lt;/h1>
+&lt;p>Nachdem wir eine (oder mehrere) Aufgaben erledigt haben wollen wir unsere Commits auch an den TFS übertragen.&lt;br>
+Gerade bei TFS Konfigurationen, die Anforderungen an einen Checkin haben (z.B. &amp;ldquo;muss mit einem Task verbunden sein&amp;rdquo;) bietet sich das &amp;ldquo;Checkintool&amp;rdquo; an.&lt;br>
+Diese Programm erlaubt es komfortabel Git-Commits auf den TFS Server zu bringen und dabei TFS Elemente (z.B. Tasks) zu verlinken.&lt;/p>
+&lt;pre>&lt;code>git tfs checkintool
+&lt;/code>&lt;/pre>
+&lt;h1 id="alternativen">Alternativen&lt;/h1>
+&lt;p>Wer unter einem anderen Betriebssystem als Windows arbeitet, kann Microsofts&lt;br>
+eigene Brücke namens &lt;a href="https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=&amp;amp;ved=2ahUKEwiVy7SR1Nb7AhUJQvEDHUS3DWQQFnoECA4QAQ&amp;amp;url=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2FA%2FE%2F2%2FAE23B059-5727-445B-91CC-15B7A078A7F4%2FGit-TF_GettingStarted.html">git-tf&lt;/a>(!) nutzen.&lt;br>
+Diese in Java geschriebene Brücke funktioniert ähnlich git-tfs, bietet jedoch&lt;br>
+kein &amp;ldquo;Checkintool&amp;rdquo;.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Git-tfs erlaubt es extrem einfach eine transparente Brücke zwischen TFS und Git zu nutzen.&lt;br>
+Wer Nicht-Windows Betriebssysteme nutzt, kann mit git-tf ebenfalls mit einem TFS zusammen arbeiten.&lt;/p></content></item><item><title>Shift Lock sinnvoll nutzen</title><link>/shift-lock-sinnvoll-nutzen/</link><pubDate>Tue, 21 Apr 2015 19:01:17 +0000</pubDate><guid>/shift-lock-sinnvoll-nutzen/</guid><description>&lt;h1 id="shift-lock">Shift-Lock&lt;/h1>
+&lt;p>Die Shift-Lock Taste alias &amp;ldquo;Feststelltaste&amp;rdquo; ist für die meisten Menschen ein Ärgernis und&lt;br>
+Relikt aus der Zeit der Schreibmaschinen.&lt;/p>
+&lt;p>Doch anstatt die Taste zu deaktivieren oder gar auszubauen kann die Taste auch gut für andere&lt;br>
+Zwecke verwendet werden.&lt;/p>
+&lt;p>Ich habe die Shift-Lock Taste auf die &amp;ldquo;Ctrl&amp;rdquo; (Steuerung) Taste gemappt, was Shortcuts wie &lt;em>Ctrl+C&lt;/em> in vim deutlich attraktiver macht&lt;/p>
+&lt;h1 id="so-gehts">So gehts&lt;/h1></description><content>&lt;h1 id="shift-lock">Shift-Lock&lt;/h1>
+&lt;p>Die Shift-Lock Taste alias &amp;ldquo;Feststelltaste&amp;rdquo; ist für die meisten Menschen ein Ärgernis und&lt;br>
+Relikt aus der Zeit der Schreibmaschinen.&lt;/p>
+&lt;p>Doch anstatt die Taste zu deaktivieren oder gar auszubauen kann die Taste auch gut für andere&lt;br>
+Zwecke verwendet werden.&lt;/p>
+&lt;p>Ich habe die Shift-Lock Taste auf die &amp;ldquo;Ctrl&amp;rdquo; (Steuerung) Taste gemappt, was Shortcuts wie &lt;em>Ctrl+C&lt;/em> in vim deutlich attraktiver macht&lt;/p>
+&lt;h1 id="so-gehts">So gehts&lt;/h1>
+&lt;h2 id="windows">Windows&lt;/h2>
+&lt;p>Unter Windows erstellen wir eine Datei mit der Endung .reg, z.B. &lt;code>shift.reg&lt;/code> mit folgendem Inhalt:&lt;/p>
+&lt;pre>&lt;code> REGEDIT4
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+&amp;quot;Scancode Map&amp;quot;=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00
+&lt;/code>&lt;/pre>
+&lt;p>Nach dem Importieren in die Registry (i.d.R. Doppellick auf die neue Datei) und einem Neustart sollte die Tastet nun die neue Funktion haben.&lt;/p>
+&lt;h2 id="os-x">OS X&lt;/h2>
+&lt;p>Unter OS X fällt die Einstellung etwas einfacher aus:&lt;br>
+In den &amp;ldquo;System Preferences&amp;rdquo; wählen wir den Punkt &amp;ldquo;Keyboard&amp;rdquo; aus.&lt;br>
+Dort, im Reiter &amp;ldquo;Keyboard&amp;rdquo;, befindet sich ein Knopf namens &amp;ldquo;Modifier Keys&amp;hellip;&amp;rdquo;.&lt;/p>
+&lt;p>Hier können wir die Belegung von &amp;ldquo;Caps Lock&amp;rdquo; (d.h. Shift Lock), &amp;ldquo;Control&amp;rdquo;, &amp;ldquo;Option&amp;rdquo; und auch &amp;ldquo;Command&amp;rdquo; ändern.&lt;/p>
+&lt;p>Achtung: Diese Einstellung ist nur für das aktuelle Keyboard gültig, d.h. bei&lt;br>
+Notebook mit externer Tastatur muss diese Einstellung sowohl für die eingebaute als auch die externe Tastatur durchgeführt werden.&lt;/p>
+&lt;h2 id="linux-bsd-ua">Linux, BSD, u.a.&lt;/h2>
+&lt;p>Unter Linux/BSD kann diese Einstellung oftmals in den jeweiligen Systemwerkzeugen getroffen werden.&lt;br>
+Eine &amp;ldquo;eher universale&amp;rdquo; Möglichkeit für X ergibt sich mit folgendem Befehl:&lt;/p>
+&lt;pre>&lt;code>setxkbmap -option ctrl:nocaps
+&lt;/code>&lt;/pre>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Mit geringem Aufwand kann man die &amp;ldquo;nervige&amp;rdquo; Shift-Lock Taste in eine wertvolle Taste&lt;br>
+verwandeln.&lt;br>
+Nach etwas Umgewöhnung nutze ich die &amp;ldquo;normale&amp;rdquo; Control Taste praktisch gar nicht mehr und bei der Nutzung von &lt;code>vim&lt;/code> gehen Shortcuts wie &lt;em>Ctrl+C&lt;/em>&lt;br>
+(in den &lt;em>normal mode&lt;/em> wechseln) und &lt;em>Ctrl+V&lt;/em> (&lt;em>visual block mode&lt;/em>) deutlich leichter von der Hand.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>Einstellungen Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?
+Die Einstellungen!
+Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.
+Doch auch Software hat Einstellungen:
+Welchen Editor setze ich als Standard? Welche Shell-Erweiterungen lade ich in oh-my-zsh? Welches color-theme lade ich in vim? Welche Accounts habe ich in mutt? Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.</description><content>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
+&lt;p>Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?&lt;br>
+Die Einstellungen!&lt;br>
+Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.&lt;/p>
+&lt;p>Doch auch Software hat Einstellungen:&lt;/p>
+&lt;ul>
+&lt;li>Welchen Editor setze ich als Standard?&lt;/li>
+&lt;li>Welche Shell-Erweiterungen lade ich in &lt;code>oh-my-zsh&lt;/code>?&lt;/li>
+&lt;li>Welches &lt;code>color-theme&lt;/code> lade ich in vim?&lt;/li>
+&lt;li>Welche Accounts habe ich in &lt;code>mutt&lt;/code>?&lt;/li>
+&lt;/ul>
+&lt;p>Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.&lt;br>
+Da ich jedoch regelmässig auf unterschiedlichen Rechnern arbeite, möchte ich diese aktuell halten.&lt;/p>
+&lt;h1 id="dropbox">Dropbox&lt;/h1>
+&lt;p>Mein erster Ansatz war es, alle Dateien in einen zentralen Dropbox Ordner zu verschieben und Links zu erstellen nach folgendem Schema&lt;/p>
+&lt;pre>&lt;code>~/.vimrc -&amp;gt; ~/Dropbox/config/vimrc
+&lt;/code>&lt;/pre>
+&lt;p>Meine &lt;code>.vimrc&lt;/code> wurde durch den Dropbox-Dienst nun auf allen Rechnern synchronisiert und immer aktuell.&lt;br>
+Richtete ich einen neuen Rechner ein, so musste ich &amp;ldquo;nur&amp;rdquo; Dropbox und den Link erstellen.&lt;/p>
+&lt;p>Dieser Ansatz hat jedoch einige Nachteile:&lt;/p>
+&lt;ol>
+&lt;li>Ich bin von der Verfügbarkeit von Dropbox abhängig (ist ok für mich)&lt;/li>
+&lt;li>Ich muss auf allen Rechnern Dropbox installieren (ist auch noch so ok)&lt;/li>
+&lt;li>Ich muss alle Dateien händisch verlinken (nicht ok!)&lt;/li>
+&lt;li>Die Änderungen sind nicht dokumentiert bzw. haben keine definierten Zwischenstände (nicht ok!)&lt;/li>
+&lt;li>Alle Änderungen werden sofort bei allen Systemen aktualisiert (außer ich stoppe Dropbox)&lt;/li>
+&lt;/ol>
+&lt;h1 id="vcsh">VCSH&lt;/h1>
+&lt;p>Ich wünschte mir ein System, welches die Versionierung der Konfigurationsdaten übernimmt und bin dabei auf VCHS gestoßen.&lt;/p>
+&lt;p>Das schöne an VCSH: Es baut einfach auf git auf und bietet somit einerseits ein vertrautes Interface. Zudem kann ich meine Konfigurationsdateien nun einfach in ein zentrales Repository (z.B. auf Github oder auf einem eigenen Server) ablegen.&lt;/p>
+&lt;h2 id="installieren">Installieren&lt;/h2>
+&lt;p>Installieren erfolgt aus dem Repository, Debian/Ubuntu also per&lt;/p>
+&lt;pre>&lt;code>apt-get install vcsh
+&lt;/code>&lt;/pre>
+&lt;p>oder bei Arch Linux via aur (hier mit yaourt)&lt;/p>
+&lt;pre>&lt;code>yaourt -S vcsh
+&lt;/code>&lt;/pre>
+&lt;h2 id="anlegen">Anlegen&lt;/h2>
+&lt;p>Ich empfehle pro Werkzeug (z.B. emacs, mutt, &amp;hellip;) ein eigenes Repository anzulegen um die Übersicht zu behalten.&lt;br>
+Die Syntax hierbei entspricht der von git, jedoch mit Namen des Werkzeugs vorangestellt, also &lt;code>vcsh WERKZEUG GIT-BEFEHL&lt;/code> (Ausnahme: &lt;code>init&lt;/code>-Befehl)&lt;/p>
+&lt;p>Wir initialisieren uns erstmal ein Repository für unsere Vim-Einstellungen&amp;hellip;&lt;/p>
+&lt;pre>&lt;code>vcsh init vim
+&lt;/code>&lt;/pre>
+&lt;p>&amp;hellip; fügen die Datei(en) hinzu, die wir verwalten wollen &amp;hellip;&lt;/p>
+&lt;pre>&lt;code>vcsh vim add ~/.vimrc
+&lt;/code>&lt;/pre>
+&lt;p>&amp;hellip; machen unseren ersten commit &amp;hellip;&lt;/p>
+&lt;pre>&lt;code>vcsh vim commit -m &amp;quot;Mein erster Vim-commit&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;p>&amp;hellip; und pushen diesen auf unseren Git-Server (z.B. Github)&lt;/p>
+&lt;pre>&lt;code>vcsh vim remote add git@MEINGITSERVER:vim.git
+vcsh vim push -u origin master
+&lt;/code>&lt;/pre>
+&lt;h2 id="klonen">Klonen&lt;/h2>
+&lt;p>Auf einem neuen Rechner können wir uns die Konfiguration einfach holen:&lt;/p>
+&lt;pre>&lt;code>vcsh clone git@MEINGISERVER:vim.git
+&lt;/code>&lt;/pre>
+&lt;h2 id="gitignore">.gitignore&lt;/h2>
+&lt;p>Da sich unsere Konfigurationsdateien im Home-Verzeichnis des Users befinden, hat VCSH (bzw. git) keine Chance zu wissen welche Dateien definitiv zu dem Projekt gehören und welche nicht.&lt;br>
+Also schaffen wir mit einer .gitignore-Datei Abhilfe: Alle Dateien und Verzeichnisse sollen ignoriert werden, außer den Projektdateien/Ordnern.&lt;br>
+Diese erstellen wir automatisch via&lt;/p>
+&lt;pre>&lt;code>vcsh write-gitignore vim
+&lt;/code>&lt;/pre>
+&lt;p>Wie fügen die ignore-Datei selbst auch dem Projekt hinzu&amp;hellip;&lt;/p>
+&lt;pre>&lt;code>vcsh vim add -f ~/.gitignore.d/vim
+&lt;/code>&lt;/pre>
+&lt;p>&amp;hellip; und schreiben die Datei erneut.&lt;/p>
+&lt;pre>&lt;code>vcsh write-gitignore vim
+&lt;/code>&lt;/pre>
+&lt;p>Nun kontrollieren wir die Datei &lt;code>~/.gitignore.d/vim&lt;/code> ob sie nicht Dateien ignoriert, welche wir versionieren wollen;&lt;br>
+Wenn nicht: Ab damit ins Repository!&lt;/p>
+&lt;pre>&lt;code>vcsh vim add ~/.gitignore.d/vim
+&lt;/code>&lt;/pre>
+&lt;p>Alle weiteren Aktionen können wir nun in gewohnter git-manier (commit push pull) erledigen.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>VCSH erlaubt es bequem Dotfiles zu organisieren und diese versioniert abzulegen.&lt;br>
+Im Alltag hilft mir es enorm meine Konfigurationsdateien auf einem Stand zu halten und Änderungen dokumentiert.&lt;/p>
+&lt;p>Ergänzend zu VCSH bietet sich die Benutzung von &lt;code>myrepos&lt;/code> ab um mehrere Repositories gleichzeitig zu verwalten.&lt;/p></content></item><item><title>Touch Display auf Raspberry Pi mit Arch Linux</title><link>/touch-display-auf-raspberry-pi-mit-arch-linux/</link><pubDate>Sun, 12 Apr 2015 12:28:29 +0000</pubDate><guid>/touch-display-auf-raspberry-pi-mit-arch-linux/</guid><description>&lt;p>Auf der Suche nach einem kleinen Display bin ich auf ein &lt;a href="https://github.com/watterott/RPi-Display">Display von Watterott&lt;/a> gestoßen.&lt;br>
+Um das Gerät auf dem &lt;a href="https://www.raspberrypi.org/">Raspberry Pi&lt;/a> unter &lt;a href="http://archlinuxarm.org/">Arch Linux&lt;/a> zu betreiben sind einige Schritte notwendig.&lt;/p></description><content>&lt;p>Auf der Suche nach einem kleinen Display bin ich auf ein &lt;a href="https://github.com/watterott/RPi-Display">Display von Watterott&lt;/a> gestoßen.&lt;br>
+Um das Gerät auf dem &lt;a href="https://www.raspberrypi.org/">Raspberry Pi&lt;/a> unter &lt;a href="http://archlinuxarm.org/">Arch Linux&lt;/a> zu betreiben sind einige Schritte notwendig.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Für alle Schritte nehme ich als User &lt;code>root&lt;/code> an&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&amp;ldquo;Normale&amp;rdquo; Arch Linux &lt;a href="http://web.archive.org/web/20150412224859/archlinuxarm.org/platforms/armv6/raspberry-pi">Installation auf dem Raspberry Pi durchführen&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Hilfswerkzeug &lt;code>rpi-update&lt;/code> installieren:&lt;!-- raw HTML omitted -->
+curl -L &amp;ndash;output /usr/bin/rpi-update &lt;a href="https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update">https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update&lt;/a> &amp;amp;&amp;amp; sudo chmod +x /usr/bin/rpi-update&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Kernel mit passenden Treibern installieren&lt;!-- raw HTML omitted -->
+REPO_URI=https://github.com/notro/rpi-firmware rpi-update&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>X installieren&lt;!-- raw HTML omitted -->
+pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Optional: Tool zur Kalibrierung des Touch-Displays installieren&lt;!-- raw HTML omitted -->
+pacman -S xinput_calibrator&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Konfigurationsdateien:&lt;br>
+7.1. Am Ende &lt;code>/boot/config.txt:&lt;/code> einfügen:&lt;!-- raw HTML omitted -->
+dtparam=spi=on
+dtoverlay=rpi-display&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;pre>&lt;code>7.2. Am Ende von `/etc/modules-load.d/raspberrypi.conf` einfügen:
+snd-bcm2835
+spi_bcm2708
+fbtft_device
+7.3. Datei `/etc/modprobe.d/fbtft.conf` anlegen und folgenden Inhalt
+einfügen:
+options fbtft_device name=mi0283qt-9a gpios=reset:23,led:18 speed=32000000 rotate=270
+Achtung: Je nach Ausführung des Displays unterscheiden sich die
+Parameter - einfach in die [Liste aufGithub][5]
+schauen.
+Achtung: Mit dem Parameter `rotate=270` dreht sich die Ausrichtung
+des Displays
+7.4. Datei `/etc/X11/xorg.conf.d/99-fbturbo.conf` anlegen und
+folgenden Inhalt einfügen:
+Section &amp;quot;Device&amp;quot;
+Identifier &amp;quot;Allwinner A10/A13 FBDEV&amp;quot;
+Driver &amp;quot;fbturbo&amp;quot;
+Option &amp;quot;fbdev&amp;quot; &amp;quot;/dev/fb0&amp;quot;
+Option &amp;quot;SwapbuffersWait&amp;quot; &amp;quot;true&amp;quot;
+EndSection
+7.5 Ans Ende der vorhandenen Datei `/etc/X11/xinit/xinitrc`
+einfügen:
+xinput --set-prop 'ADS7846 Touchscreen' 'Evdev Axes Swap' 1
+xinput --set-prop 'ADS7846 Touchscreen' 'Evdev Axis Inversion' 0 1
+Achtung: Hiermit dreht sich die Ausrichtung des Touch-Displays
+passend zu den oben eingestellten 270 Grad; &amp;lt;/li&amp;gt;
+* Reboot&amp;lt;/p&amp;gt;
+reboot
+* Nach dem Ausführen von&amp;lt;/p&amp;gt;
+startx
+sollte nun eine grafische Oberfläche auf dem kleinen Display laufen. &amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt;
+&lt;/code>&lt;/pre></content></item></channel></rss>

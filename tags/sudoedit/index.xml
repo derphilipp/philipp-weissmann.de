@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sudoedit on Philipp Weißmann</title><link>/tags/sudoedit/</link><description>Recent content in sudoedit on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Wed, 18 May 2016 11:44:20 +0000</lastBuildDate><atom:link href="/tags/sudoedit/index.xml" rel="self" type="application/rss+xml"/><item><title>Systemdateien editieren mit sudoedit</title><link>/systemdateien-editieren-mit-sudoedit/</link><pubDate>Wed, 18 May 2016 11:44:20 +0000</pubDate><guid>/systemdateien-editieren-mit-sudoedit/</guid><description>&lt;p>Praktisch jeder Entwickler und jeder Administrator hat seine eigene Editor-Konfiguration.&lt;br>
+Ob Farbschema, Plugins, eigene Kürzel oder Optionen - kaum ein Werkzeug wird&lt;br>
+so intensiv den eigenen Vorstellungen, Wünschen und Vorlieben angepasst wie ein&lt;br>
+Editor.&lt;/p>
+&lt;p>Muss jedoch eine Datei editiert werden, die nicht dem Benutzer &amp;ldquo;gehört&amp;rdquo; (z.B.&lt;br>
+Konfigurationsdateien eines Webservers), funktioniert der &amp;ldquo;eigene&amp;rdquo; Editor nicht&lt;br>
+mehr.&lt;/p></description><content>&lt;p>Praktisch jeder Entwickler und jeder Administrator hat seine eigene Editor-Konfiguration.&lt;br>
+Ob Farbschema, Plugins, eigene Kürzel oder Optionen - kaum ein Werkzeug wird&lt;br>
+so intensiv den eigenen Vorstellungen, Wünschen und Vorlieben angepasst wie ein&lt;br>
+Editor.&lt;/p>
+&lt;p>Muss jedoch eine Datei editiert werden, die nicht dem Benutzer &amp;ldquo;gehört&amp;rdquo; (z.B.&lt;br>
+Konfigurationsdateien eines Webservers), funktioniert der &amp;ldquo;eigene&amp;rdquo; Editor nicht&lt;br>
+mehr.&lt;/p>
+&lt;p>So öffnet sich beim Aufruf via &lt;code>sudo vim /etc/nginx/nginx.conf&lt;/code> zwar der Editor&lt;br>
+vim, aber die schöne eigene Konfiguration wird nicht geladen, da ja der Editor&lt;br>
+unter einem anderen Benutzer gestartet wird.&lt;/p>
+&lt;p>Abhilfe schafft hier das auf modernen Systemen installierte &lt;code>sudoedit&lt;/code>.&lt;br>
+Dieses Helferlein öffnet den präferierten Editor des Benutzers (setzen mit&lt;br>
+Umgebungsvariable &lt;code>EDITOR&lt;/code>) unter dessen Kontext.&lt;/p>
+&lt;p>So kann mit &lt;code>sudoedit /etc/nginx/nginx.conf&lt;/code>, wie zuvor mit &lt;code>sudo&lt;/code>,&lt;br>
+die Konfigurationsdatei des Webservers editiert werden - und das mit den&lt;br>
+Editor-Einstellungen des Benutzers.&lt;/p></content></item></channel></rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>shell on Philipp Weißmann</title><link>/tags/shell/</link><description>Recent content in shell on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sun, 29 Nov 2020 18:24:12 +0000</lastBuildDate><atom:link href="/tags/shell/index.xml" rel="self" type="application/rss+xml"/><item><title>Dateien bereinigen mit fd und sd</title><link>/dateien-bereinigen-mit-fd-und-sd/</link><pubDate>Sun, 29 Nov 2020 18:24:12 +0000</pubDate><guid>/dateien-bereinigen-mit-fd-und-sd/</guid><description>Das Problem In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
+Ob der uneinheitliche Zeilenumbruch, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.
+Die Werkzeuge Dabei kann das Projekt Editorconfig helfen.
+Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.</description><content>&lt;h2 id="das-problem">Das Problem&lt;/h2>
+&lt;p>In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.&lt;br>
+Ob der uneinheitliche &lt;a href="https://de.wikipedia.org/wiki/Zeilenumbruch#Codierung_des_Zeilenumbruchs">Zeilenumbruch&lt;/a>, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.&lt;/p>
+&lt;h2 id="die-werkzeuge">Die Werkzeuge&lt;/h2>
+&lt;p>Dabei kann das Projekt &lt;a href="https://editorconfig.org/">Editorconfig&lt;/a> helfen.&lt;br>
+Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.&lt;/p>
+&lt;p>Was passiert aber mit den bereits vorhandenen Dateien?&lt;br>
+Hier helfen ein paar einfache Kommandozeilenbefehle.&lt;br>
+Ich verwende dabei &lt;a href="https://github.com/chmln/sd">sd&lt;/a> und &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a>, die für viele System verfügbar sind.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="beispiele">Beispiele&lt;/h2>
+&lt;p>Allen Javascript Dateien die fehlende lezte Newline hinzufügen&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>(Erklärung der Regular Expression: &amp;ldquo;Finde ein Nicht-Zeilenende vor dem Dateiende. Ersetze dies durch den gleichen Inhalt wie zuvor, aber füge ein Newline am Ende ein&amp;rdquo;)&lt;/p>
+&lt;p>Alle Javascript Dateien &amp;ldquo;trailing whitespaces&amp;rdquo; löschen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>(Erklärung der Regular Expression: &amp;ldquo;Finde ein (oder mehrere) Leerzeichen vor einem Newline. Ersetze das gefundene durch eine Newline&amp;rdquo;)&lt;/p>
+&lt;p>Alle Javascript Dateien in &amp;ldquo;unix-style&amp;rdquo; Zeilenumbrüche setzen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="weitere-schritte">Weitere Schritte&lt;/h2>
+&lt;p>Für die Zukunft könnten wir einen editor-config checker in unsere CI-Pipeline einbauen, der Änderungen auf unseren Standard gegenprüft.&lt;/p>
+&lt;p>Für jede Sprache sollte jetzt noch ein Linter zur Einhaltung des gleichen Formatierungsstandards eingesetzt werden.&lt;/p>
+&lt;h2 id="fazit">Fazit&lt;/h2>
+&lt;p>Mit den kleinen Reparaturen können wir unser Projekt auf einen einheitlichen Standard heben. Das Editorconfig-Projekt hilft uns diese in der Zukunft einzuhalten.&lt;/p></content></item><item><title>Skripte schöner abbrechen</title><link>/skripte-schoener-abbrechen/</link><pubDate>Sat, 09 Mar 2019 12:34:23 +0000</pubDate><guid>/skripte-schoener-abbrechen/</guid><description>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:
+Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!</description><content>&lt;p>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!&lt;/p>
+&lt;!-- raw HTML omitted --></content></item></channel></rss>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on Philipp Weißmann</title><link>/tags/git/</link><description>Recent content in Git on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Tue, 16 Apr 2019 19:59:37 +0000</lastBuildDate><atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Simples deployment via git</title><link>/simples-deployment-via-git/</link><pubDate>Tue, 16 Apr 2019 19:59:37 +0000</pubDate><guid>/simples-deployment-via-git/</guid><description>Das Problem Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute git.
+Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.
+Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:
+Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.</description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
+&lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
+&lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="ausgangssituation">Ausgangssituation&lt;/h1>
+&lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).&lt;br>
+Auf Github befindet sich unser Projekt.&lt;br>
+Auf Laptop wie auch auf dem Server haben wir uns mit &lt;code>git clone&lt;/code> das Projekt eingerichtet.&lt;/p>
+&lt;h1 id="vorgehen">Vorgehen&lt;/h1>
+&lt;p>Das Projekt auf dem Server soll beim Empfangen neuer Dateien diese auch in das &amp;ldquo;Working Directory&amp;rdquo; schreiben. Dies aktivieren wir mit :&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Nun müssen wir unserem Projekt auf dem Laptop das neue Ziel beibringen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Unsere Änderungen können wir weiterhin zu Github schieben:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Aber nun auch neu: Auf dem Server direkt ausrollen:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Es ist sogar möglich mittels &lt;code>push-url&lt;/code> mehrere Ziele auf einmal zu definieren.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Natürlich ersetzt unser kleiner Workflow keinen Build-Server oder ausgetüftelte Deployment Prozesse. Aber für Kleinst-Projekte kann das vorgehen mit &lt;code>updateInstead&lt;/code> sehr praktisch sein.&lt;/p>
+&lt;p>&lt;strong>Aber Achtung&lt;/strong>: Verwenden wir diese Möglichkeit um Webseiten zu versionieren: Nicht vergessen, den &lt;code>.git&lt;/code> Ordner nicht auszuliefern.&lt;/p></content></item><item><title>Myrepos: Alle meine Repositories</title><link>/myrepos-alle-meine-repositories/</link><pubDate>Sun, 17 May 2015 13:15:05 +0000</pubDate><guid>/myrepos-alle-meine-repositories/</guid><description>&lt;h1 id="repository-zentrale">Repository-Zentrale&lt;/h1>
+&lt;p>Dank VCSH habe ich all meine Dotfiles hübsch in Git-Repositories verpackt.&lt;br>
+Das Einbinden eines einzelnen Repositories geht nun zwar schnell von der Hand,&lt;br>
+aber wenn nun für &lt;code>vim&lt;/code> und &lt;code>mutt&lt;/code> und &lt;code>emacs&lt;/code> und und und &amp;hellip; lauter&lt;br>
+Repositories vorliegen wird es unbequem.&lt;br>
+Auch das updaten (&lt;code>pull&lt;/code>) jedes einzelnen Repos ist sehr mühselig und damit&lt;br>
+fehleranfällig.&lt;/p>
+&lt;p>Abhilfe schafft hier &lt;a href="https://myrepos.branchable.com/">myrepos&lt;/a> (kurz &lt;code>mr&lt;/code>),&lt;br>
+dass es erlaubt Aktionen auf mehreren Repositories auszuführen.&lt;/p></description><content>&lt;h1 id="repository-zentrale">Repository-Zentrale&lt;/h1>
+&lt;p>Dank VCSH habe ich all meine Dotfiles hübsch in Git-Repositories verpackt.&lt;br>
+Das Einbinden eines einzelnen Repositories geht nun zwar schnell von der Hand,&lt;br>
+aber wenn nun für &lt;code>vim&lt;/code> und &lt;code>mutt&lt;/code> und &lt;code>emacs&lt;/code> und und und &amp;hellip; lauter&lt;br>
+Repositories vorliegen wird es unbequem.&lt;br>
+Auch das updaten (&lt;code>pull&lt;/code>) jedes einzelnen Repos ist sehr mühselig und damit&lt;br>
+fehleranfällig.&lt;/p>
+&lt;p>Abhilfe schafft hier &lt;a href="https://myrepos.branchable.com/">myrepos&lt;/a> (kurz &lt;code>mr&lt;/code>),&lt;br>
+dass es erlaubt Aktionen auf mehreren Repositories auszuführen.&lt;/p>
+&lt;h1 id="installation">Installation&lt;/h1>
+&lt;p>Wir installieren uns das Paket &lt;code>myrepos&lt;/code> via &lt;code>apt-get&lt;/code> oder &lt;code>yaourt&lt;/code>&lt;/p>
+&lt;p>Installation unter Debian/Ubuntu:&lt;/p>
+&lt;pre>&lt;code>sudo apt-get install myrepos
+&lt;/code>&lt;/pre>
+&lt;p>oder unter Arch Linux&lt;/p>
+&lt;pre>&lt;code>yaourt -S myrepos
+&lt;/code>&lt;/pre>
+&lt;h1 id="basis-konfiguration">Basis-Konfiguration&lt;/h1>
+&lt;p>Wir legen eine Konfigurationsdatei mit dem Namen &lt;code>~/.mrconfig&lt;/code> an mit folgendem&lt;br>
+Inhalt:&lt;/p>
+&lt;pre>&lt;code>[DEFAULT]
+git_gc = git gc &amp;quot;$@&amp;quot;
+jobs = 1
+include = cat ~/.config/mr/config.d/*
+&lt;/code>&lt;/pre>
+&lt;p>Wenn nach allen Schritten die Konfiguration zuverlässig installiert können wir&lt;br>
+die Anzahl der parallelen Jobs auf z.B. 4 erhöhen.&lt;/p>
+&lt;p>Nun legen wir folgende Verzeichnisse an:&lt;/p>
+&lt;pre>&lt;code>mkdir -p ~/.config/mr/config.d
+mkdir ~/.config/mr/available.d
+&lt;/code>&lt;/pre>
+&lt;p>In das Verzeichnis &lt;code>available.d&lt;/code> legen wir alle Konfigurationsdateien ab.&lt;/p>
+&lt;p>Eine solche Konfigurationsdatei enthält den Ort Zielort des Repositories&lt;br>
+und auch die Anweisung, woher die Quelle kommt.&lt;/p>
+&lt;p>Die Datei für eine &lt;code>vim&lt;/code>-VCSH-Konfiguration könnte z.B. so aussehen:&lt;/p>
+&lt;p>Dateiname: &lt;code>vim.vcsh&lt;/code>&lt;/p>
+&lt;pre>&lt;code>[$HOME/.config/vcsh/repo.d/vim.git]
+checkout = vcsh clone git@MEINGITSERVER:vim vim
+&lt;/code>&lt;/pre>
+&lt;p>Dabei kann myrepos vcsh oder direkt git oder auch subversion (u.v.m.) nutzen.&lt;/p>
+&lt;p>Nun linke (&lt;code>ln -s&lt;/code>) ich noch alle die Konfigurationsdateien nach &lt;code>available.d&lt;/code>,&lt;br>
+die auch wirklich auf all meinen Systemen nutzen möchte.&lt;/p>
+&lt;p>Mit dem Aufruf&lt;/p>
+&lt;pre>&lt;code>mr up
+&lt;/code>&lt;/pre>
+&lt;p>Aktualisiere (z.B. bei git: pull) ich nun alle Repositories, die ich via&lt;br>
+myrepos verwalte. Somit kann ich beim Wechsel von Rechnern einfach meine&lt;br>
+Konfiguration aktualisieren.&lt;/p>
+&lt;p>Auch pushen von allen Repositories ist möglich:&lt;/p>
+&lt;pre>&lt;code>mr push
+&lt;/code>&lt;/pre>
+&lt;p>usw.&lt;/p>
+&lt;h1 id="myrepos-in-vcsh">Myrepos in VCSH&lt;/h1>
+&lt;p>Auch die Konfiguration von myrepos selbst verwalte ich mit vcsh (und&lt;br>
+wiederum mit Datei-Eintrag in myrepos), so dass sich auch beim Hinzukommen&lt;br>
+von neuen Repositories ich diese auf meinen Geräten erhalte.&lt;/p>
+&lt;h1 id="neuer-rechner---einfacher-schritt">Neuer Rechner - einfacher Schritt&lt;/h1>
+&lt;p>Bei einem neuen Rechner sind nun extrem wenige Schritte notwendig:&lt;/p>
+&lt;ol>
+&lt;li>Installieren von vcsh und myrepos (gibt es zumeist im Paketmanager)&lt;/li>
+&lt;li>Klonen des myrepos vcsh repositories (d.h. &lt;code>vcsh clone git@MEINGITSERVER:mr mr&lt;/code>)&lt;/li>
+&lt;li>Klonen aller weiteren Repos via &lt;code>mr up&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h1 id="sonderfälle">Sonderfälle&lt;/h1>
+&lt;p>Auch einfache Programme (z.B. &lt;a href="https://rg3.github.io/youtube-dl/">youtube-dl&lt;/a>)&lt;br>
+installiere (und update) ich via myrepos: Hierzu leg ich ich wieder eine&lt;br>
+Konfigurationsdatei an (z.B. &lt;code>youtube-dl.git&lt;/code>) mit folgendem Inhalt:&lt;/p>
+&lt;pre>&lt;code>[$HOME/.local/opt/youtube-dl.git]
+checkout = git clone https://github.com/rg3/youtube-dl.git $HOME/.local/opt/youtube-dl.git
+push = echo &amp;quot;No pushing to public repo&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;p>Der &lt;code>push&lt;/code> Befehl wird hier explizit überschrieben und gibt bei &lt;code>mr push&lt;/code> einfach die&lt;br>
+Nachricht aus, dass ich in dieses Repository nicht pushen möchte.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Myrepos ermöglicht das einfache und bequeme Verwalten und Nutzen von vielen&lt;br>
+Repositories. Gerade das Updaten oder initiale Klonen wird damit deutlich&lt;br>
+bequemer. Insbesondere im Zusammenspiel mit VCSH wird eine extrem komfortable&lt;br>
+Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>Git-tfs</title><link>/git-tfs/</link><pubDate>Wed, 22 Apr 2015 19:11:48 +0000</pubDate><guid>/git-tfs/</guid><description>&lt;h1 id="git-statt-tfs">Git statt TFS?&lt;/h1>
+&lt;p>Wer gerne mit &lt;a href="http://git-scm.com/">git&lt;/a> arbeitet, wünscht sich oft eine Brücke von anderen Versionsmanagement-Werkzeugen zu git.&lt;br>
+So gibt es zur Nutzung von &lt;a href="https://subversion.apache.org/">Subversion (snv)&lt;/a> die Möglichkeit &lt;a href="http://git-scm.com/docs/git-svn">git-svn&lt;/a> zu nutzen.&lt;br>
+Was aber, wenn die Serverseite &lt;a href="http://de.wikipedia.org/wiki/Team_Foundation_Server">TFS&lt;/a>{.broken_link} anbietet?&lt;/p></description><content>&lt;h1 id="git-statt-tfs">Git statt TFS?&lt;/h1>
+&lt;p>Wer gerne mit &lt;a href="http://git-scm.com/">git&lt;/a> arbeitet, wünscht sich oft eine Brücke von anderen Versionsmanagement-Werkzeugen zu git.&lt;br>
+So gibt es zur Nutzung von &lt;a href="https://subversion.apache.org/">Subversion (snv)&lt;/a> die Möglichkeit &lt;a href="http://git-scm.com/docs/git-svn">git-svn&lt;/a> zu nutzen.&lt;br>
+Was aber, wenn die Serverseite &lt;a href="http://de.wikipedia.org/wiki/Team_Foundation_Server">TFS&lt;/a>{.broken_link} anbietet?&lt;/p>
+&lt;h1 id="installation">Installation&lt;/h1>
+&lt;p>&lt;a href="http://git-scm.com/download/win">Git für Windows&lt;/a> wird einfach via Installer in das System gebracht.&lt;br>
+Eine Brücke zu TFS fehlt jedoch noch.&lt;/p>
+&lt;p>Abhilfe schafft hier das Werkzeug &lt;a href="https://github.com/git-tfs/git-tfs">git-tfs&lt;/a>.&lt;br>
+Zur Installation muss lediglich die Datei heruntergeladen und entpackt werden.&lt;br>
+Anschließend fügen wir das Verzeichnis der &lt;code>PATH&lt;/code> Variable hinzu.&lt;/p>
+&lt;p>Nun kann das installierte &lt;code>git&lt;/code> einen weiteren Befehl: &lt;code>git tfs&lt;/code>&lt;/p>
+&lt;h1 id="klonen">Klonen&lt;/h1>
+&lt;p>Als erstes schauen wir uns an, welche TFS Projekte/Branches auf dem Server liegen:&lt;/p>
+&lt;pre>&lt;code>git tfs list-remote-branches http://MEIN-TFS-SERVER:8080/tfs/
+&lt;/code>&lt;/pre>
+&lt;p>Wenn wir das Projekt gefunden haben, das wir brauchen, klonen wir es uns - und zwar mit allen Branches:&lt;/p>
+&lt;pre>&lt;code>git tfs clone --with-branches http://MEIN-TFS-SERVER:8080/tfs/ $/MeinProjekt
+&lt;/code>&lt;/pre>
+&lt;p>Je nach Projektgröße, kann dieser Schritt einige Zeit dauern.&lt;/p>
+&lt;h1 id="arbeiten-mit-git">Arbeiten mit git&lt;/h1>
+&lt;p>Die Arbeit mit &lt;code>git&lt;/code> erfolgt wie gewohnt, lediglich das &amp;ldquo;pushen&amp;rdquo; auf den Server bzw. das &amp;ldquo;pullen&amp;rdquo; entfällt.&lt;br>
+Hierzu müssen wir abermals &lt;code>git-tfs&lt;/code> aufrufen:&lt;/p>
+&lt;h1 id="tfs-nach-git">TFS nach Git&lt;/h1>
+&lt;p>Wenn wir uns die Änderungen von Teamkollegen abholen wollen, erfolgt dies mit folgendem Befehl:&lt;/p>
+&lt;pre>&lt;code>git tfs pull
+&lt;/code>&lt;/pre>
+&lt;p>Um dies für alle Branches durchzuführen, nutzen wir:&lt;/p>
+&lt;pre>&lt;code>git tfs pull --all
+&lt;/code>&lt;/pre>
+&lt;p>Um dabei statt eines Merge einen &lt;a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Rebase&lt;/a> durchzuführen, nutzen wir:&lt;/p>
+&lt;pre>&lt;code>git tfs pull --rebase
+&lt;/code>&lt;/pre>
+&lt;h1 id="git-nach-tfs">Git nach TFS&lt;/h1>
+&lt;p>Nachdem wir eine (oder mehrere) Aufgaben erledigt haben wollen wir unsere Commits auch an den TFS übertragen.&lt;br>
+Gerade bei TFS Konfigurationen, die Anforderungen an einen Checkin haben (z.B. &amp;ldquo;muss mit einem Task verbunden sein&amp;rdquo;) bietet sich das &amp;ldquo;Checkintool&amp;rdquo; an.&lt;br>
+Diese Programm erlaubt es komfortabel Git-Commits auf den TFS Server zu bringen und dabei TFS Elemente (z.B. Tasks) zu verlinken.&lt;/p>
+&lt;pre>&lt;code>git tfs checkintool
+&lt;/code>&lt;/pre>
+&lt;h1 id="alternativen">Alternativen&lt;/h1>
+&lt;p>Wer unter einem anderen Betriebssystem als Windows arbeitet, kann Microsofts&lt;br>
+eigene Brücke namens &lt;a href="https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=&amp;amp;ved=2ahUKEwiVy7SR1Nb7AhUJQvEDHUS3DWQQFnoECA4QAQ&amp;amp;url=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2FA%2FE%2F2%2FAE23B059-5727-445B-91CC-15B7A078A7F4%2FGit-TF_GettingStarted.html">git-tf&lt;/a>(!) nutzen.&lt;br>
+Diese in Java geschriebene Brücke funktioniert ähnlich git-tfs, bietet jedoch&lt;br>
+kein &amp;ldquo;Checkintool&amp;rdquo;.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>Git-tfs erlaubt es extrem einfach eine transparente Brücke zwischen TFS und Git zu nutzen.&lt;br>
+Wer Nicht-Windows Betriebssysteme nutzt, kann mit git-tf ebenfalls mit einem TFS zusammen arbeiten.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>Einstellungen Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?
+Die Einstellungen!
+Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.
+Doch auch Software hat Einstellungen:
+Welchen Editor setze ich als Standard? Welche Shell-Erweiterungen lade ich in oh-my-zsh? Welches color-theme lade ich in vim? Welche Accounts habe ich in mutt? Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.</description><content>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
+&lt;p>Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?&lt;br>
+Die Einstellungen!&lt;br>
+Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.&lt;/p>
+&lt;p>Doch auch Software hat Einstellungen:&lt;/p>
+&lt;ul>
+&lt;li>Welchen Editor setze ich als Standard?&lt;/li>
+&lt;li>Welche Shell-Erweiterungen lade ich in &lt;code>oh-my-zsh&lt;/code>?&lt;/li>
+&lt;li>Welches &lt;code>color-theme&lt;/code> lade ich in vim?&lt;/li>
+&lt;li>Welche Accounts habe ich in &lt;code>mutt&lt;/code>?&lt;/li>
+&lt;/ul>
+&lt;p>Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.&lt;br>
+Da ich jedoch regelmässig auf unterschiedlichen Rechnern arbeite, möchte ich diese aktuell halten.&lt;/p>
+&lt;h1 id="dropbox">Dropbox&lt;/h1>
+&lt;p>Mein erster Ansatz war es, alle Dateien in einen zentralen Dropbox Ordner zu verschieben und Links zu erstellen nach folgendem Schema&lt;/p>
+&lt;pre>&lt;code>~/.vimrc -&amp;gt; ~/Dropbox/config/vimrc
+&lt;/code>&lt;/pre>
+&lt;p>Meine &lt;code>.vimrc&lt;/code> wurde durch den Dropbox-Dienst nun auf allen Rechnern synchronisiert und immer aktuell.&lt;br>
+Richtete ich einen neuen Rechner ein, so musste ich &amp;ldquo;nur&amp;rdquo; Dropbox und den Link erstellen.&lt;/p>
+&lt;p>Dieser Ansatz hat jedoch einige Nachteile:&lt;/p>
+&lt;ol>
+&lt;li>Ich bin von der Verfügbarkeit von Dropbox abhängig (ist ok für mich)&lt;/li>
+&lt;li>Ich muss auf allen Rechnern Dropbox installieren (ist auch noch so ok)&lt;/li>
+&lt;li>Ich muss alle Dateien händisch verlinken (nicht ok!)&lt;/li>
+&lt;li>Die Änderungen sind nicht dokumentiert bzw. haben keine definierten Zwischenstände (nicht ok!)&lt;/li>
+&lt;li>Alle Änderungen werden sofort bei allen Systemen aktualisiert (außer ich stoppe Dropbox)&lt;/li>
+&lt;/ol>
+&lt;h1 id="vcsh">VCSH&lt;/h1>
+&lt;p>Ich wünschte mir ein System, welches die Versionierung der Konfigurationsdaten übernimmt und bin dabei auf VCHS gestoßen.&lt;/p>
+&lt;p>Das schöne an VCSH: Es baut einfach auf git auf und bietet somit einerseits ein vertrautes Interface. Zudem kann ich meine Konfigurationsdateien nun einfach in ein zentrales Repository (z.B. auf Github oder auf einem eigenen Server) ablegen.&lt;/p>
+&lt;h2 id="installieren">Installieren&lt;/h2>
+&lt;p>Installieren erfolgt aus dem Repository, Debian/Ubuntu also per&lt;/p>
+&lt;pre>&lt;code>apt-get install vcsh
+&lt;/code>&lt;/pre>
+&lt;p>oder bei Arch Linux via aur (hier mit yaourt)&lt;/p>
+&lt;pre>&lt;code>yaourt -S vcsh
+&lt;/code>&lt;/pre>
+&lt;h2 id="anlegen">Anlegen&lt;/h2>
+&lt;p>Ich empfehle pro Werkzeug (z.B. emacs, mutt, &amp;hellip;) ein eigenes Repository anzulegen um die Übersicht zu behalten.&lt;br>
+Die Syntax hierbei entspricht der von git, jedoch mit Namen des Werkzeugs vorangestellt, also &lt;code>vcsh WERKZEUG GIT-BEFEHL&lt;/code> (Ausnahme: &lt;code>init&lt;/code>-Befehl)&lt;/p>
+&lt;p>Wir initialisieren uns erstmal ein Repository für unsere Vim-Einstellungen&amp;hellip;&lt;/p>
+&lt;pre>&lt;code>vcsh init vim
+&lt;/code>&lt;/pre>
+&lt;p>&amp;hellip; fügen die Datei(en) hinzu, die wir verwalten wollen &amp;hellip;&lt;/p>
+&lt;pre>&lt;code>vcsh vim add ~/.vimrc
+&lt;/code>&lt;/pre>
+&lt;p>&amp;hellip; machen unseren ersten commit &amp;hellip;&lt;/p>
+&lt;pre>&lt;code>vcsh vim commit -m &amp;quot;Mein erster Vim-commit&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;p>&amp;hellip; und pushen diesen auf unseren Git-Server (z.B. Github)&lt;/p>
+&lt;pre>&lt;code>vcsh vim remote add git@MEINGITSERVER:vim.git
+vcsh vim push -u origin master
+&lt;/code>&lt;/pre>
+&lt;h2 id="klonen">Klonen&lt;/h2>
+&lt;p>Auf einem neuen Rechner können wir uns die Konfiguration einfach holen:&lt;/p>
+&lt;pre>&lt;code>vcsh clone git@MEINGISERVER:vim.git
+&lt;/code>&lt;/pre>
+&lt;h2 id="gitignore">.gitignore&lt;/h2>
+&lt;p>Da sich unsere Konfigurationsdateien im Home-Verzeichnis des Users befinden, hat VCSH (bzw. git) keine Chance zu wissen welche Dateien definitiv zu dem Projekt gehören und welche nicht.&lt;br>
+Also schaffen wir mit einer .gitignore-Datei Abhilfe: Alle Dateien und Verzeichnisse sollen ignoriert werden, außer den Projektdateien/Ordnern.&lt;br>
+Diese erstellen wir automatisch via&lt;/p>
+&lt;pre>&lt;code>vcsh write-gitignore vim
+&lt;/code>&lt;/pre>
+&lt;p>Wie fügen die ignore-Datei selbst auch dem Projekt hinzu&amp;hellip;&lt;/p>
+&lt;pre>&lt;code>vcsh vim add -f ~/.gitignore.d/vim
+&lt;/code>&lt;/pre>
+&lt;p>&amp;hellip; und schreiben die Datei erneut.&lt;/p>
+&lt;pre>&lt;code>vcsh write-gitignore vim
+&lt;/code>&lt;/pre>
+&lt;p>Nun kontrollieren wir die Datei &lt;code>~/.gitignore.d/vim&lt;/code> ob sie nicht Dateien ignoriert, welche wir versionieren wollen;&lt;br>
+Wenn nicht: Ab damit ins Repository!&lt;/p>
+&lt;pre>&lt;code>vcsh vim add ~/.gitignore.d/vim
+&lt;/code>&lt;/pre>
+&lt;p>Alle weiteren Aktionen können wir nun in gewohnter git-manier (commit push pull) erledigen.&lt;/p>
+&lt;h1 id="fazit">Fazit&lt;/h1>
+&lt;p>VCSH erlaubt es bequem Dotfiles zu organisieren und diese versioniert abzulegen.&lt;br>
+Im Alltag hilft mir es enorm meine Konfigurationsdateien auf einem Stand zu halten und Änderungen dokumentiert.&lt;/p>
+&lt;p>Ergänzend zu VCSH bietet sich die Benutzung von &lt;code>myrepos&lt;/code> ab um mehrere Repositories gleichzeitig zu verwalten.&lt;/p></content></item></channel></rss>
