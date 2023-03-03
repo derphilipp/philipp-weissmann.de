@@ -32,7 +32,7 @@ Auf Laptop wie auch auf dem Server haben wir uns mit `git clone` das Projekt ein
 
 # Vorgehen
 
-Das Projekt auf dem Server soll beim Empfangen neuer Dateien diese auch in das "Working Directory" schreiben. Dies aktivieren wir mit :
+Das Projekt auf dem Server soll beim Empfangen neuer Dateien diese auch in das "Working Directory" schreiben. Dies aktivieren wir mit:
 
 
 ```bash
