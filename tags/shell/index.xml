@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>shell on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/shell/</link><description>Recent content in shell on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sun, 29 Nov 2020 18:24:12 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/shell/index.xml" rel="self" type="application/rss+xml"/><item><title>Dateien bereinigen mit fd und sd</title><link>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</link><pubDate>Sun, 29 Nov 2020 18:24:12 +0000</pubDate><guid>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</guid><description>Das Problem In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
-Ob der uneinheitliche Zeilenumbruch, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.
-Die Werkzeuge Dabei kann das Projekt Editorconfig helfen.
-Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.</description><content>&lt;h2 id="das-problem">Das Problem&lt;/h2>
-&lt;p>In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>shell on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/shell/</link><description>Recent content in shell on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sun, 29 Nov 2020 18:24:12 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/shell/index.xml" rel="self" type="application/rss+xml"/><item><title>Dateien bereinigen mit fd und sd</title><link>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</link><pubDate>Sun, 29 Nov 2020 18:24:12 +0000</pubDate><guid>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</guid><description>Das Problem In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz. Ob der uneinheitliche Zeilenumbruch, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.
+Die Werkzeuge Dabei kann das Projekt Editorconfig helfen. Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.</description><content>&lt;h2 id="das-problem">Das Problem&lt;/h2>
+&lt;p>In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
 Ob der uneinheitliche &lt;a href="https://de.wikipedia.org/wiki/Zeilenumbruch#Codierung_des_Zeilenumbruchs">Zeilenumbruch&lt;/a>, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.&lt;/p>
 &lt;h2 id="die-werkzeuge">Die Werkzeuge&lt;/h2>
-&lt;p>Dabei kann das Projekt &lt;a href="https://editorconfig.org/">Editorconfig&lt;/a> helfen.&lt;br>
+&lt;p>Dabei kann das Projekt &lt;a href="https://editorconfig.org/">Editorconfig&lt;/a> helfen.
 Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.&lt;/p>
-&lt;p>Was passiert aber mit den bereits vorhandenen Dateien?&lt;br>
-Hier helfen ein paar einfache Kommandozeilenbefehle.&lt;br>
+&lt;p>Was passiert aber mit den bereits vorhandenen Dateien?
+Hier helfen ein paar einfache Kommandozeilenbefehle.
 Ich verwende dabei &lt;a href="https://github.com/chmln/sd">sd&lt;/a> und &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a>, die für viele System verfügbar sind.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;h2 id="beispiele">Beispiele&lt;/h2>
 &lt;p>Allen Javascript Dateien die fehlende lezte Newline hinzufügen&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fd --extension js -x sd &amp;amp;&lt;span style="color:#75715e">#039;([^\n]\z)&amp;amp;#039; &amp;amp;#039;$1\n&amp;amp;#039;&lt;/span>
@@ -28,5 +25,4 @@ Ich verwende dabei &lt;a href="https://github.com/chmln/sd">sd&lt;/a> und &lt;a 
 #!/usr/bin/env bash set -Eeuo pipefail Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!</description><content>&lt;p>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#!/usr/bin/env bash
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>set -Eeuo pipefail
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!&lt;/p>
-&lt;!-- raw HTML omitted --></content></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!&lt;/p></content></item></channel></rss>

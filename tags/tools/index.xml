@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/tools/</link><description>Recent content in Tools on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sun, 29 Nov 2020 18:24:12 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Dateien bereinigen mit fd und sd</title><link>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</link><pubDate>Sun, 29 Nov 2020 18:24:12 +0000</pubDate><guid>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</guid><description>Das Problem In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
-Ob der uneinheitliche Zeilenumbruch, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.
-Die Werkzeuge Dabei kann das Projekt Editorconfig helfen.
-Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.</description><content>&lt;h2 id="das-problem">Das Problem&lt;/h2>
-&lt;p>In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/tools/</link><description>Recent content in Tools on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sun, 29 Nov 2020 18:24:12 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Dateien bereinigen mit fd und sd</title><link>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</link><pubDate>Sun, 29 Nov 2020 18:24:12 +0000</pubDate><guid>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</guid><description>Das Problem In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz. Ob der uneinheitliche Zeilenumbruch, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.
+Die Werkzeuge Dabei kann das Projekt Editorconfig helfen. Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.</description><content>&lt;h2 id="das-problem">Das Problem&lt;/h2>
+&lt;p>In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
 Ob der uneinheitliche &lt;a href="https://de.wikipedia.org/wiki/Zeilenumbruch#Codierung_des_Zeilenumbruchs">Zeilenumbruch&lt;/a>, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.&lt;/p>
 &lt;h2 id="die-werkzeuge">Die Werkzeuge&lt;/h2>
-&lt;p>Dabei kann das Projekt &lt;a href="https://editorconfig.org/">Editorconfig&lt;/a> helfen.&lt;br>
+&lt;p>Dabei kann das Projekt &lt;a href="https://editorconfig.org/">Editorconfig&lt;/a> helfen.
 Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.&lt;/p>
-&lt;p>Was passiert aber mit den bereits vorhandenen Dateien?&lt;br>
-Hier helfen ein paar einfache Kommandozeilenbefehle.&lt;br>
+&lt;p>Was passiert aber mit den bereits vorhandenen Dateien?
+Hier helfen ein paar einfache Kommandozeilenbefehle.
 Ich verwende dabei &lt;a href="https://github.com/chmln/sd">sd&lt;/a> und &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a>, die für viele System verfügbar sind.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;h2 id="beispiele">Beispiele&lt;/h2>
 &lt;p>Allen Javascript Dateien die fehlende lezte Newline hinzufügen&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fd --extension js -x sd &amp;amp;&lt;span style="color:#75715e">#039;([^\n]\z)&amp;amp;#039; &amp;amp;#039;$1\n&amp;amp;#039;&lt;/span>
@@ -24,18 +21,16 @@ Ich verwende dabei &lt;a href="https://github.com/chmln/sd">sd&lt;/a> und &lt;a 
 &lt;p>Für die Zukunft könnten wir einen editor-config checker in unsere CI-Pipeline einbauen, der Änderungen auf unseren Standard gegenprüft.&lt;/p>
 &lt;p>Für jede Sprache sollte jetzt noch ein Linter zur Einhaltung des gleichen Formatierungsstandards eingesetzt werden.&lt;/p>
 &lt;h2 id="fazit">Fazit&lt;/h2>
-&lt;p>Mit den kleinen Reparaturen können wir unser Projekt auf einen einheitlichen Standard heben. Das Editorconfig-Projekt hilft uns diese in der Zukunft einzuhalten.&lt;/p></content></item><item><title>Umbenennen mit dem Lieblingseditor</title><link>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</link><pubDate>Sat, 14 Sep 2019 08:11:33 +0000</pubDate><guid>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</guid><description>Dateien umbenennen ist oft mühsam.
+&lt;p>Mit den kleinen Reparaturen können wir unser Projekt auf einen einheitlichen Standard heben. Das Editorconfig-Projekt hilft uns diese in der Zukunft einzuhalten.&lt;/p></content></item><item><title>Umbenennen mit dem Lieblingseditor</title><link>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</link><pubDate>Sat, 14 Sep 2019 08:11:33 +0000</pubDate><guid>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</guid><description>Dateien umbenennen ist oft mühsam. Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen. Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein. Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.
+Hier kommt die Werkzeugsammlung renameutils zum Einsatz.
+Installation Installiert wird das ganze aus den üblichen Paketmanagern, also z.B.
+brew install renameutils # macOS / Linuxbrew pacman-S renameutils # Arch based sudo apt install renameutils # Debian based Benutzung Nun gibt es die Befehle: qmv und qcp, mit denen Dateien umbenannt, bzw.</description><content>&lt;p>Dateien umbenennen ist oft mühsam.
 Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.
 Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.
-Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.
-Hier kommt die Werkzeugsammlung renameutils zum Einsatz.
-Installation brew install renameutils # macOS / Linuxbrew pacman-S renameutils # Arch based sudo apt install renameutils # Debian based Benutzung Nun gibt es die Befehle: qmv und qcp, mit denen Dateien umbenannt, bzw.</description><content>&lt;p>Dateien umbenennen ist oft mühsam.&lt;br>
-Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.&lt;br>
-Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.&lt;br>
 Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.&lt;/p>
 &lt;p>Hier kommt die Werkzeugsammlung &lt;code>renameutils&lt;/code> zum Einsatz.&lt;/p>
 &lt;h2 id="installation">Installation&lt;/h2>
-&lt;!-- raw HTML omitted -->
+&lt;p>Installiert wird das ganze aus den üblichen Paketmanagern, also z.B.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>brew install renameutils &lt;span style="color:#75715e"># macOS / Linuxbrew&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman-S renameutils &lt;span style="color:#75715e"># Arch based&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install renameutils &lt;span style="color:#75715e"># Debian based&lt;/span>
@@ -53,9 +48,9 @@ Kopie von abrechnung.txt
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>qmv *.txt
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nun öffnet sich unser eingestellter Editor mit einer Dateiliste und wir können die Datei-Umbenennungen direkt im Editor vornehmen.&lt;/p>
 &lt;h2 id="fazit">Fazit&lt;/h2>
-&lt;p>Das Verwenden von Shell-Kommandos zum Umbennen ist oft schnell.&lt;br>
+&lt;p>Das Verwenden von Shell-Kommandos zum Umbennen ist oft schnell.
 So geht das Umbenennen aller &lt;code>.txt&lt;/code> Dateien in &lt;code>.md&lt;/code> schnell von der Hand.&lt;/p>
-&lt;p>Für komplexe Fälle können wir &lt;code>qmv&lt;/code> verwenden. Damit können wir unseren vertrauten Editor und alle darin vorhandenen Funktionen nutzen.&lt;br>
+&lt;p>Für komplexe Fälle können wir &lt;code>qmv&lt;/code> verwenden. Damit können wir unseren vertrauten Editor und alle darin vorhandenen Funktionen nutzen.
 Insbesondere, wenn wir keine einfachen Regeln zum Umbenennen formulieren können, helfen uns die &lt;code>renameutils&lt;/code> hier stark weiter.&lt;/p>
 &lt;p>So ist bei mir der Alias&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias ren&lt;span style="color:#f92672">=&lt;/span>qmv --format&lt;span style="color:#f92672">=&lt;/span>destination-only
@@ -65,7 +60,6 @@ Aus der Community getrieben Pakete können aus dem AUR mit einem beliebigen Tool
 Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.&lt;/p>
 &lt;p>Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: &lt;a href="https://de.wikipedia.org/wiki/Rolling_Release" title="Rolling Releases">Rolling Releases&lt;/a> statt großer Versionssprünge erleichtern den Entwickleralltag.
 Auch auf dem Raspberry Pi läuft diese Distribution.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;p>Aus der Community getrieben Pakete können aus dem &lt;a href="https://wiki.archlinux.org/title/Arch_User_Repository" title="AUR">AUR&lt;/a> mit einem beliebigen Tool installiert werden.
 Derzeit verwende ich dafür gerne &lt;a href="https://github.com/Jguer/yay">yay&lt;/a>.&lt;/p>
 &lt;p>Um &lt;code>yay&lt;/code> auf dem Raspberry Pi zu installieren, sind folgende Schritte notwendig:&lt;/p>
@@ -83,7 +77,6 @@ Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für
 &lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
 &lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
 &lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;h1 id="ausgangssituation">Ausgangssituation&lt;/h1>
 &lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).
 Auf Github befindet sich unser Projekt.
@@ -114,7 +107,6 @@ fd schuh Beispiel 2 Finde alle .</description><content>&lt;p>Das Tool &lt;a href
 Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.&lt;/p>
 &lt;p>Hier kommt &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a> ins Spiel:&lt;/p>
 &lt;p>Das Open-Source Programm erledigt nahezu alle Aufgaben von &lt;code>find&lt;/code>, ist aber einfacher zu bedienen.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;h1 id="beispiel1">Beispiel1&lt;/h1>
 &lt;p>Finde alle Dateien mit der Zeichenfolge &lt;em>schuh&lt;/em> im Namen:&lt;/p>
 &lt;p>find:&lt;/p>
@@ -136,10 +128,10 @@ Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. L
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Konvertiert parallel mehrere Dateien auf einmal&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fd -e png -x convert &lt;span style="color:#f92672">{}&lt;/span> &lt;span style="color:#f92672">{&lt;/span>.&lt;span style="color:#f92672">}&lt;/span>.jpg
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="fazit">Fazit:&lt;/h1>
-&lt;p>Wer &lt;code>find&lt;/code> in- und auswendig beherrscht hat keinen Zwang zu wechseln. Der bequeme Syntax von &lt;code>fd&lt;/code> macht das Leben jedoch leichter. Die Möglichkeit parallel mehrere Dateien zu verarbeiten ist ungemein praktisch. Daher ist &lt;code>fd&lt;/code> für jeden Kommandozeilen-Fan absolut empfehlenswert.&lt;/p></content></item><item><title>Windows auf Schlafentzug</title><link>https://philipp-weissmann.de/windows-auf-schlafentzug/</link><pubDate>Tue, 13 Dec 2016 08:59:09 +0000</pubDate><guid>https://philipp-weissmann.de/windows-auf-schlafentzug/</guid><description>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
-Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
-Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p></description><content>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
-Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
+&lt;p>Wer &lt;code>find&lt;/code> in- und auswendig beherrscht hat keinen Zwang zu wechseln. Der bequeme Syntax von &lt;code>fd&lt;/code> macht das Leben jedoch leichter. Die Möglichkeit parallel mehrere Dateien zu verarbeiten ist ungemein praktisch. Daher ist &lt;code>fd&lt;/code> für jeden Kommandozeilen-Fan absolut empfehlenswert.&lt;/p></content></item><item><title>Windows auf Schlafentzug</title><link>https://philipp-weissmann.de/windows-auf-schlafentzug/</link><pubDate>Tue, 13 Dec 2016 08:59:09 +0000</pubDate><guid>https://philipp-weissmann.de/windows-auf-schlafentzug/</guid><description>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.
+Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine
+Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p></description><content>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.
+Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine
 Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p>
 &lt;p>Zwar verhindert manche Präsentationssoftware die lästige Sperre, aber spätestens bei Präsentationen aus PDF Dateien oder im Browser schlägt die Sperre erneut zu.&lt;/p>
 &lt;p>Abhilfe verschafft ein kleines Snippet, welches Tastatureingaben simuliert:&lt;/p>
@@ -150,8 +142,7 @@ Do While i = 0
 objResult = objShell.sendkeys(&amp;#34;{NUMLOCK}{NUMLOCK}&amp;#34;)
 Wscript.Sleep (6000)
 Loop
-&lt;/code>&lt;/pre>&lt;!-- raw HTML omitted -->
-&lt;p>Einfach als &lt;code>schlaflos.vbs&lt;/code> abspeichern und ausführen. Nun wird alle sechs Sekunden die &lt;code>Numlock&lt;/code> zwei Mal gedrückt.&lt;br>
+&lt;/code>&lt;/pre>&lt;p>Einfach als &lt;code>schlaflos.vbs&lt;/code> abspeichern und ausführen. Nun wird alle sechs Sekunden die &lt;code>Numlock&lt;/code> zwei Mal gedrückt.
 Nun haben wir ein schlafloses Windows, welches nach dem Beenden des Skriptes, spätestens aber zum nächsten Neustart auch wieder schlafen darf.&lt;/p>
 &lt;p>Gute Nacht Windows!&lt;/p></content></item><item><title>Wget wiederaufnehmen</title><link>https://philipp-weissmann.de/wget-wiederaufnehmen/</link><pubDate>Wed, 13 Apr 2016 05:46:16 +0000</pubDate><guid>https://philipp-weissmann.de/wget-wiederaufnehmen/</guid><description>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.
 Mit dem Download-Werkzeug wget ist dies einfach mit der Kommandozeilenoption -r möglich.

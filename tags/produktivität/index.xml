@@ -5,7 +5,6 @@ Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für
 &lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
 &lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
 &lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;h1 id="ausgangssituation">Ausgangssituation&lt;/h1>
 &lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).
 Auf Github befindet sich unser Projekt.
@@ -26,16 +25,16 @@ Auf Laptop wie auch auf dem Server haben wir uns mit &lt;code>git clone&lt;/code
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Es ist sogar möglich mittels &lt;code>push-url&lt;/code> mehrere Ziele auf einmal zu definieren.&lt;/p>
 &lt;h1 id="fazit">Fazit&lt;/h1>
 &lt;p>Natürlich ersetzt unser kleiner Workflow keinen Build-Server oder ausgetüftelte Deployment Prozesse. Aber für Kleinst-Projekte kann das vorgehen mit &lt;code>updateInstead&lt;/code> sehr praktisch sein.&lt;/p>
-&lt;p>&lt;strong>Aber Achtung&lt;/strong>: Verwenden wir diese Möglichkeit um Webseiten zu versionieren: Nicht vergessen, den &lt;code>.git&lt;/code> Ordner nicht auszuliefern.&lt;/p></content></item><item><title>Kommandozeile mit FZF</title><link>https://philipp-weissmann.de/kommandozeile-mit-fzf/</link><pubDate>Fri, 22 Apr 2016 08:01:39 +0000</pubDate><guid>https://philipp-weissmann.de/kommandozeile-mit-fzf/</guid><description>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.&lt;br>
+&lt;p>&lt;strong>Aber Achtung&lt;/strong>: Verwenden wir diese Möglichkeit um Webseiten zu versionieren: Nicht vergessen, den &lt;code>.git&lt;/code> Ordner nicht auszuliefern.&lt;/p></content></item><item><title>Kommandozeile mit FZF</title><link>https://philipp-weissmann.de/kommandozeile-mit-fzf/</link><pubDate>Fri, 22 Apr 2016 08:01:39 +0000</pubDate><guid>https://philipp-weissmann.de/kommandozeile-mit-fzf/</guid><description>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.
 So stöbert man in &lt;code>bash&lt;/code> bzw. &lt;code>zsh&lt;/code>mit &lt;code>Ctrl+R&lt;/code> in der Eingabe-History, sucht mit &lt;code>find&lt;/code> Dateien in einem gegeben Pfad - und so weiter und so fort.&lt;/p>
-&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt&lt;br>
-ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&lt;/p></description><content>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.&lt;br>
+&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt
+ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&lt;/p></description><content>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.
 So stöbert man in &lt;code>bash&lt;/code> bzw. &lt;code>zsh&lt;/code>mit &lt;code>Ctrl+R&lt;/code> in der Eingabe-History, sucht mit &lt;code>find&lt;/code> Dateien in einem gegeben Pfad - und so weiter und so fort.&lt;/p>
-&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt&lt;br>
+&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt
 ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&lt;/p>
 &lt;p>In &lt;a href="http://golang.org">Go&lt;/a> geschrieben und fix installiert (z.B. via Arch Linux Aur, zu Fuß oder als via Vim-Plugin) kann das Werkzeug händisch genutzt werden oder in Verbindung mit &lt;code>tmux&lt;/code> auch die oben genannten Tastaturkürzel übernehmen.&lt;/p>
 &lt;p>Und so sieht das ganze aus:&lt;/p>
-&lt;!-- raw HTML omitted -->
+&lt;p>![Interaktives fzf][https://camo.githubusercontent.com/0b07def9e05309281212369b118fcf9b9fc7948e/68747470733a2f2f7261772e6769746875622e636f6d2f6a756e6567756e6e2f692f6d61737465722f667a662e676966]&lt;/p>
 &lt;p>Jetzt erlaubt das Tool interaktiv und komfortabel nach Dateien zu suchen, alte Befehle aufzufinden und damit den Komfort des Arbeitens auf der Kommandozeile deutlich zu steigern.&lt;/p></content></item><item><title>Sharpkeys</title><link>https://philipp-weissmann.de/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>https://philipp-weissmann.de/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
 Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &amp;ldquo;SharpKeys&amp;rdquo; behelfen.
 Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.
@@ -129,19 +128,18 @@ Repositories. Gerade das Updaten oder initiale Klonen wird damit deutlich&lt;br>
 bequemer. Insbesondere im Zusammenspiel mit VCSH wird eine extrem komfortable&lt;br>
 Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>OS X Keyboard Layout</title><link>https://philipp-weissmann.de/keyboard-layout/</link><pubDate>Sun, 26 Apr 2015 13:35:47 +0000</pubDate><guid>https://philipp-weissmann.de/keyboard-layout/</guid><description>&lt;h1 id="das-problem">Das Problem&lt;/h1>
 &lt;p>Als Entwickler nutze ich stetig Sonderzeichen und Symbole wie {, ] oder auch `.&lt;/p>
-&lt;p>Doch welches Tastaturlayout soll ich einsetzen?&lt;br>
+&lt;p>Doch welches Tastaturlayout soll ich einsetzen?
 Zwar ist ein englisches Tastaturlayout sehr attraktiv, da dort sämtliche Sonderzeichen gut erreichbar sind. Als Entwickler im deutschsprachigen Raum benötige ich jedoch ständig Umlaute und das &lt;em>ß&lt;/em>-Zeichen.&lt;/p></description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
 &lt;p>Als Entwickler nutze ich stetig Sonderzeichen und Symbole wie {, ] oder auch `.&lt;/p>
-&lt;p>Doch welches Tastaturlayout soll ich einsetzen?&lt;br>
+&lt;p>Doch welches Tastaturlayout soll ich einsetzen?
 Zwar ist ein englisches Tastaturlayout sehr attraktiv, da dort sämtliche Sonderzeichen gut erreichbar sind. Als Entwickler im deutschsprachigen Raum benötige ich jedoch ständig Umlaute und das &lt;em>ß&lt;/em>-Zeichen.&lt;/p>
 &lt;p>Bei der Nutzung eines deutschen Tastaturlayout finde ich jedoch Symbole wie &lt;em>{&lt;/em> extrem Umständlich zu erreichen.&lt;/p>
-&lt;p>Sonderbelegungen wie &lt;a href="https://de.wikipedia.org/wiki/Dvorak-Tastaturbelegung">Dvorak&lt;/a> sind zwar reizvoll, scheitern aber für mich an der Tatsache, dass die&lt;br>
+&lt;p>Sonderbelegungen wie &lt;a href="https://de.wikipedia.org/wiki/Dvorak-Tastaturbelegung">Dvorak&lt;/a> sind zwar reizvoll, scheitern aber für mich an der Tatsache, dass die
 Umgewöhnung bei der Nutzung eines fremden Rechners zu hoch wäre.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;h1 id="lösung">Lösung&lt;/h1>
-&lt;p>Daher habe ich mir für OS X ein eigenes Tastaturlayout gebaut.&lt;br>
+&lt;p>Daher habe ich mir für OS X ein eigenes Tastaturlayout gebaut.
 Dieses nutzt als Basis das US-Englische Layout, nutzt jedoch die Alt-Taste für &amp;ldquo;deutsche&amp;rdquo; Sonderzeichen.&lt;/p>
-&lt;p>So erzeugt &lt;code>Alt + [&lt;/code> das &lt;em>ü&lt;/em> Zeichen.&lt;br>
+&lt;p>So erzeugt &lt;code>Alt + [&lt;/code> das &lt;em>ü&lt;/em> Zeichen.
 Ich drücke also genau die Taste, die bei einem deutschen Keyboard ebenfalls das &lt;em>ü&lt;/em> erzeugt.&lt;/p>
 &lt;p>Somit fällt die Umgewöhnung auf die neue Eingabeform extrem leicht.&lt;/p>
 &lt;h1 id="installation">Installation&lt;/h1>
@@ -149,8 +147,8 @@ Ich drücke also genau die Taste, die bei einem deutschen Keyboard ebenfalls das
 &lt;p>Wie in der &lt;a href="https://github.com/derphilipp/english_keyboard_for_germans/">Anleitung&lt;/a> beschrieben, muss nach dem Entpacken der Datei diese lediglich in das Verzeichnis&lt;/p>
 &lt;pre>&lt;code>~/Library/Keyboard Layouts
 &lt;/code>&lt;/pre>
-&lt;p>kopiert werden und in dem Punkt&lt;br>
-&lt;em>Systemeinstellungen&lt;/em> -&amp;gt; &lt;em>Tastatur&lt;/em> -&amp;gt; &lt;em>Eingabequellen&lt;/em>&lt;br>
+&lt;p>kopiert werden und in dem Punkt
+&lt;em>Systemeinstellungen&lt;/em> -&amp;gt; &lt;em>Tastatur&lt;/em> -&amp;gt; &lt;em>Eingabequellen&lt;/em>
 aktiviert werden.&lt;/p>
 &lt;h1 id="fazit">Fazit&lt;/h1>
 &lt;p>Nach kurzer Umgewöhnungszeit ist es mir nun möglich das komfortable englische Tastaturlayout zu nutzen, ohne jedoch auf die native Eingabemöglichkeit Umlauten und Co zu verzichten.&lt;/p></content></item><item><title>Shift Lock sinnvoll nutzen</title><link>https://philipp-weissmann.de/shift-lock-sinnvoll-nutzen/</link><pubDate>Tue, 21 Apr 2015 19:01:17 +0000</pubDate><guid>https://philipp-weissmann.de/shift-lock-sinnvoll-nutzen/</guid><description>&lt;h1 id="shift-lock">Shift-Lock&lt;/h1>

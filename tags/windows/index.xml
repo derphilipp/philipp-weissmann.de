@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/windows/</link><description>Recent content in Windows on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Tue, 13 Dec 2016 08:59:09 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows auf Schlafentzug</title><link>https://philipp-weissmann.de/windows-auf-schlafentzug/</link><pubDate>Tue, 13 Dec 2016 08:59:09 +0000</pubDate><guid>https://philipp-weissmann.de/windows-auf-schlafentzug/</guid><description>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
-Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
-Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p></description><content>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
-Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/windows/</link><description>Recent content in Windows on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Tue, 13 Dec 2016 08:59:09 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows auf Schlafentzug</title><link>https://philipp-weissmann.de/windows-auf-schlafentzug/</link><pubDate>Tue, 13 Dec 2016 08:59:09 +0000</pubDate><guid>https://philipp-weissmann.de/windows-auf-schlafentzug/</guid><description>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.
+Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine
+Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p></description><content>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.
+Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine
 Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p>
 &lt;p>Zwar verhindert manche Präsentationssoftware die lästige Sperre, aber spätestens bei Präsentationen aus PDF Dateien oder im Browser schlägt die Sperre erneut zu.&lt;/p>
 &lt;p>Abhilfe verschafft ein kleines Snippet, welches Tastatureingaben simuliert:&lt;/p>
@@ -12,8 +12,7 @@ Do While i = 0
 objResult = objShell.sendkeys(&amp;#34;{NUMLOCK}{NUMLOCK}&amp;#34;)
 Wscript.Sleep (6000)
 Loop
-&lt;/code>&lt;/pre>&lt;!-- raw HTML omitted -->
-&lt;p>Einfach als &lt;code>schlaflos.vbs&lt;/code> abspeichern und ausführen. Nun wird alle sechs Sekunden die &lt;code>Numlock&lt;/code> zwei Mal gedrückt.&lt;br>
+&lt;/code>&lt;/pre>&lt;p>Einfach als &lt;code>schlaflos.vbs&lt;/code> abspeichern und ausführen. Nun wird alle sechs Sekunden die &lt;code>Numlock&lt;/code> zwei Mal gedrückt.
 Nun haben wir ein schlafloses Windows, welches nach dem Beenden des Skriptes, spätestens aber zum nächsten Neustart auch wieder schlafen darf.&lt;/p>
 &lt;p>Gute Nacht Windows!&lt;/p></content></item><item><title>Sharpkeys</title><link>https://philipp-weissmann.de/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>https://philipp-weissmann.de/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
 Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &amp;ldquo;SharpKeys&amp;rdquo; behelfen.

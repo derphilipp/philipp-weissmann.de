@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>macOS on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/macos/</link><description>Recent content in macOS on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sat, 14 Sep 2019 08:11:33 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/macos/index.xml" rel="self" type="application/rss+xml"/><item><title>Umbenennen mit dem Lieblingseditor</title><link>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</link><pubDate>Sat, 14 Sep 2019 08:11:33 +0000</pubDate><guid>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</guid><description>Dateien umbenennen ist oft mühsam.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>macOS on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/macos/</link><description>Recent content in macOS on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Sat, 14 Sep 2019 08:11:33 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/macos/index.xml" rel="self" type="application/rss+xml"/><item><title>Umbenennen mit dem Lieblingseditor</title><link>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</link><pubDate>Sat, 14 Sep 2019 08:11:33 +0000</pubDate><guid>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</guid><description>Dateien umbenennen ist oft mühsam. Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen. Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein. Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.
+Hier kommt die Werkzeugsammlung renameutils zum Einsatz.
+Installation Installiert wird das ganze aus den üblichen Paketmanagern, also z.B.
+brew install renameutils # macOS / Linuxbrew pacman-S renameutils # Arch based sudo apt install renameutils # Debian based Benutzung Nun gibt es die Befehle: qmv und qcp, mit denen Dateien umbenannt, bzw.</description><content>&lt;p>Dateien umbenennen ist oft mühsam.
 Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.
 Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.
-Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.
-Hier kommt die Werkzeugsammlung renameutils zum Einsatz.
-Installation brew install renameutils # macOS / Linuxbrew pacman-S renameutils # Arch based sudo apt install renameutils # Debian based Benutzung Nun gibt es die Befehle: qmv und qcp, mit denen Dateien umbenannt, bzw.</description><content>&lt;p>Dateien umbenennen ist oft mühsam.&lt;br>
-Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.&lt;br>
-Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.&lt;br>
 Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.&lt;/p>
 &lt;p>Hier kommt die Werkzeugsammlung &lt;code>renameutils&lt;/code> zum Einsatz.&lt;/p>
 &lt;h2 id="installation">Installation&lt;/h2>
-&lt;!-- raw HTML omitted -->
+&lt;p>Installiert wird das ganze aus den üblichen Paketmanagern, also z.B.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>brew install renameutils &lt;span style="color:#75715e"># macOS / Linuxbrew&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman-S renameutils &lt;span style="color:#75715e"># Arch based&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install renameutils &lt;span style="color:#75715e"># Debian based&lt;/span>
@@ -27,9 +25,9 @@ Kopie von abrechnung.txt
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>qmv *.txt
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nun öffnet sich unser eingestellter Editor mit einer Dateiliste und wir können die Datei-Umbenennungen direkt im Editor vornehmen.&lt;/p>
 &lt;h2 id="fazit">Fazit&lt;/h2>
-&lt;p>Das Verwenden von Shell-Kommandos zum Umbennen ist oft schnell.&lt;br>
+&lt;p>Das Verwenden von Shell-Kommandos zum Umbennen ist oft schnell.
 So geht das Umbenennen aller &lt;code>.txt&lt;/code> Dateien in &lt;code>.md&lt;/code> schnell von der Hand.&lt;/p>
-&lt;p>Für komplexe Fälle können wir &lt;code>qmv&lt;/code> verwenden. Damit können wir unseren vertrauten Editor und alle darin vorhandenen Funktionen nutzen.&lt;br>
+&lt;p>Für komplexe Fälle können wir &lt;code>qmv&lt;/code> verwenden. Damit können wir unseren vertrauten Editor und alle darin vorhandenen Funktionen nutzen.
 Insbesondere, wenn wir keine einfachen Regeln zum Umbenennen formulieren können, helfen uns die &lt;code>renameutils&lt;/code> hier stark weiter.&lt;/p>
 &lt;p>So ist bei mir der Alias&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias ren&lt;span style="color:#f92672">=&lt;/span>qmv --format&lt;span style="color:#f92672">=&lt;/span>destination-only
@@ -40,7 +38,6 @@ Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für
 &lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
 &lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
 &lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;h1 id="ausgangssituation">Ausgangssituation&lt;/h1>
 &lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).
 Auf Github befindet sich unser Projekt.
@@ -71,7 +68,6 @@ fd schuh Beispiel 2 Finde alle .</description><content>&lt;p>Das Tool &lt;a href
 Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.&lt;/p>
 &lt;p>Hier kommt &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a> ins Spiel:&lt;/p>
 &lt;p>Das Open-Source Programm erledigt nahezu alle Aufgaben von &lt;code>find&lt;/code>, ist aber einfacher zu bedienen.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;h1 id="beispiel1">Beispiel1&lt;/h1>
 &lt;p>Finde alle Dateien mit der Zeichenfolge &lt;em>schuh&lt;/em> im Namen:&lt;/p>
 &lt;p>find:&lt;/p>
@@ -93,30 +89,27 @@ Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. L
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Konvertiert parallel mehrere Dateien auf einmal&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fd -e png -x convert &lt;span style="color:#f92672">{}&lt;/span> &lt;span style="color:#f92672">{&lt;/span>.&lt;span style="color:#f92672">}&lt;/span>.jpg
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="fazit">Fazit:&lt;/h1>
-&lt;p>Wer &lt;code>find&lt;/code> in- und auswendig beherrscht hat keinen Zwang zu wechseln. Der bequeme Syntax von &lt;code>fd&lt;/code> macht das Leben jedoch leichter. Die Möglichkeit parallel mehrere Dateien zu verarbeiten ist ungemein praktisch. Daher ist &lt;code>fd&lt;/code> für jeden Kommandozeilen-Fan absolut empfehlenswert.&lt;/p></content></item><item><title>SD Karte beschreiben mit „flash“</title><link>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</link><pubDate>Tue, 29 Nov 2016 08:30:27 +0000</pubDate><guid>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</guid><description>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.
-Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.
-Unter Windows bietet sich Win32 Disk Imager an,
-unter macOS das Tool ApplePi Baker und unter Linux nutzt man einfach dd.
+&lt;p>Wer &lt;code>find&lt;/code> in- und auswendig beherrscht hat keinen Zwang zu wechseln. Der bequeme Syntax von &lt;code>fd&lt;/code> macht das Leben jedoch leichter. Die Möglichkeit parallel mehrere Dateien zu verarbeiten ist ungemein praktisch. Daher ist &lt;code>fd&lt;/code> für jeden Kommandozeilen-Fan absolut empfehlenswert.&lt;/p></content></item><item><title>SD Karte beschreiben mit „flash“</title><link>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</link><pubDate>Tue, 29 Nov 2016 08:30:27 +0000</pubDate><guid>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</guid><description>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben. Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.
+Unter Windows bietet sich Win32 Disk Imager an, unter macOS das Tool ApplePi Baker und unter Linux nutzt man einfach dd.
 Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.
-Genau das erledigt das Tool flash.</description><content>&lt;p>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.&lt;br>
+Genau das erledigt das Tool flash.</description><content>&lt;p>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.
 Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.&lt;/p>
-&lt;p>Unter Windows bietet sich &lt;a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager&lt;/a> an,&lt;br>
+&lt;p>Unter Windows bietet sich &lt;a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager&lt;/a> an,
 unter macOS das Tool &lt;a href="http://www.tweaking4all.com/software/macosx-software/macosx-apple-pi-baker/">ApplePi Baker&lt;/a> und unter Linux nutzt man einfach &lt;code>dd&lt;/code>.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;p>Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.&lt;/p>
-&lt;p>Genau das erledigt das Tool &lt;a href="https://github.com/hypriot/flash">flash&lt;/a>.&lt;br>
+&lt;p>Genau das erledigt das Tool &lt;a href="https://github.com/hypriot/flash">flash&lt;/a>.
 Das in &lt;a href="https://de.wikipedia.org/wiki/Bash_(Shell)">bash&lt;/a> geschrieben Werkzeug ist schnell installiert:&lt;/p>
 &lt;pre>&lt;code>curl -O https://raw.githubusercontent.com/hypriot/flash/master/$(uname -s)/flash
 chmod +x flash
 sudo mv flash /usr/local/bin/flash
 &lt;/code>&lt;/pre>
-&lt;p>Wie in der &lt;a href="https://github.com/hypriot/flash">Installationsanleitung auf Github&lt;/a> zu sehen, sind noch optionale Abhängigkeiten auf einige Tools zu installieren (u.a. &lt;code>curl&lt;/code>, &lt;code>pv&lt;/code>, &lt;code>unzip&lt;/code>).&lt;br>
+&lt;p>Wie in der &lt;a href="https://github.com/hypriot/flash">Installationsanleitung auf Github&lt;/a> zu sehen, sind noch optionale Abhängigkeiten auf einige Tools zu installieren (u.a. &lt;code>curl&lt;/code>, &lt;code>pv&lt;/code>, &lt;code>unzip&lt;/code>).
 Nach erfolgreicher Installation durch den Paketmanager des Vertrauens, können Raspberry Images geschrieben werden:&lt;/p>
 &lt;pre>&lt;code>flash jessie-light.zip
 &lt;/code>&lt;/pre>
 &lt;p>Dabei übernimmt &lt;code>flash&lt;/code> das entpacken (bzw. Download) der Datei und fordert den Benutzer anschließend auf, die SD Karte einzulegen. Nach Identifizieren des Speichermediums braucht man lediglich selbiges zu bestätigen und der Schreibeprozess beginnt.&lt;/p>
 &lt;p>Zum Abschluss des Ganzen werden auch alle Dateisystem ausgehängt und die Speicherkarte kann in den Raspberry Pi wandern.&lt;/p>
-&lt;p>Für mich ist &lt;code>flash&lt;/code> &lt;em>das&lt;/em> Werkzeug zum Schreiben von SD Karten geworden.&lt;br>
+&lt;p>Für mich ist &lt;code>flash&lt;/code> &lt;em>das&lt;/em> Werkzeug zum Schreiben von SD Karten geworden.
 Minimalistisch, komfortabel und einfach zu handhaben erleichtert mit das kleine Helferlein den Alltag.&lt;/p></content></item><item><title>Homebrew Cask mit Ansible</title><link>https://philipp-weissmann.de/homebrew-cask-mit-ansible/</link><pubDate>Fri, 03 Jun 2016 06:52:45 +0000</pubDate><guid>https://philipp-weissmann.de/homebrew-cask-mit-ansible/</guid><description>&lt;p>Paketmanager auf modernen Betriebssystemen sind ein wahrer Segen: Programme
 können einfach installiert, auf den aktuellsten Stand gebracht und restlos
 deinstalliert werden.
@@ -169,16 +162,16 @@ sinnvoll, die beiden Tasks &lt;code>homebrew&lt;/code> und &lt;code>homebrew_tab
 lassen, den &lt;code>homebrew_cask&lt;/code> Prozess jedoch als Administrator (Siehe
 &lt;a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html">become&lt;/a>).&lt;/p>
 &lt;p>Nun haben wir die Möglichkeit zentral, dokumentiert und nachvollziehbar
-Software zu installieren, die aus Installern stammt.&lt;/p></content></item><item><title>Kommandozeile mit FZF</title><link>https://philipp-weissmann.de/kommandozeile-mit-fzf/</link><pubDate>Fri, 22 Apr 2016 08:01:39 +0000</pubDate><guid>https://philipp-weissmann.de/kommandozeile-mit-fzf/</guid><description>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.&lt;br>
+Software zu installieren, die aus Installern stammt.&lt;/p></content></item><item><title>Kommandozeile mit FZF</title><link>https://philipp-weissmann.de/kommandozeile-mit-fzf/</link><pubDate>Fri, 22 Apr 2016 08:01:39 +0000</pubDate><guid>https://philipp-weissmann.de/kommandozeile-mit-fzf/</guid><description>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.
 So stöbert man in &lt;code>bash&lt;/code> bzw. &lt;code>zsh&lt;/code>mit &lt;code>Ctrl+R&lt;/code> in der Eingabe-History, sucht mit &lt;code>find&lt;/code> Dateien in einem gegeben Pfad - und so weiter und so fort.&lt;/p>
-&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt&lt;br>
-ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&lt;/p></description><content>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.&lt;br>
+&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt
+ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&lt;/p></description><content>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.
 So stöbert man in &lt;code>bash&lt;/code> bzw. &lt;code>zsh&lt;/code>mit &lt;code>Ctrl+R&lt;/code> in der Eingabe-History, sucht mit &lt;code>find&lt;/code> Dateien in einem gegeben Pfad - und so weiter und so fort.&lt;/p>
-&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt&lt;br>
+&lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt
 ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&lt;/p>
 &lt;p>In &lt;a href="http://golang.org">Go&lt;/a> geschrieben und fix installiert (z.B. via Arch Linux Aur, zu Fuß oder als via Vim-Plugin) kann das Werkzeug händisch genutzt werden oder in Verbindung mit &lt;code>tmux&lt;/code> auch die oben genannten Tastaturkürzel übernehmen.&lt;/p>
 &lt;p>Und so sieht das ganze aus:&lt;/p>
-&lt;!-- raw HTML omitted -->
+&lt;p>![Interaktives fzf][https://camo.githubusercontent.com/0b07def9e05309281212369b118fcf9b9fc7948e/68747470733a2f2f7261772e6769746875622e636f6d2f6a756e6567756e6e2f692f6d61737465722f667a662e676966]&lt;/p>
 &lt;p>Jetzt erlaubt das Tool interaktiv und komfortabel nach Dateien zu suchen, alte Befehle aufzufinden und damit den Komfort des Arbeitens auf der Kommandozeile deutlich zu steigern.&lt;/p></content></item><item><title>Wget wiederaufnehmen</title><link>https://philipp-weissmann.de/wget-wiederaufnehmen/</link><pubDate>Wed, 13 Apr 2016 05:46:16 +0000</pubDate><guid>https://philipp-weissmann.de/wget-wiederaufnehmen/</guid><description>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.
 Mit dem Download-Werkzeug wget ist dies einfach mit der Kommandozeilenoption -r möglich.
 Damit man jedoch nicht immer daran denken muss, lässt sie dies auch als Standardverhalten einstellen.
@@ -287,19 +280,18 @@ Repositories. Gerade das Updaten oder initiale Klonen wird damit deutlich&lt;br>
 bequemer. Insbesondere im Zusammenspiel mit VCSH wird eine extrem komfortable&lt;br>
 Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>OS X Keyboard Layout</title><link>https://philipp-weissmann.de/keyboard-layout/</link><pubDate>Sun, 26 Apr 2015 13:35:47 +0000</pubDate><guid>https://philipp-weissmann.de/keyboard-layout/</guid><description>&lt;h1 id="das-problem">Das Problem&lt;/h1>
 &lt;p>Als Entwickler nutze ich stetig Sonderzeichen und Symbole wie {, ] oder auch `.&lt;/p>
-&lt;p>Doch welches Tastaturlayout soll ich einsetzen?&lt;br>
+&lt;p>Doch welches Tastaturlayout soll ich einsetzen?
 Zwar ist ein englisches Tastaturlayout sehr attraktiv, da dort sämtliche Sonderzeichen gut erreichbar sind. Als Entwickler im deutschsprachigen Raum benötige ich jedoch ständig Umlaute und das &lt;em>ß&lt;/em>-Zeichen.&lt;/p></description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
 &lt;p>Als Entwickler nutze ich stetig Sonderzeichen und Symbole wie {, ] oder auch `.&lt;/p>
-&lt;p>Doch welches Tastaturlayout soll ich einsetzen?&lt;br>
+&lt;p>Doch welches Tastaturlayout soll ich einsetzen?
 Zwar ist ein englisches Tastaturlayout sehr attraktiv, da dort sämtliche Sonderzeichen gut erreichbar sind. Als Entwickler im deutschsprachigen Raum benötige ich jedoch ständig Umlaute und das &lt;em>ß&lt;/em>-Zeichen.&lt;/p>
 &lt;p>Bei der Nutzung eines deutschen Tastaturlayout finde ich jedoch Symbole wie &lt;em>{&lt;/em> extrem Umständlich zu erreichen.&lt;/p>
-&lt;p>Sonderbelegungen wie &lt;a href="https://de.wikipedia.org/wiki/Dvorak-Tastaturbelegung">Dvorak&lt;/a> sind zwar reizvoll, scheitern aber für mich an der Tatsache, dass die&lt;br>
+&lt;p>Sonderbelegungen wie &lt;a href="https://de.wikipedia.org/wiki/Dvorak-Tastaturbelegung">Dvorak&lt;/a> sind zwar reizvoll, scheitern aber für mich an der Tatsache, dass die
 Umgewöhnung bei der Nutzung eines fremden Rechners zu hoch wäre.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;h1 id="lösung">Lösung&lt;/h1>
-&lt;p>Daher habe ich mir für OS X ein eigenes Tastaturlayout gebaut.&lt;br>
+&lt;p>Daher habe ich mir für OS X ein eigenes Tastaturlayout gebaut.
 Dieses nutzt als Basis das US-Englische Layout, nutzt jedoch die Alt-Taste für &amp;ldquo;deutsche&amp;rdquo; Sonderzeichen.&lt;/p>
-&lt;p>So erzeugt &lt;code>Alt + [&lt;/code> das &lt;em>ü&lt;/em> Zeichen.&lt;br>
+&lt;p>So erzeugt &lt;code>Alt + [&lt;/code> das &lt;em>ü&lt;/em> Zeichen.
 Ich drücke also genau die Taste, die bei einem deutschen Keyboard ebenfalls das &lt;em>ü&lt;/em> erzeugt.&lt;/p>
 &lt;p>Somit fällt die Umgewöhnung auf die neue Eingabeform extrem leicht.&lt;/p>
 &lt;h1 id="installation">Installation&lt;/h1>
@@ -307,8 +299,8 @@ Ich drücke also genau die Taste, die bei einem deutschen Keyboard ebenfalls das
 &lt;p>Wie in der &lt;a href="https://github.com/derphilipp/english_keyboard_for_germans/">Anleitung&lt;/a> beschrieben, muss nach dem Entpacken der Datei diese lediglich in das Verzeichnis&lt;/p>
 &lt;pre>&lt;code>~/Library/Keyboard Layouts
 &lt;/code>&lt;/pre>
-&lt;p>kopiert werden und in dem Punkt&lt;br>
-&lt;em>Systemeinstellungen&lt;/em> -&amp;gt; &lt;em>Tastatur&lt;/em> -&amp;gt; &lt;em>Eingabequellen&lt;/em>&lt;br>
+&lt;p>kopiert werden und in dem Punkt
+&lt;em>Systemeinstellungen&lt;/em> -&amp;gt; &lt;em>Tastatur&lt;/em> -&amp;gt; &lt;em>Eingabequellen&lt;/em>
 aktiviert werden.&lt;/p>
 &lt;h1 id="fazit">Fazit&lt;/h1>
 &lt;p>Nach kurzer Umgewöhnungszeit ist es mir nun möglich das komfortable englische Tastaturlayout zu nutzen, ohne jedoch auf die native Eingabemöglichkeit Umlauten und Co zu verzichten.&lt;/p></content></item><item><title>Shift Lock sinnvoll nutzen</title><link>https://philipp-weissmann.de/shift-lock-sinnvoll-nutzen/</link><pubDate>Tue, 21 Apr 2015 19:01:17 +0000</pubDate><guid>https://philipp-weissmann.de/shift-lock-sinnvoll-nutzen/</guid><description>&lt;h1 id="shift-lock">Shift-Lock&lt;/h1>

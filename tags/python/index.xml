@@ -1,16 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/python/</link><description>Recent content in Python on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Fri, 20 Jan 2017 17:00:02 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Python auf dem ESP8266</title><link>https://philipp-weissmann.de/python-auf-dem-esp8266/</link><pubDate>Fri, 20 Jan 2017 17:00:02 +0000</pubDate><guid>https://philipp-weissmann.de/python-auf-dem-esp8266/</guid><description>&lt;p>Der &lt;a href="https://de.wikipedia.org/wiki/ESP8266">ESP8266&lt;/a> ist ein kleiner Mikrocontroller, den es für kleines Geld in verschiedenen Ausführungen und von verschiedensten Herstellern gibt.&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/python/</link><description>Recent content in Python on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Fri, 20 Jan 2017 17:00:02 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Python auf dem ESP8266</title><link>https://philipp-weissmann.de/python-auf-dem-esp8266/</link><pubDate>Fri, 20 Jan 2017 17:00:02 +0000</pubDate><guid>https://philipp-weissmann.de/python-auf-dem-esp8266/</guid><description>&lt;p>Der &lt;a href="https://de.wikipedia.org/wiki/ESP8266">ESP8266&lt;/a> ist ein kleiner Mikrocontroller, den es für kleines Geld in verschiedenen Ausführungen und von verschiedensten Herstellern gibt.
 Das kleine 32-Bit Board besticht neben einfacher Zugänglichkeit, niedrigem Preis und einem on-board WLAN Modul.&lt;/p>
 &lt;p>Für viele Zwecke lohnt sich ein Blick auf &lt;a href="https://micropython.org/">Micropython&lt;/a> als Alternative zu &amp;ldquo;klassischer&amp;rdquo; Arduino C++ Entwicklung für das kleine Wunderwerk.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;p>Diese auf Python 3 basierende, spezialisierte Version von Python bringt vieles mit, was man sich auf einer Entwicklungsplattform wünscht:&lt;/p>
 &lt;ul>
 &lt;li>Interaktive Programmierung/Nutzung des Geräts mit &lt;a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL&lt;/a>&lt;/li>
 &lt;li>Bibliotheken für Netzwerkkonfiguration&lt;/li>
 &lt;li>Bibliotheken für Schnittstellen (Pins, I2C, SPI, &amp;hellip;)&lt;/li>
-&lt;/ul></description><content>&lt;p>Der &lt;a href="https://de.wikipedia.org/wiki/ESP8266">ESP8266&lt;/a> ist ein kleiner Mikrocontroller, den es für kleines Geld in verschiedenen Ausführungen und von verschiedensten Herstellern gibt.&lt;br>
+&lt;/ul></description><content>&lt;p>Der &lt;a href="https://de.wikipedia.org/wiki/ESP8266">ESP8266&lt;/a> ist ein kleiner Mikrocontroller, den es für kleines Geld in verschiedenen Ausführungen und von verschiedensten Herstellern gibt.
 Das kleine 32-Bit Board besticht neben einfacher Zugänglichkeit, niedrigem Preis und einem on-board WLAN Modul.&lt;/p>
 &lt;p>Für viele Zwecke lohnt sich ein Blick auf &lt;a href="https://micropython.org/">Micropython&lt;/a> als Alternative zu &amp;ldquo;klassischer&amp;rdquo; Arduino C++ Entwicklung für das kleine Wunderwerk.&lt;/p>
-&lt;!-- raw HTML omitted -->
 &lt;p>Diese auf Python 3 basierende, spezialisierte Version von Python bringt vieles mit, was man sich auf einer Entwicklungsplattform wünscht:&lt;/p>
 &lt;ul>
 &lt;li>Interaktive Programmierung/Nutzung des Geräts mit &lt;a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL&lt;/a>&lt;/li>
@@ -18,7 +16,7 @@ Das kleine 32-Bit Board besticht neben einfacher Zugänglichkeit, niedrigem Prei
 &lt;li>Bibliotheken für Schnittstellen (Pins, I2C, SPI, &amp;hellip;)&lt;/li>
 &lt;/ul>
 &lt;p>Für den einfachen Einstieg mit dem ESP8266 laden wir uns zunächst die aktuellste (stable) Version für das Board &lt;a href="https://micropython.org/download">hier&lt;/a> herunter.&lt;/p>
-&lt;p>Als nächstes installieren wir uns das Tool &lt;a href="https://github.com/espressif/esptool">esptool&lt;/a>, welches zum Flashen des Microcontrollers mit unserem Micropython-Image genutzt wird.&lt;br>
+&lt;p>Als nächstes installieren wir uns das Tool &lt;a href="https://github.com/espressif/esptool">esptool&lt;/a>, welches zum Flashen des Microcontrollers mit unserem Micropython-Image genutzt wird.
 Dies geschieht am einfachsten mit&lt;/p>
 &lt;pre>&lt;code>pip3 install esptool
 &lt;/code>&lt;/pre>
@@ -27,8 +25,8 @@ Dies geschieht am einfachsten mit&lt;/p>
 &lt;/code>&lt;/pre>
 &lt;p>falls notwendig.&lt;/p>
 &lt;p>Unter Windows und OS X ist es nun notwendig, den passenden Treiber für das Board zu installieren. Dieser sorgt dafür, dass das Gerät als serielle Schnittstelle auftaucht - unter aktuellen GNU/Linux Versionen ist dies in der Regel nicht notwendig.&lt;/p>
-&lt;p>Nun sollte das Gerät beim Anschliessen via USB auftauchen:&lt;br>
-So meldet sich der ESP8266 der Variante &amp;ldquo;Nodemcu&amp;rdquo; als&lt;br>
+&lt;p>Nun sollte das Gerät beim Anschliessen via USB auftauchen:
+So meldet sich der ESP8266 der Variante &amp;ldquo;Nodemcu&amp;rdquo; als
 &lt;code>/dev/cu.SLAB_USBtoUART&lt;/code> bzw &lt;code>/dev/tty.SLAB_USBtoUART&lt;/code>.&lt;/p>
 &lt;p>Dies unterscheidet sich nach Treiber und Betriebssystem.&lt;/p>
 &lt;p>&lt;strong>Bei allen folgenden Beispielen muss &lt;code>/dev/cu.SLAB_USBtoUART&lt;/code> mit dem passenden Pfad ersetzt werden.&lt;/strong>&lt;/p>
@@ -43,16 +41,16 @@ write_flash \
 --flash_size=detect --flash_mode=dio 0 \
 /Pfad/Zu/Image/esp8266-20170108-v1.8.7.bin --verify
 &lt;/code>&lt;/pre>
-&lt;!-- raw HTML omitted -->
-&lt;p>Bei Problemen kann die Baud-Rate (hier: 460800) verringert werden. Zudem&lt;br>
-sollte man dringend auf die Spannungsversorgung des Geräts achten. Schlechte&lt;br>
+&lt;p>![Python][/img/python.jpg]&lt;/p>
+&lt;p>Bei Problemen kann die Baud-Rate (hier: 460800) verringert werden. Zudem
+sollte man dringend auf die Spannungsversorgung des Geräts achten. Schlechte
 USB Hubs können hier für viel Ärger sorgen.&lt;/p>
 &lt;p>Nun können wir bereits mit dem ESP8266 kommunizieren:&lt;/p>
 &lt;pre>&lt;code>screen /dev/cu.SLAB_USBtoUART -b 115200
 &lt;/code>&lt;/pre>
 &lt;p>Wir sehen (spätestens beim Drücken des Reset-Buttons des ESPs) unsere vertrauten Python REPL, welche nun interaktive Benutzung auf dem Gerät zulässt.&lt;/p>
 &lt;p>Entwickelt man jedoch etwas länger für das Gerät, möchte man natürlich seine gewohnte Entwicklungsumgebung/Editor einsetzen. Nun kommt das Tool &lt;a href="https://github.com/adafruit/ampy">ampy&lt;/a> ins Spiel:&lt;/p>
-&lt;p>Dieses kleine Helferlein erlaubt es uns Dateien von und auf den ESP8266 zu&lt;br>
+&lt;p>Dieses kleine Helferlein erlaubt es uns Dateien von und auf den ESP8266 zu
 kopieren und ein Skript auszuführen. Zur Installation kommt abermals kommt pip zum Einsatz:&lt;/p>
 &lt;pre>&lt;code>pip3 install adafruit-ampy
 &lt;/code>&lt;/pre>
@@ -60,13 +58,13 @@ kopieren und ein Skript auszuführen. Zur Installation kommt abermals kommt pip 
 &lt;pre>&lt;code>sudo -H pip3 install adafruit-ampy
 &lt;/code>&lt;/pre>
 &lt;p>Nun können wir unsere Bibliotheken-Dateien auf den ESP kopieren.&lt;/p>
-&lt;p>Auch unser Hauptprogramm (auf dem Gerät immer &lt;code>main.py&lt;/code>) können wir so auf das Gerät bringen.&lt;br>
+&lt;p>Auch unser Hauptprogramm (auf dem Gerät immer &lt;code>main.py&lt;/code>) können wir so auf das Gerät bringen.
 Dieses startet bei jedem Neustart des Geräts automatisch.&lt;/p>
 &lt;pre>&lt;code>ampy -p /dev/cu.SLAB_USBtoUART put main.py
 &lt;/code>&lt;/pre>
 &lt;p>Wollen wir das Programm gleich ohne Reset starten, können wir auch dies einfach mit &lt;code>ampy&lt;/code> erledigen:&lt;/p>
 &lt;pre>&lt;code>ampy -p /dev/cu.SLAB_USBtoUART run -n main.py
 &lt;/code>&lt;/pre>
-&lt;p>Mit diesen Werkzeugen ist es nun möglich in wenigen Sekunden automatisiert neue Versionen von Software auf das Gerät aufzuspielen um diese auszuprobieren.&lt;br>
+&lt;p>Mit diesen Werkzeugen ist es nun möglich in wenigen Sekunden automatisiert neue Versionen von Software auf das Gerät aufzuspielen um diese auszuprobieren.
 Dies verringert die Zeit des klassischen Workflows von &amp;ldquo;Programmieren, (Cross)-Kompilieren, Flashen&amp;rdquo; drastisch und erlaubt Fans von Python ein komfortables Arbeiten mit dem ESP8266.&lt;/p>
 &lt;p>Viel Spaß!&lt;/p></content></item></channel></rss>
