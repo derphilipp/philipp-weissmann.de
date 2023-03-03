@@ -48,7 +48,7 @@ git remote add deploy benutzer@servername:/pfad/zu/projektordner/auf/server
 # jetzt noch sagen: schiebe den lokalen branch _master_ auf den server (nur 1 mal notwendig)
 git push --set-upstream deploy master
 ```
-```
+
 
 Unsere Änderungen können wir weiterhin zu Github schieben:
 
