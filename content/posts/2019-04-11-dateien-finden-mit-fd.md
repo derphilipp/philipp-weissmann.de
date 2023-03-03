@@ -12,38 +12,46 @@ tags:
   - Tools
 
 ---
-Das Tool [find][1] ist ein praktisches Programm und Dateien und Ordner zu finden.  
+Das Tool [find][1] ist ein praktisches Programm und Dateien und Ordner zu finden.
 Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.
 
 Hier kommt [fd][2] ins Spiel:
 
 Das Open-Source Programm erledigt nahezu alle Aufgaben von `find`, ist aber einfacher zu bedienen.
 
-<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/04/lps-1024x680.jpg" alt="LPs" /> 
+<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/04/lps-1024x680.jpg" alt="LPs" />
 
 # Beispiel1
 
 Finde alle Dateien mit der Zeichenfolge _schuh_ im Namen:
 
-find: 
+find:
 
-<pre><code class="language-bash">find . -iname &#039;*schuh*&#039;</code></pre>
+```bash
+find . -iname '*schuh*'
+```
 
 fd:
 
-<pre><code class="language-bash">fd schuh</code></pre>
+```bash
+fd schuh
+```
 
 # Beispiel 2
 
 Finde alle .jpg Dateien:
 
-find: 
+find:
 
-<pre><code class="language-bash">find . -iname &#039;*.jpg&#039;</code></pre>
+```bash
+find . -iname '*.jpg'
+```
 
 fd:
 
-<pre><code class="language-bash">fd -e jpg</code></pre>
+```bash
+fd -e jpg
+```
 
 # Beispiel 3
 
@@ -51,13 +59,17 @@ Finde alle .png Dateien und konvertiere diese in .jpg Dateien:
 
 find:
 
-<pre><code class="language-bash">find ./ -name &#039;*.png&#039; -exec bash -c &#039;convert $0 ${0/png/jpg}&#039; {} \;
-# Konvertiert eine nach der anderen Datei</code></pre>
+```bash
+# Konvertiert eine nach der anderen Datei
+find ./ -name '*.png' -exec bash -c 'convert $0 ${0/png/jpg}' {} \;
+```
 
 fd:
 
-<pre><code class="language-bash">fd -e png -x convert {} {.}.jpg
-# Konvertiert parallel mehrere Dateien auf einmal</code></pre>
+```bash
+# Konvertiert parallel mehrere Dateien auf einmal
+fd -e png -x convert {} {.}.jpg
+```
 
 # Fazit:
 

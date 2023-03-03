@@ -32,19 +32,25 @@ Ich verwende dabei [sd][3] und [fd][4], die für viele System verfügbar sind.
 
 Allen Javascript Dateien die fehlende lezte Newline hinzufügen
 
-<pre><code class="language-bash">fd --extension js -x sd &#039;([^\n]\z)&#039; &#039;$1\n&#039;</code></pre>
+```bash
+fd --extension js -x sd &#039;([^\n]\z)&#039; &#039;$1\n&#039;
+```
 
 (Erklärung der Regular Expression: "Finde ein Nicht-Zeilenende vor dem Dateiende. Ersetze dies durch den gleichen Inhalt wie zuvor, aber füge ein Newline am Ende ein")
 
 Alle Javascript Dateien "trailing whitespaces" löschen:
 
-<pre><code class="language-bash">fd --extension js -x sd &#039; +\n&#039; &#039;\n&#039;</code></pre>
+```bash
+fd --extension js -x sd &#039; +\n&#039; &#039;\n&#039;
+```
 
 (Erklärung der Regular Expression: "Finde ein (oder mehrere) Leerzeichen vor einem Newline. Ersetze das gefundene durch eine Newline")
 
 Alle Javascript Dateien in "unix-style" Zeilenumbrüche setzen:
 
-<pre><code class="language-bash">fd --extension js -x dos2unix</code></pre>
+```bash
+fd --extension js -x dos2unix
+```
 
 ## Weitere Schritte
 

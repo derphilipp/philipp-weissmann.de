@@ -15,8 +15,10 @@ tags:
 ---
 Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:
 
-<pre><code class="language-sh">#!/usr/bin/env bash
-set -Eeuo pipefail</code></pre>
+```sh
+#!/usr/bin/env bash
+set -Eeuo pipefail
+```
 
 Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!
 

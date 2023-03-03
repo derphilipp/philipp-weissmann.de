@@ -1,5 +1,4 @@
-baseURL = '/'
-#url = 'https://philipp-weissmann.de/'
+baseURL = 'https://philipp-weissmann.de/'
 name = 'Philipp Weißmann'
 title = 'Philipp Weißmann'
 languageCode = 'de-de'
@@ -10,7 +9,9 @@ paginate = 5
 [params]
 # dir name of your main content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
-contentTypeName = "posts"
+#contentTypeName = "content/posts"
+contentTypeName = "post"
+
 
 # ["orange", "blue", "red", "green", "pink"]
 themeColor = "pink"
@@ -75,7 +76,7 @@ missingBackButtonLabel = "Back to home page"
 
 [languages.de.params.logo]
 logoText = "Philipp Weißmann"
-logoHomeLink = "/posts"
+logoHomeLink = "/"
 
 [languages.de.menu]
 [[languages.de.menu.main]]

@@ -26,7 +26,8 @@ Will man nun Dienste via docker-compose mit dem System zusammen starten, bietet 
 
 Als erstes definieren wir ein Dienst-Template in einer neuen Datei `/etc/systemd/system/dc@.service`
 
-<pre><code class="language-ini">[Unit]
+```ini
+[Unit]
 Description=%i service with docker compose
 Requires=docker.service
 After=docker.service
@@ -49,7 +50,8 @@ ExecStart=/usr/local/bin/docker-compose up
 ExecStop=/usr/local/bin/docker-compose down -v
 
 [Install]
-WantedBy=multi-user.target</code></pre>
+WantedBy=multi-user.target
+```
 
 Wir gehen dabei davon aus, dass alle docker-compose Konfigurationsdateien in `/opt/dockerfile/DIENSTNAME` liegen und sich `docker-compose` im Verzeichnis `/usr/local/bin` liegt.
 

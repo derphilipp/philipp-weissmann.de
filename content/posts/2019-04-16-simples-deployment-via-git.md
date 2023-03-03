@@ -22,35 +22,45 @@ Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien 
 
 Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:
 
-<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/04/distribute-1024x684.jpg" alt="Verteilen von Paketen" /> 
+<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/04/distribute-1024x684.jpg" alt="Verteilen von Paketen" />
 
 # Ausgangssituation
 
-Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).  
-Auf Github befindet sich unser Projekt.  
+Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).
+Auf Github befindet sich unser Projekt.
 Auf Laptop wie auch auf dem Server haben wir uns mit `git clone` das Projekt eingerichtet.
 
 # Vorgehen
 
 Das Projekt auf dem Server soll beim Empfangen neuer Dateien diese auch in das "Working Directory" schreiben. Dies aktivieren wir mit :
 
-<pre><code class="language-bash"># auf Server, im Projektverzeichnis
-git config receive.denyCurrentBranch updateInstead</code></pre>
+
+```bash
+# auf Server, im Projektverzeichnis
+git config receive.denyCurrentBranch updateInstead
+```
 
 Nun müssen wir unserem Projekt auf dem Laptop das neue Ziel beibringen:
 
-<pre><code class="language-bash"># auf Laptop, im Projektverzeichnis
+```bash
+# auf Laptop, im Projektverzeichnis
 git remote add deploy benutzer@servername:/pfad/zu/projektordner/auf/server
 # jetzt noch sagen: schiebe den lokalen branch _master_ auf den server (nur 1 mal notwendig)
-git push --set-upstream deploy master</code></pre>
+git push --set-upstream deploy master
+```
+```
 
 Unsere Änderungen können wir weiterhin zu Github schieben:
 
-<pre><code class="language-bash">git push origin</code></pre>
+```bash
+git push origin
+```
 
 Aber nun auch neu: Auf dem Server direkt ausrollen:
 
-<pre><code class="language-bash">git push deploy</code></pre>
+```bash
+git push deploy
+```
 
 Es ist sogar möglich mittels `push-url` mehrere Ziele auf einmal zu definieren.
 

@@ -21,7 +21,8 @@ Zwar verhindert manche Präsentationssoftware die lästige Sperre, aber spätest
 
 Abhilfe verschafft ein kleines Snippet, welches Tastatureingaben simuliert:
 
-<pre><code class="language-vbscript">Dim objResult
+```vbscript
+Dim objResult
 
 Set objShell = WScript.CreateObject("WScript.Shell")    
 i = 0
@@ -29,7 +30,8 @@ i = 0
 Do While i = 0
   objResult = objShell.sendkeys("{NUMLOCK}{NUMLOCK}")
     Wscript.Sleep (6000)
-Loop</code></pre>
+Loop
+```
 
 <img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/04/schlaflos-1024x681.jpg" alt="Schlaflos" /> 
 

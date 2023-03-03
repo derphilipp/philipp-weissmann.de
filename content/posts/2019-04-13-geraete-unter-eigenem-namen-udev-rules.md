@@ -25,7 +25,9 @@ Um dies sicher zu stellen erstellt man eine Regel mit _udev_:
 
 Zunächst identifizieren wir, welches Gerät wir haben wollen. Als Beispiel nutzen wir hier einen Microcontroller, der unter `/dev/ttyUSB0` eingehängt ist.
 
-<pre><code class="language-bash">udevadm info --name=/dev/ttyUSB0 --attribute-walk</code></pre>
+```bash
+udevadm info --name=/dev/ttyUSB0 --attribute-walk
+```
 
 Aus der Ausgabe von `udevadm` suchen wir uns einige Werte heraus: Die von `ATTRS{idVendor}`, `ATTRS{idProduct}` und `ATTRS{serial}`.  
 Dies sollte zum eindeutigen Identifizieren des Gerätes ausreichen.
@@ -38,10 +40,14 @@ Eine neu erstellte `/etc/udev/rules.d/20-mydevice.rules` füllen wir nun mit den
 
 Nun noch die neuen Regeln anlegen: 
 
-<pre><code class="language-bash">sudo udevadm trigger</code></pre>
+```bash
+sudo udevadm trigger
+```
 
 und den `udev` Dienst neu starten:
 
-<pre><code class="language-bash">sudo systemctl restart udev</code></pre>
+```bash
+sudo systemctl restart udev
+```
 
 Nun sollte unsere Regel angewendet werden und ein neuer Eintrag `/dev/ttyUSB_mydevice` angelegt sein. Dieser ist ein Link auf das "echte" Gerät. Somit können wir uns immer auf den selbstgewählten Namen verlassen - auch wenn sich der automatisch Vergebene Name nach einem Neustart ändern kann.

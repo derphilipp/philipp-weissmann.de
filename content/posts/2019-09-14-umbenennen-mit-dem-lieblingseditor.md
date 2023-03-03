@@ -24,11 +24,17 @@ Hier kommt die Werkzeugsammlung `renameutils` zum Einsatz.
 <img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/09/qvm7scmftvc-683x1024.jpg" alt="" />  
 Installiert wird das ganze aus den üblichen Paketmanagern, also z.B.
 
-<pre><code class="language-bash">brew install renameutils # macOS / Linuxbrew</code></pre>
+```bash
+brew install renameutils # macOS / Linuxbrew
+```
 
-<pre><code class="language-bash">pacman-S renameutils # Arch based</code></pre>
+```bash
+pacman-S renameutils # Arch based
+```
 
-<pre><code class="language-bash">sudo apt install renameutils # Debian based</code></pre>
+```bash
+sudo apt install renameutils # Debian based
+```
 
 ## Benutzung
 
@@ -46,7 +52,9 @@ Ausgabe:
 
 Nun verwenden wir unser neues Werkzeug:
 
-<pre><code class="language-bash">qmv *.txt</code></pre>
+```bash
+qmv *.txt
+```
 
 Nun öffnet sich unser eingestellter Editor mit einer Dateiliste und wir können die Datei-Umbenennungen direkt im Editor vornehmen.
 
@@ -60,6 +68,8 @@ Insbesondere, wenn wir keine einfachen Regeln zum Umbenennen formulieren können
 
 So ist bei mir der Alias
 
-<pre><code class="language-bash">alias ren=qmv --format=destination-only</code></pre>
+```bash
+alias ren=qmv --format=destination-only
+```
 
 fest in meine Werkzeugkiste eingezogen.
