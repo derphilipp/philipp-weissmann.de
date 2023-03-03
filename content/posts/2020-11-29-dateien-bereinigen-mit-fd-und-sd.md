@@ -4,6 +4,7 @@ author: Philipp Weißmann
 type: post
 date: 2020-11-29T18:24:12+00:00
 url: /dateien-bereinigen-mit-fd-und-sd/
+cover: /img/cleaning.jpg
 categories:
   - Uncategorized
 tags:
@@ -14,19 +15,17 @@ tags:
 ---
 ## Das Problem
 
-In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.  
+In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
 Ob der uneinheitliche [Zeilenumbruch][1], (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.
 
 ## Die Werkzeuge
 
-Dabei kann das Projekt [Editorconfig][2] helfen.  
+Dabei kann das Projekt [Editorconfig][2] helfen.
 Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.
 
-Was passiert aber mit den bereits vorhandenen Dateien?  
-Hier helfen ein paar einfache Kommandozeilenbefehle.  
+Was passiert aber mit den bereits vorhandenen Dateien?
+Hier helfen ein paar einfache Kommandozeilenbefehle.
 Ich verwende dabei [sd][3] und [fd][4], die für viele System verfügbar sind.
-
-<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2020/11/otvu7zmteic.jpg" alt="" /> 
 
 ## Beispiele
 

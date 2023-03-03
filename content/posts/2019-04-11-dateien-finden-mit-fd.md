@@ -4,6 +4,7 @@ author: Philipp Weißmann
 type: post
 date: 2019-04-11T16:00:10+00:00
 url: /dateien-finden-mit-fd/
+cover: /img/lps.jpg
 categories:
   - Uncategorized
 tags:
@@ -18,8 +19,6 @@ Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. L
 Hier kommt [fd][2] ins Spiel:
 
 Das Open-Source Programm erledigt nahezu alle Aufgaben von `find`, ist aber einfacher zu bedienen.
-
-<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/04/lps-1024x680.jpg" alt="LPs" />
 
 # Beispiel1
 

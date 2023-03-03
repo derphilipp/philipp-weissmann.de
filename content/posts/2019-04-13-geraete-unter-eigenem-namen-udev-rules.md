@@ -4,6 +4,7 @@ author: Philipp Weißmann
 type: post
 date: 2019-04-13T18:32:50+00:00
 url: /geraete-unter-eigenem-namen-udev-rules/
+cover: /img/rule.jpg
 categories:
   - Uncategorized
 tags:
@@ -12,12 +13,11 @@ tags:
 ---
 # Das Problem
 
-Unter Linux wird jedem verbundenen Gerät ein Pfad zugeordnet.  
-So erscheint z.B. ein verbundener Esp8266 Microcontroller als (serielle) Schnittstelle `/dev/ttyUSB0`.  
+Unter Linux wird jedem verbundenen Gerät ein Pfad zugeordnet.
+So erscheint z.B. ein verbundener Esp8266 Microcontroller als (serielle) Schnittstelle `/dev/ttyUSB0`.
 Sind noch mehr Geräte verbunden, so erscheinen diese als `/dev/ttyUSB1`, `/dev/ttyUSB2` usw.
 
-Welches Gerät ist aber nun welche Schnittstelle? Und sind diese nach dem Reboot noch gleich?  
-<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/04/rule-1024x732.jpg" alt="Rules" /> 
+Welches Gerät ist aber nun welche Schnittstelle? Und sind diese nach dem Reboot noch gleich?
 
 # Die Lösung: udev rules
 
@@ -29,7 +29,7 @@ Zunächst identifizieren wir, welches Gerät wir haben wollen. Als Beispiel nutz
 udevadm info --name=/dev/ttyUSB0 --attribute-walk
 ```
 
-Aus der Ausgabe von `udevadm` suchen wir uns einige Werte heraus: Die von `ATTRS{idVendor}`, `ATTRS{idProduct}` und `ATTRS{serial}`.  
+Aus der Ausgabe von `udevadm` suchen wir uns einige Werte heraus: Die von `ATTRS{idVendor}`, `ATTRS{idProduct}` und `ATTRS{serial}`.
 Dies sollte zum eindeutigen Identifizieren des Gerätes ausreichen.
 
 Nun legen wir uns eine Regel-Datei an:
@@ -38,7 +38,7 @@ Eine neu erstellte `/etc/udev/rules.d/20-mydevice.rules` füllen wir nun mit den
 
     SUBSYSTEM=="tty", ATTRS{idVendor}=="1234", ATTRS{idProduct}=="abcd", ATTRS{serial}=="01010101010101010101010101010", SYMLINK+="ttyUSB_mydevice"
 
-Nun noch die neuen Regeln anlegen: 
+Nun noch die neuen Regeln anlegen:
 
 ```bash
 sudo udevadm trigger

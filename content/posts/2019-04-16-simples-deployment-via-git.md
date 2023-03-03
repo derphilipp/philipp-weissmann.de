@@ -4,6 +4,7 @@ author: Philipp Weißmann
 type: post
 date: 2019-04-16T19:59:37+00:00
 url: /simples-deployment-via-git/
+cover: /img/distribute.jpg
 categories:
   - Uncategorized
 tags:
@@ -21,8 +22,6 @@ Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle P
 Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.
 
 Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:
-
-<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/04/distribute-1024x684.jpg" alt="Verteilen von Paketen" />
 
 # Ausgangssituation
 

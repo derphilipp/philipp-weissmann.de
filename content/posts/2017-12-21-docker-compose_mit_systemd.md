@@ -4,6 +4,7 @@ author: Philipp Weißmann
 type: post
 date: 2017-12-21T21:05:32+00:00
 url: /docker-compose_mit_systemd/
+cover: /img/container.jpg
 categories:
   - Uncategorized
 tags:
@@ -15,8 +16,6 @@ tags:
 [Docker][1] ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.
 
 Wie kann man jedoch einen logischen Verbund an Diensten mit dem System zusammen starten?
-
-<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2017/12/container-1024x683.jpg" alt="Container" /> 
 
 Mit der Hilfe von Docker können Anforderungen eines Dienstes (z.B. [Gitlab][2]) an die Distribution innerhalb eines Containers befriedigt werden. Das ausführende System aussenherum bleibt davon unberührt und kann auch eine inkompatible Distribution sein.
 

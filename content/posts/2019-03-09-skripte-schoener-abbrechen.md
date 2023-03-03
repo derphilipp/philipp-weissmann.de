@@ -4,6 +4,7 @@ author: Philipp Weißmann
 type: post
 date: 2019-03-09T12:34:23+00:00
 url: /skripte-schoener-abbrechen/
+cover: /img/exit.jpg
 categories:
   - Uncategorized
 tags:
@@ -21,5 +22,3 @@ set -Eeuo pipefail
 ```
 
 Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!
-
-<img decoding="async" src="https://philipp-weissmann.de/wp-content/uploads/2019/04/exit-1024x683.jpg" alt="Exit Symbol" />
