@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Produktivität on Philipp Weißmann</title><link>/tags/produktivit%C3%A4t/</link><description>Recent content in Produktivität on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Tue, 16 Apr 2019 19:59:37 +0000</lastBuildDate><atom:link href="/tags/produktivit%C3%A4t/index.xml" rel="self" type="application/rss+xml"/><item><title>Simples deployment via git</title><link>/simples-deployment-via-git/</link><pubDate>Tue, 16 Apr 2019 19:59:37 +0000</pubDate><guid>/simples-deployment-via-git/</guid><description>Das Problem Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute git.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Produktivität on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/produktivit%C3%A4t/</link><description>Recent content in Produktivität on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Tue, 16 Apr 2019 19:59:37 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/produktivit%C3%A4t/index.xml" rel="self" type="application/rss+xml"/><item><title>Simples deployment via git</title><link>https://philipp-weissmann.de/simples-deployment-via-git/</link><pubDate>Tue, 16 Apr 2019 19:59:37 +0000</pubDate><guid>https://philipp-weissmann.de/simples-deployment-via-git/</guid><description>Das Problem Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute git.
 Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.
 Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:
 Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.</description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
@@ -7,24 +7,28 @@ Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für
 &lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
 &lt;!-- raw HTML omitted -->
 &lt;h1 id="ausgangssituation">Ausgangssituation&lt;/h1>
-&lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).&lt;br>
-Auf Github befindet sich unser Projekt.&lt;br>
+&lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).
+Auf Github befindet sich unser Projekt.
 Auf Laptop wie auch auf dem Server haben wir uns mit &lt;code>git clone&lt;/code> das Projekt eingerichtet.&lt;/p>
 &lt;h1 id="vorgehen">Vorgehen&lt;/h1>
 &lt;p>Das Projekt auf dem Server soll beim Empfangen neuer Dateien diese auch in das &amp;ldquo;Working Directory&amp;rdquo; schreiben. Dies aktivieren wir mit :&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;p>Nun müssen wir unserem Projekt auf dem Laptop das neue Ziel beibringen:&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;p>Unsere Änderungen können wir weiterhin zu Github schieben:&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;p>Aber nun auch neu: Auf dem Server direkt ausrollen:&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;p>Es ist sogar möglich mittels &lt;code>push-url&lt;/code> mehrere Ziele auf einmal zu definieren.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># auf Server, im Projektverzeichnis&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git config receive.denyCurrentBranch updateInstead
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nun müssen wir unserem Projekt auf dem Laptop das neue Ziel beibringen:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># auf Laptop, im Projektverzeichnis&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git remote add deploy benutzer@servername:/pfad/zu/projektordner/auf/server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># jetzt noch sagen: schiebe den lokalen branch _master_ auf den server (nur 1 mal notwendig)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git push --set-upstream deploy master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>
+Unsere Änderungen können wir weiterhin zu Github schieben:
+```bash
+git push origin
+&lt;/code>&lt;/pre>&lt;p>Aber nun auch neu: Auf dem Server direkt ausrollen:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push deploy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Es ist sogar möglich mittels &lt;code>push-url&lt;/code> mehrere Ziele auf einmal zu definieren.&lt;/p>
 &lt;h1 id="fazit">Fazit&lt;/h1>
 &lt;p>Natürlich ersetzt unser kleiner Workflow keinen Build-Server oder ausgetüftelte Deployment Prozesse. Aber für Kleinst-Projekte kann das vorgehen mit &lt;code>updateInstead&lt;/code> sehr praktisch sein.&lt;/p>
-&lt;p>&lt;strong>Aber Achtung&lt;/strong>: Verwenden wir diese Möglichkeit um Webseiten zu versionieren: Nicht vergessen, den &lt;code>.git&lt;/code> Ordner nicht auszuliefern.&lt;/p></content></item><item><title>Kommandozeile mit FZF</title><link>/kommandozeile-mit-fzf/</link><pubDate>Fri, 22 Apr 2016 08:01:39 +0000</pubDate><guid>/kommandozeile-mit-fzf/</guid><description>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.&lt;br>
+&lt;p>&lt;strong>Aber Achtung&lt;/strong>: Verwenden wir diese Möglichkeit um Webseiten zu versionieren: Nicht vergessen, den &lt;code>.git&lt;/code> Ordner nicht auszuliefern.&lt;/p></content></item><item><title>Kommandozeile mit FZF</title><link>https://philipp-weissmann.de/kommandozeile-mit-fzf/</link><pubDate>Fri, 22 Apr 2016 08:01:39 +0000</pubDate><guid>https://philipp-weissmann.de/kommandozeile-mit-fzf/</guid><description>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.&lt;br>
 So stöbert man in &lt;code>bash&lt;/code> bzw. &lt;code>zsh&lt;/code>mit &lt;code>Ctrl+R&lt;/code> in der Eingabe-History, sucht mit &lt;code>find&lt;/code> Dateien in einem gegeben Pfad - und so weiter und so fort.&lt;/p>
 &lt;p>Ein nützliches Helferlein, welches die beiden Aktionen (und mehr) beschleunigt&lt;br>
 ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&lt;/p></description><content>&lt;p>Wer viel auf der Kommandozeile/Shell arbeitet, lernt im Lauf der Zeit einige nützliche Tools und Tastaturkürzel kennen.&lt;br>
@@ -34,13 +38,13 @@ ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&
 &lt;p>In &lt;a href="http://golang.org">Go&lt;/a> geschrieben und fix installiert (z.B. via Arch Linux Aur, zu Fuß oder als via Vim-Plugin) kann das Werkzeug händisch genutzt werden oder in Verbindung mit &lt;code>tmux&lt;/code> auch die oben genannten Tastaturkürzel übernehmen.&lt;/p>
 &lt;p>Und so sieht das ganze aus:&lt;/p>
 &lt;!-- raw HTML omitted -->
-&lt;p>Jetzt erlaubt das Tool interaktiv und komfortabel nach Dateien zu suchen, alte Befehle aufzufinden und damit den Komfort des Arbeitens auf der Kommandozeile deutlich zu steigern.&lt;/p></content></item><item><title>Sharpkeys</title><link>/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
+&lt;p>Jetzt erlaubt das Tool interaktiv und komfortabel nach Dateien zu suchen, alte Befehle aufzufinden und damit den Komfort des Arbeitens auf der Kommandozeile deutlich zu steigern.&lt;/p></content></item><item><title>Sharpkeys</title><link>https://philipp-weissmann.de/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>https://philipp-weissmann.de/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
 Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &amp;ldquo;SharpKeys&amp;rdquo; behelfen.
 Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.
 Tipp: Die Feststelltaste einfach mit Strg (Ctrl) belegen.</description><content>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
 Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &lt;a href="https://github.com/randyrants/sharpkeys">&amp;ldquo;SharpKeys&amp;rdquo;&lt;/a> behelfen.&lt;/p>
 &lt;p>Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.&lt;/p>
-&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></content></item><item><title>Myrepos: Alle meine Repositories</title><link>/myrepos-alle-meine-repositories/</link><pubDate>Sun, 17 May 2015 13:15:05 +0000</pubDate><guid>/myrepos-alle-meine-repositories/</guid><description>&lt;h1 id="repository-zentrale">Repository-Zentrale&lt;/h1>
+&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></content></item><item><title>Myrepos: Alle meine Repositories</title><link>https://philipp-weissmann.de/myrepos-alle-meine-repositories/</link><pubDate>Sun, 17 May 2015 13:15:05 +0000</pubDate><guid>https://philipp-weissmann.de/myrepos-alle-meine-repositories/</guid><description>&lt;h1 id="repository-zentrale">Repository-Zentrale&lt;/h1>
 &lt;p>Dank VCSH habe ich all meine Dotfiles hübsch in Git-Repositories verpackt.&lt;br>
 Das Einbinden eines einzelnen Repositories geht nun zwar schnell von der Hand,&lt;br>
 aber wenn nun für &lt;code>vim&lt;/code> und &lt;code>mutt&lt;/code> und &lt;code>emacs&lt;/code> und und und &amp;hellip; lauter&lt;br>
@@ -125,7 +129,7 @@ Nachricht aus, dass ich in dieses Repository nicht pushen möchte.&lt;/p>
 &lt;p>Myrepos ermöglicht das einfache und bequeme Verwalten und Nutzen von vielen&lt;br>
 Repositories. Gerade das Updaten oder initiale Klonen wird damit deutlich&lt;br>
 bequemer. Insbesondere im Zusammenspiel mit VCSH wird eine extrem komfortable&lt;br>
-Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>OS X Keyboard Layout</title><link>/keyboard-layout/</link><pubDate>Sun, 26 Apr 2015 13:35:47 +0000</pubDate><guid>/keyboard-layout/</guid><description>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>OS X Keyboard Layout</title><link>https://philipp-weissmann.de/keyboard-layout/</link><pubDate>Sun, 26 Apr 2015 13:35:47 +0000</pubDate><guid>https://philipp-weissmann.de/keyboard-layout/</guid><description>&lt;h1 id="das-problem">Das Problem&lt;/h1>
 &lt;p>Als Entwickler nutze ich stetig Sonderzeichen und Symbole wie {, ] oder auch `.&lt;/p>
 &lt;p>Doch welches Tastaturlayout soll ich einsetzen?&lt;br>
 Zwar ist ein englisches Tastaturlayout sehr attraktiv, da dort sämtliche Sonderzeichen gut erreichbar sind. Als Entwickler im deutschsprachigen Raum benötige ich jedoch ständig Umlaute und das &lt;em>ß&lt;/em>-Zeichen.&lt;/p></description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
@@ -151,7 +155,7 @@ Ich drücke also genau die Taste, die bei einem deutschen Keyboard ebenfalls das
 &lt;em>Systemeinstellungen&lt;/em> -&amp;gt; &lt;em>Tastatur&lt;/em> -&amp;gt; &lt;em>Eingabequellen&lt;/em>&lt;br>
 aktiviert werden.&lt;/p>
 &lt;h1 id="fazit">Fazit&lt;/h1>
-&lt;p>Nach kurzer Umgewöhnungszeit ist es mir nun möglich das komfortable englische Tastaturlayout zu nutzen, ohne jedoch auf die native Eingabemöglichkeit Umlauten und Co zu verzichten.&lt;/p></content></item><item><title>Shift Lock sinnvoll nutzen</title><link>/shift-lock-sinnvoll-nutzen/</link><pubDate>Tue, 21 Apr 2015 19:01:17 +0000</pubDate><guid>/shift-lock-sinnvoll-nutzen/</guid><description>&lt;h1 id="shift-lock">Shift-Lock&lt;/h1>
+&lt;p>Nach kurzer Umgewöhnungszeit ist es mir nun möglich das komfortable englische Tastaturlayout zu nutzen, ohne jedoch auf die native Eingabemöglichkeit Umlauten und Co zu verzichten.&lt;/p></content></item><item><title>Shift Lock sinnvoll nutzen</title><link>https://philipp-weissmann.de/shift-lock-sinnvoll-nutzen/</link><pubDate>Tue, 21 Apr 2015 19:01:17 +0000</pubDate><guid>https://philipp-weissmann.de/shift-lock-sinnvoll-nutzen/</guid><description>&lt;h1 id="shift-lock">Shift-Lock&lt;/h1>
 &lt;p>Die Shift-Lock Taste alias &amp;ldquo;Feststelltaste&amp;rdquo; ist für die meisten Menschen ein Ärgernis und&lt;br>
 Relikt aus der Zeit der Schreibmaschinen.&lt;/p>
 &lt;p>Doch anstatt die Taste zu deaktivieren oder gar auszubauen kann die Taste auch gut für andere&lt;br>
@@ -187,7 +191,7 @@ Eine &amp;ldquo;eher universale&amp;rdquo; Möglichkeit für X ergibt sich mit f
 &lt;p>Mit geringem Aufwand kann man die &amp;ldquo;nervige&amp;rdquo; Shift-Lock Taste in eine wertvolle Taste&lt;br>
 verwandeln.&lt;br>
 Nach etwas Umgewöhnung nutze ich die &amp;ldquo;normale&amp;rdquo; Control Taste praktisch gar nicht mehr und bei der Nutzung von &lt;code>vim&lt;/code> gehen Shortcuts wie &lt;em>Ctrl+C&lt;/em>&lt;br>
-(in den &lt;em>normal mode&lt;/em> wechseln) und &lt;em>Ctrl+V&lt;/em> (&lt;em>visual block mode&lt;/em>) deutlich leichter von der Hand.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>Einstellungen Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?
+(in den &lt;em>normal mode&lt;/em> wechseln) und &lt;em>Ctrl+V&lt;/em> (&lt;em>visual block mode&lt;/em>) deutlich leichter von der Hand.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>Einstellungen Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?
 Die Einstellungen!
 Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.
 Doch auch Software hat Einstellungen:

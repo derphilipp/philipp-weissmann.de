@@ -1,22 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on Philipp Weißmann</title><link>/tags/windows/</link><description>Recent content in Windows on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Tue, 13 Dec 2016 08:59:09 +0000</lastBuildDate><atom:link href="/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows auf Schlafentzug</title><link>/windows-auf-schlafentzug/</link><pubDate>Tue, 13 Dec 2016 08:59:09 +0000</pubDate><guid>/windows-auf-schlafentzug/</guid><description>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/windows/</link><description>Recent content in Windows on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Tue, 13 Dec 2016 08:59:09 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows auf Schlafentzug</title><link>https://philipp-weissmann.de/windows-auf-schlafentzug/</link><pubDate>Tue, 13 Dec 2016 08:59:09 +0000</pubDate><guid>https://philipp-weissmann.de/windows-auf-schlafentzug/</guid><description>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
 Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
 Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p></description><content>&lt;p>Um seinen Rechner vor fremden Zugriff zu schützen, ist es sinnvoll, eine automatische Sperre nach einer definierten Zeit zu setzen.&lt;br>
 Doch es gibt Situationen, in denen kann diese Sperre hinderlich sein: Hält man eine&lt;br>
 Präsentation und der Bildschirm sperrt sich, hilft nur noch entsperren und weitermachen.&lt;/p>
 &lt;p>Zwar verhindert manche Präsentationssoftware die lästige Sperre, aber spätestens bei Präsentationen aus PDF Dateien oder im Browser schlägt die Sperre erneut zu.&lt;/p>
 &lt;p>Abhilfe verschafft ein kleines Snippet, welches Tastatureingaben simuliert:&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;pre tabindex="0">&lt;code class="language-vbscript" data-lang="vbscript">Dim objResult
+Set objShell = WScript.CreateObject(&amp;#34;WScript.Shell&amp;#34;)
+i = 0
+Do While i = 0
+objResult = objShell.sendkeys(&amp;#34;{NUMLOCK}{NUMLOCK}&amp;#34;)
+Wscript.Sleep (6000)
+Loop
+&lt;/code>&lt;/pre>&lt;!-- raw HTML omitted -->
 &lt;p>Einfach als &lt;code>schlaflos.vbs&lt;/code> abspeichern und ausführen. Nun wird alle sechs Sekunden die &lt;code>Numlock&lt;/code> zwei Mal gedrückt.&lt;br>
 Nun haben wir ein schlafloses Windows, welches nach dem Beenden des Skriptes, spätestens aber zum nächsten Neustart auch wieder schlafen darf.&lt;/p>
-&lt;p>Gute Nacht Windows!&lt;/p></content></item><item><title>Sharpkeys</title><link>/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
+&lt;p>Gute Nacht Windows!&lt;/p></content></item><item><title>Sharpkeys</title><link>https://philipp-weissmann.de/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>https://philipp-weissmann.de/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
 Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &amp;ldquo;SharpKeys&amp;rdquo; behelfen.
 Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.
 Tipp: Die Feststelltaste einfach mit Strg (Ctrl) belegen.</description><content>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
 Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &lt;a href="https://github.com/randyrants/sharpkeys">&amp;ldquo;SharpKeys&amp;rdquo;&lt;/a> behelfen.&lt;/p>
 &lt;p>Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.&lt;/p>
-&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></content></item><item><title>Git-tfs</title><link>/git-tfs/</link><pubDate>Wed, 22 Apr 2015 19:11:48 +0000</pubDate><guid>/git-tfs/</guid><description>&lt;h1 id="git-statt-tfs">Git statt TFS?&lt;/h1>
+&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></content></item><item><title>Git-tfs</title><link>https://philipp-weissmann.de/git-tfs/</link><pubDate>Wed, 22 Apr 2015 19:11:48 +0000</pubDate><guid>https://philipp-weissmann.de/git-tfs/</guid><description>&lt;h1 id="git-statt-tfs">Git statt TFS?&lt;/h1>
 &lt;p>Wer gerne mit &lt;a href="http://git-scm.com/">git&lt;/a> arbeitet, wünscht sich oft eine Brücke von anderen Versionsmanagement-Werkzeugen zu git.&lt;br>
 So gibt es zur Nutzung von &lt;a href="https://subversion.apache.org/">Subversion (snv)&lt;/a> die Möglichkeit &lt;a href="http://git-scm.com/docs/git-svn">git-svn&lt;/a> zu nutzen.&lt;br>
 Was aber, wenn die Serverseite &lt;a href="http://de.wikipedia.org/wiki/Team_Foundation_Server">TFS&lt;/a>{.broken_link} anbietet?&lt;/p></description><content>&lt;h1 id="git-statt-tfs">Git statt TFS?&lt;/h1>
@@ -64,7 +69,7 @@ Diese in Java geschriebene Brücke funktioniert ähnlich git-tfs, bietet jedoch&
 kein &amp;ldquo;Checkintool&amp;rdquo;.&lt;/p>
 &lt;h1 id="fazit">Fazit&lt;/h1>
 &lt;p>Git-tfs erlaubt es extrem einfach eine transparente Brücke zwischen TFS und Git zu nutzen.&lt;br>
-Wer Nicht-Windows Betriebssysteme nutzt, kann mit git-tf ebenfalls mit einem TFS zusammen arbeiten.&lt;/p></content></item><item><title>Shift Lock sinnvoll nutzen</title><link>/shift-lock-sinnvoll-nutzen/</link><pubDate>Tue, 21 Apr 2015 19:01:17 +0000</pubDate><guid>/shift-lock-sinnvoll-nutzen/</guid><description>&lt;h1 id="shift-lock">Shift-Lock&lt;/h1>
+Wer Nicht-Windows Betriebssysteme nutzt, kann mit git-tf ebenfalls mit einem TFS zusammen arbeiten.&lt;/p></content></item><item><title>Shift Lock sinnvoll nutzen</title><link>https://philipp-weissmann.de/shift-lock-sinnvoll-nutzen/</link><pubDate>Tue, 21 Apr 2015 19:01:17 +0000</pubDate><guid>https://philipp-weissmann.de/shift-lock-sinnvoll-nutzen/</guid><description>&lt;h1 id="shift-lock">Shift-Lock&lt;/h1>
 &lt;p>Die Shift-Lock Taste alias &amp;ldquo;Feststelltaste&amp;rdquo; ist für die meisten Menschen ein Ärgernis und&lt;br>
 Relikt aus der Zeit der Schreibmaschinen.&lt;/p>
 &lt;p>Doch anstatt die Taste zu deaktivieren oder gar auszubauen kann die Taste auch gut für andere&lt;br>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Administration on Philipp Weißmann</title><link>/tags/administration/</link><description>Recent content in Administration on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Tue, 19 May 2015 19:15:13 +0000</lastBuildDate><atom:link href="/tags/administration/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux Pakete mit fpm bauen</title><link>/linux-pakete-mit-fpm-bauen/</link><pubDate>Tue, 19 May 2015 19:15:13 +0000</pubDate><guid>/linux-pakete-mit-fpm-bauen/</guid><description>Software installieren Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Administration on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/administration/</link><description>Recent content in Administration on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Tue, 19 May 2015 19:15:13 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/administration/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux Pakete mit fpm bauen</title><link>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</link><pubDate>Tue, 19 May 2015 19:15:13 +0000</pubDate><guid>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</guid><description>Software installieren Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager
 installiert.
 Gerade in der Software-Entwicklung kommt es aber immer wieder dazu, dass
 man selbstkompilierte oder selbstentwickelte Software installieren muss.
@@ -67,7 +67,7 @@ es werden auch nicht alle Möglichkeiten und Funktionen des Paketmanagements gen
 in der Praxis erleichtert dies die Installation von Software - gerade in Teams&lt;br>
 ungemein.&lt;/p>
 &lt;p>Jetzt nur noch ein Repository-Server aufgesetzt - und schon hat man im Team&lt;br>
-eine komfortablen Weg Software bereit zu stellen.&lt;/p></content></item><item><title>Myrepos: Alle meine Repositories</title><link>/myrepos-alle-meine-repositories/</link><pubDate>Sun, 17 May 2015 13:15:05 +0000</pubDate><guid>/myrepos-alle-meine-repositories/</guid><description>&lt;h1 id="repository-zentrale">Repository-Zentrale&lt;/h1>
+eine komfortablen Weg Software bereit zu stellen.&lt;/p></content></item><item><title>Myrepos: Alle meine Repositories</title><link>https://philipp-weissmann.de/myrepos-alle-meine-repositories/</link><pubDate>Sun, 17 May 2015 13:15:05 +0000</pubDate><guid>https://philipp-weissmann.de/myrepos-alle-meine-repositories/</guid><description>&lt;h1 id="repository-zentrale">Repository-Zentrale&lt;/h1>
 &lt;p>Dank VCSH habe ich all meine Dotfiles hübsch in Git-Repositories verpackt.&lt;br>
 Das Einbinden eines einzelnen Repositories geht nun zwar schnell von der Hand,&lt;br>
 aber wenn nun für &lt;code>vim&lt;/code> und &lt;code>mutt&lt;/code> und &lt;code>emacs&lt;/code> und und und &amp;hellip; lauter&lt;br>
@@ -152,7 +152,7 @@ Nachricht aus, dass ich in dieses Repository nicht pushen möchte.&lt;/p>
 &lt;p>Myrepos ermöglicht das einfache und bequeme Verwalten und Nutzen von vielen&lt;br>
 Repositories. Gerade das Updaten oder initiale Klonen wird damit deutlich&lt;br>
 bequemer. Insbesondere im Zusammenspiel mit VCSH wird eine extrem komfortable&lt;br>
-Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>Einstellungen Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?
+Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>Einstellungen Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?
 Die Einstellungen!
 Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.
 Doch auch Software hat Einstellungen:

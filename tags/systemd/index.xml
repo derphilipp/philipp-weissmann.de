@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Systemd on Philipp Weißmann</title><link>/tags/systemd/</link><description>Recent content in Systemd on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Thu, 21 Dec 2017 21:05:32 +0000</lastBuildDate><atom:link href="/tags/systemd/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker services via docker-compose und systemd template</title><link>/docker-compose_mit_systemd/</link><pubDate>Thu, 21 Dec 2017 21:05:32 +0000</pubDate><guid>/docker-compose_mit_systemd/</guid><description>Docker ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Systemd on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/systemd/</link><description>Recent content in Systemd on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><lastBuildDate>Thu, 21 Dec 2017 21:05:32 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/systemd/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker services via docker-compose und systemd template</title><link>https://philipp-weissmann.de/docker-compose_mit_systemd/</link><pubDate>Thu, 21 Dec 2017 21:05:32 +0000</pubDate><guid>https://philipp-weissmann.de/docker-compose_mit_systemd/</guid><description>Docker ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.
 Wie kann man jedoch einen logischen Verbund an Diensten mit dem System zusammen starten?
 Mit der Hilfe von Docker können Anforderungen eines Dienstes (z.B. Gitlab) an die Distribution innerhalb eines Containers befriedigt werden. Das ausführende System aussenherum bleibt davon unberührt und kann auch eine inkompatible Distribution sein.
 In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Diese können mit dem Tool docker-compose beschrieben und gestartet werden.</description><content>&lt;p>&lt;a href="https://www.docker.com/">Docker&lt;/a> ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.&lt;/p>
@@ -8,9 +8,31 @@ In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Dies
 &lt;p>In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Diese können mit dem Tool &lt;a href="https://docs.docker.com/compose/">docker-compose&lt;/a> beschrieben und gestartet werden.&lt;/p>
 &lt;p>Will man nun Dienste via docker-compose mit dem System zusammen starten, bietet sich folgende Vorgehensweise an:&lt;/p>
 &lt;p>Als erstes definieren wir ein Dienst-Template in einer neuen Datei &lt;code>/etc/systemd/system/dc@.service&lt;/code>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;p>Wir gehen dabei davon aus, dass alle docker-compose Konfigurationsdateien in &lt;code>/opt/dockerfile/DIENSTNAME&lt;/code> liegen und sich &lt;code>docker-compose&lt;/code> im Verzeichnis &lt;code>/usr/local/bin&lt;/code> liegt.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">[Unit]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">Description&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">%i service with docker compose&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">Requires&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">docker.service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">After&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">docker.service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">[Service]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">Restart&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">always&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">TimeoutStartSec&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">1200&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">WorkingDirectory&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">/opt/dockerfiles/%i&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Remove old containers, images and volumes and update it&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">ExecStartPre&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">/usr/local/bin/docker-compose down -v&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">ExecStartPre&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">/usr/local/bin/docker-compose rm -fv&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">ExecStartPre&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">/usr/local/bin/docker-compose pull&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Compose up&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">ExecStart&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">/usr/local/bin/docker-compose up&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Compose down, remove containers and volumes&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">ExecStop&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">/usr/local/bin/docker-compose down -v&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">[Install]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">WantedBy&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">multi-user.target&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Wir gehen dabei davon aus, dass alle docker-compose Konfigurationsdateien in &lt;code>/opt/dockerfile/DIENSTNAME&lt;/code> liegen und sich &lt;code>docker-compose&lt;/code> im Verzeichnis &lt;code>/usr/local/bin&lt;/code> liegt.&lt;/p>
 &lt;p>Nun legen wir unsere docker-compose.yml Datei z.B. in &lt;code>/opt/dockerfile/gitlab/docker-compose.yml&lt;/code> ab.&lt;/p>
 &lt;p>Nun weisen wir systemd an, das Template zu instanziieren:&lt;/p>
 &lt;p>&lt;code>sudo systemctl enable dc@gitlab&lt;/code>&lt;/p>
