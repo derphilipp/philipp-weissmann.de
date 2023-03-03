@@ -19,11 +19,9 @@ Auf Laptop wie auch auf dem Server haben wir uns mit &lt;code>git clone&lt;/code
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git remote add deploy benutzer@servername:/pfad/zu/projektordner/auf/server
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># jetzt noch sagen: schiebe den lokalen branch _master_ auf den server (nur 1 mal notwendig)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git push --set-upstream deploy master
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>
-Unsere Änderungen können wir weiterhin zu Github schieben:
-```bash
-git push origin
-&lt;/code>&lt;/pre>&lt;p>Aber nun auch neu: Auf dem Server direkt ausrollen:&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Unsere Änderungen können wir weiterhin zu Github schieben:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push origin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Aber nun auch neu: Auf dem Server direkt ausrollen:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push deploy
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Es ist sogar möglich mittels &lt;code>push-url&lt;/code> mehrere Ziele auf einmal zu definieren.&lt;/p>
 &lt;h1 id="fazit">Fazit&lt;/h1>
