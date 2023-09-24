@@ -52,9 +52,9 @@ ExecStop=/usr/local/bin/docker-compose down -v
 WantedBy=multi-user.target
 ```
 
-Wir gehen dabei davon aus, dass alle docker-compose Konfigurationsdateien in `/opt/dockerfile/DIENSTNAME` liegen und sich `docker-compose` im Verzeichnis `/usr/local/bin` liegt.
+Wir gehen dabei davon aus, dass alle docker-compose Konfigurationsdateien in `/opt/dockerfiles/DIENSTNAME` liegen und sich `docker-compose` im Verzeichnis `/usr/local/bin` liegt.
 
-Nun legen wir unsere docker-compose.yml Datei z.B. in `/opt/dockerfile/gitlab/docker-compose.yml` ab.
+Nun legen wir unsere docker-compose.yml Datei z.B. in `/opt/dockerfiles/gitlab/docker-compose.yml` ab.
 
 Nun weisen wir systemd an, das Template zu instanziieren:
 
