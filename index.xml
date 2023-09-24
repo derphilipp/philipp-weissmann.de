@@ -230,8 +230,8 @@ In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Dies
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">[Install]&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">WantedBy&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">multi-user.target&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Wir gehen dabei davon aus, dass alle docker-compose Konfigurationsdateien in &lt;code>/opt/dockerfile/DIENSTNAME&lt;/code> liegen und sich &lt;code>docker-compose&lt;/code> im Verzeichnis &lt;code>/usr/local/bin&lt;/code> liegt.&lt;/p>
-&lt;p>Nun legen wir unsere docker-compose.yml Datei z.B. in &lt;code>/opt/dockerfile/gitlab/docker-compose.yml&lt;/code> ab.&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Wir gehen dabei davon aus, dass alle docker-compose Konfigurationsdateien in &lt;code>/opt/dockerfiles/DIENSTNAME&lt;/code> liegen und sich &lt;code>docker-compose&lt;/code> im Verzeichnis &lt;code>/usr/local/bin&lt;/code> liegt.&lt;/p>
+&lt;p>Nun legen wir unsere docker-compose.yml Datei z.B. in &lt;code>/opt/dockerfiles/gitlab/docker-compose.yml&lt;/code> ab.&lt;/p>
 &lt;p>Nun weisen wir systemd an, das Template zu instanziieren:&lt;/p>
 &lt;p>&lt;code>sudo systemctl enable dc@gitlab&lt;/code>&lt;/p>
 &lt;p>Ab sofort ist der Dienst vorhanden und kann auch direkt gestartet werden:&lt;/p>
