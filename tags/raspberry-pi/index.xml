@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raspberry Pi on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/raspberry-pi/</link><description>Recent content in Raspberry Pi on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Tue, 27 Aug 2019 18:28:54 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml"/><item><title>yay mit archarm nutzen</title><link>https://philipp-weissmann.de/yay-mit-archarm-nutzen/</link><pubDate>Tue, 27 Aug 2019 18:28:54 +0000</pubDate><guid>https://philipp-weissmann.de/yay-mit-archarm-nutzen/</guid><description>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen. Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.
-Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: Rolling Releases statt großer Versionssprünge erleichtern den Entwickleralltag. Auch auf dem Raspberry Pi läuft diese Distribution.
-Aus der Community getrieben Pakete können aus dem AUR mit einem beliebigen Tool installiert werden. Derzeit verwende ich dafür gerne yay.</description><content>&lt;p>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raspberry Pi on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/raspberry-pi/</link><description>Recent content in Raspberry Pi on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Tue, 27 Aug 2019 18:28:54 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml"/><item><title>yay mit archarm nutzen</title><link>https://philipp-weissmann.de/yay-mit-archarm-nutzen/</link><pubDate>Tue, 27 Aug 2019 18:28:54 +0000</pubDate><guid>https://philipp-weissmann.de/yay-mit-archarm-nutzen/</guid><description>&lt;p>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.
+Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.&lt;/p>
+&lt;p>Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: &lt;a href="https://de.wikipedia.org/wiki/Rolling_Release" title="Rolling Releases">Rolling Releases&lt;/a> statt großer Versionssprünge erleichtern den Entwickleralltag.
+Auch auf dem Raspberry Pi läuft diese Distribution.&lt;/p>
+&lt;p>Aus der Community getrieben Pakete können aus dem &lt;a href="https://wiki.archlinux.org/title/Arch_User_Repository" title="AUR">AUR&lt;/a> mit einem beliebigen Tool installiert werden.
+Derzeit verwende ich dafür gerne &lt;a href="https://github.com/Jguer/yay">yay&lt;/a>.&lt;/p></description><content>&lt;p>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.
 Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.&lt;/p>
 &lt;p>Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: &lt;a href="https://de.wikipedia.org/wiki/Rolling_Release" title="Rolling Releases">Rolling Releases&lt;/a> statt großer Versionssprünge erleichtern den Entwickleralltag.
 Auch auf dem Raspberry Pi läuft diese Distribution.&lt;/p>
@@ -14,16 +17,19 @@ Derzeit verwende ich dafür gerne &lt;a href="https://github.com/Jguer/yay">yay&
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git clone https://aur.archlinux.org/yay.git
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd yay
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>makepkg -si
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Dann steht der Installation von Paketen aus dem AUR nichts mehr im Wege.&lt;/p></content></item><item><title>SD Karte beschreiben mit „flash“</title><link>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</link><pubDate>Tue, 29 Nov 2016 08:30:27 +0000</pubDate><guid>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</guid><description>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben. Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.
-Unter Windows bietet sich Win32 Disk Imager an, unter macOS das Tool ApplePi Baker und unter Linux nutzt man einfach dd.
-Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.
-Genau das erledigt das Tool flash.</description><content>&lt;p>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Dann steht der Installation von Paketen aus dem AUR nichts mehr im Wege.&lt;/p></content></item><item><title>SD Karte beschreiben mit „flash“</title><link>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</link><pubDate>Tue, 29 Nov 2016 08:30:27 +0000</pubDate><guid>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</guid><description>&lt;p>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.
 Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.&lt;/p>
 &lt;p>Unter Windows bietet sich &lt;a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager&lt;/a> an,
 unter macOS das Tool &lt;a href="http://www.tweaking4all.com/software/macosx-software/macosx-apple-pi-baker/">ApplePi Baker&lt;/a> und unter Linux nutzt man einfach &lt;code>dd&lt;/code>.&lt;/p>
 &lt;p>Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.&lt;/p>
 &lt;p>Genau das erledigt das Tool &lt;a href="https://github.com/hypriot/flash">flash&lt;/a>.
-Das in &lt;a href="https://de.wikipedia.org/wiki/Bash_(Shell)">bash&lt;/a> geschrieben Werkzeug ist schnell installiert:&lt;/p>
+Das in &lt;a href="https://de.wikipedia.org/wiki/Bash_%28Shell%29">bash&lt;/a> geschrieben Werkzeug ist schnell installiert:&lt;/p></description><content>&lt;p>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.
+Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.&lt;/p>
+&lt;p>Unter Windows bietet sich &lt;a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager&lt;/a> an,
+unter macOS das Tool &lt;a href="http://www.tweaking4all.com/software/macosx-software/macosx-apple-pi-baker/">ApplePi Baker&lt;/a> und unter Linux nutzt man einfach &lt;code>dd&lt;/code>.&lt;/p>
+&lt;p>Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.&lt;/p>
+&lt;p>Genau das erledigt das Tool &lt;a href="https://github.com/hypriot/flash">flash&lt;/a>.
+Das in &lt;a href="https://de.wikipedia.org/wiki/Bash_%28Shell%29">bash&lt;/a> geschrieben Werkzeug ist schnell installiert:&lt;/p>
 &lt;pre>&lt;code>curl -O https://raw.githubusercontent.com/hypriot/flash/master/$(uname -s)/flash
 chmod +x flash
 sudo mv flash /usr/local/bin/flash

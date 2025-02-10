@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/hugo/</link><description>Recent content in Hugo on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Wed, 13 Apr 2016 14:26:13 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Editor für Hugo</title><link>https://philipp-weissmann.de/editor-fuer-hugo/</link><pubDate>Wed, 13 Apr 2016 14:26:13 +0000</pubDate><guid>https://philipp-weissmann.de/editor-fuer-hugo/</guid><description>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu
-erstellen.
-Die in Go geschriebene Software ermöglicht das einfache
-Nutzen von Templates für neue Beiträge. Ein neuer Beitrag wird auch leichter
-Hand angelegt, z.B. hugo new post/hugo_editor.md.
-Die Datei enthält danach alle Einträge des Templates - teilweise auch schon
-ausgefüllt.
-Eine interessante Konfigurationseinstellung in der config.toml (bzw.
-config.yaml, config.json) ist der Eintrag newContentEditor:
-Gesetzt auf den Editor öffnet sich dieser dem Anlegen der Datei die Schreiberei</description><content>&lt;p>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/hugo/</link><description>Recent content in Hugo on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Wed, 13 Apr 2016 14:26:13 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Editor für Hugo</title><link>https://philipp-weissmann.de/editor-fuer-hugo/</link><pubDate>Wed, 13 Apr 2016 14:26:13 +0000</pubDate><guid>https://philipp-weissmann.de/editor-fuer-hugo/</guid><description>&lt;p>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu&lt;br>
+erstellen.&lt;/p>
+&lt;p>Die in &lt;a href="https://golang.org/">Go&lt;/a> geschriebene Software ermöglicht das einfache&lt;br>
+Nutzen von Templates für neue Beiträge. Ein neuer Beitrag wird auch leichter&lt;br>
+Hand angelegt, z.B. &lt;code>hugo new post/hugo_editor.md&lt;/code>.&lt;/p>
+&lt;p>Die Datei enthält danach alle Einträge des Templates - teilweise auch schon&lt;br>
+ausgefüllt.&lt;/p>
+&lt;p>Eine interessante Konfigurationseinstellung in der &lt;code>config.toml&lt;/code> (bzw.&lt;br>
+&lt;code>config.yaml&lt;/code>, &lt;code>config.json&lt;/code>) ist der Eintrag &lt;code>newContentEditor&lt;/code>:&lt;br>
+Gesetzt auf den Editor öffnet sich dieser dem Anlegen der Datei die Schreiberei&lt;br>
+kann beginnen.&lt;/p></description><content>&lt;p>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu&lt;br>
 erstellen.&lt;/p>
 &lt;p>Die in &lt;a href="https://golang.org/">Go&lt;/a> geschriebene Software ermöglicht das einfache&lt;br>
 Nutzen von Templates für neue Beiträge. Ein neuer Beitrag wird auch leichter&lt;br>

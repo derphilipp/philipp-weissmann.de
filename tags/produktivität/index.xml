@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Produktivität on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/produktivit%C3%A4t/</link><description>Recent content in Produktivität on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Tue, 16 Apr 2019 19:59:37 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/produktivit%C3%A4t/index.xml" rel="self" type="application/rss+xml"/><item><title>Simples deployment via git</title><link>https://philipp-weissmann.de/simples-deployment-via-git/</link><pubDate>Tue, 16 Apr 2019 19:59:37 +0000</pubDate><guid>https://philipp-weissmann.de/simples-deployment-via-git/</guid><description>Das Problem Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute git.
-Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.
-Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:
-Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.</description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Produktivität on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/produktivit%C3%A4t/</link><description>Recent content in Produktivität on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Tue, 16 Apr 2019 19:59:37 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/produktivit%C3%A4t/index.xml" rel="self" type="application/rss+xml"/><item><title>Simples deployment via git</title><link>https://philipp-weissmann.de/simples-deployment-via-git/</link><pubDate>Tue, 16 Apr 2019 19:59:37 +0000</pubDate><guid>https://philipp-weissmann.de/simples-deployment-via-git/</guid><description>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
+&lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
+&lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
+&lt;h1 id="ausgangssituation">Ausgangssituation&lt;/h1>
+&lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).
+Auf Github befindet sich unser Projekt.
+Auf Laptop wie auch auf dem Server haben wir uns mit &lt;code>git clone&lt;/code> das Projekt eingerichtet.&lt;/p></description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
 &lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
 &lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
 &lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
@@ -35,10 +39,10 @@ ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&
 &lt;p>In &lt;a href="http://golang.org">Go&lt;/a> geschrieben und fix installiert (z.B. via Arch Linux Aur, zu Fuß oder als via Vim-Plugin) kann das Werkzeug händisch genutzt werden oder in Verbindung mit &lt;code>tmux&lt;/code> auch die oben genannten Tastaturkürzel übernehmen.&lt;/p>
 &lt;p>Und so sieht das ganze aus:&lt;/p>
 &lt;p>![Interaktives fzf][https://camo.githubusercontent.com/0b07def9e05309281212369b118fcf9b9fc7948e/68747470733a2f2f7261772e6769746875622e636f6d2f6a756e6567756e6e2f692f6d61737465722f667a662e676966]&lt;/p>
-&lt;p>Jetzt erlaubt das Tool interaktiv und komfortabel nach Dateien zu suchen, alte Befehle aufzufinden und damit den Komfort des Arbeitens auf der Kommandozeile deutlich zu steigern.&lt;/p></content></item><item><title>Sharpkeys</title><link>https://philipp-weissmann.de/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>https://philipp-weissmann.de/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
-Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &amp;ldquo;SharpKeys&amp;rdquo; behelfen.
-Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.
-Tipp: Die Feststelltaste einfach mit Strg (Ctrl) belegen.</description><content>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
+&lt;p>Jetzt erlaubt das Tool interaktiv und komfortabel nach Dateien zu suchen, alte Befehle aufzufinden und damit den Komfort des Arbeitens auf der Kommandozeile deutlich zu steigern.&lt;/p></content></item><item><title>Sharpkeys</title><link>https://philipp-weissmann.de/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>https://philipp-weissmann.de/sharpkeys/</guid><description>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
+Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &lt;a href="https://github.com/randyrants/sharpkeys">&amp;ldquo;SharpKeys&amp;rdquo;&lt;/a> behelfen.&lt;/p>
+&lt;p>Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.&lt;/p>
+&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></description><content>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
 Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &lt;a href="https://github.com/randyrants/sharpkeys">&amp;ldquo;SharpKeys&amp;rdquo;&lt;/a> behelfen.&lt;/p>
 &lt;p>Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.&lt;/p>
 &lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></content></item><item><title>Myrepos: Alle meine Repositories</title><link>https://philipp-weissmann.de/myrepos-alle-meine-repositories/</link><pubDate>Sun, 17 May 2015 13:15:05 +0000</pubDate><guid>https://philipp-weissmann.de/myrepos-alle-meine-repositories/</guid><description>&lt;h1 id="repository-zentrale">Repository-Zentrale&lt;/h1>
@@ -187,11 +191,19 @@ Eine &amp;ldquo;eher universale&amp;rdquo; Möglichkeit für X ergibt sich mit f
 &lt;p>Mit geringem Aufwand kann man die &amp;ldquo;nervige&amp;rdquo; Shift-Lock Taste in eine wertvolle Taste&lt;br>
 verwandeln.&lt;br>
 Nach etwas Umgewöhnung nutze ich die &amp;ldquo;normale&amp;rdquo; Control Taste praktisch gar nicht mehr und bei der Nutzung von &lt;code>vim&lt;/code> gehen Shortcuts wie &lt;em>Ctrl+C&lt;/em>&lt;br>
-(in den &lt;em>normal mode&lt;/em> wechseln) und &lt;em>Ctrl+V&lt;/em> (&lt;em>visual block mode&lt;/em>) deutlich leichter von der Hand.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>Einstellungen Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?
-Die Einstellungen!
-Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.
-Doch auch Software hat Einstellungen:
-Welchen Editor setze ich als Standard? Welche Shell-Erweiterungen lade ich in oh-my-zsh? Welches color-theme lade ich in vim? Welche Accounts habe ich in mutt? Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.</description><content>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
+(in den &lt;em>normal mode&lt;/em> wechseln) und &lt;em>Ctrl+V&lt;/em> (&lt;em>visual block mode&lt;/em>) deutlich leichter von der Hand.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
+&lt;p>Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?&lt;br>
+Die Einstellungen!&lt;br>
+Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.&lt;/p>
+&lt;p>Doch auch Software hat Einstellungen:&lt;/p>
+&lt;ul>
+&lt;li>Welchen Editor setze ich als Standard?&lt;/li>
+&lt;li>Welche Shell-Erweiterungen lade ich in &lt;code>oh-my-zsh&lt;/code>?&lt;/li>
+&lt;li>Welches &lt;code>color-theme&lt;/code> lade ich in vim?&lt;/li>
+&lt;li>Welche Accounts habe ich in &lt;code>mutt&lt;/code>?&lt;/li>
+&lt;/ul>
+&lt;p>Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.&lt;br>
+Da ich jedoch regelmässig auf unterschiedlichen Rechnern arbeite, möchte ich diese aktuell halten.&lt;/p></description><content>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
 &lt;p>Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?&lt;br>
 Die Einstellungen!&lt;br>
 Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.&lt;/p>

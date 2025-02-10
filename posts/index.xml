@@ -1,5 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Philipp Weißmann</title><link>https://philipp-weissmann.de/posts/</link><description>Recent content in Posts on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Sun, 29 Nov 2020 18:24:12 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Dateien bereinigen mit fd und sd</title><link>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</link><pubDate>Sun, 29 Nov 2020 18:24:12 +0000</pubDate><guid>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</guid><description>Das Problem In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz. Ob der uneinheitliche Zeilenumbruch, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.
-Die Werkzeuge Dabei kann das Projekt Editorconfig helfen. Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.</description><content>&lt;h2 id="das-problem">Das Problem&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Philipp Weißmann</title><link>https://philipp-weissmann.de/posts/</link><description>Recent content in Posts on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Sun, 29 Nov 2020 18:24:12 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Dateien bereinigen mit fd und sd</title><link>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</link><pubDate>Sun, 29 Nov 2020 18:24:12 +0000</pubDate><guid>https://philipp-weissmann.de/dateien-bereinigen-mit-fd-und-sd/</guid><description>&lt;h2 id="das-problem">Das Problem&lt;/h2>
+&lt;p>In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
+Ob der uneinheitliche &lt;a href="https://de.wikipedia.org/wiki/Zeilenumbruch#Codierung_des_Zeilenumbruchs">Zeilenumbruch&lt;/a>, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.&lt;/p>
+&lt;h2 id="die-werkzeuge">Die Werkzeuge&lt;/h2>
+&lt;p>Dabei kann das Projekt &lt;a href="https://editorconfig.org/">Editorconfig&lt;/a> helfen.
+Man legt eine einfache Editorconfig-Datei in seinem Projekt ab und viele Editoren kümmern sich um den Rest.&lt;/p>
+&lt;p>Was passiert aber mit den bereits vorhandenen Dateien?
+Hier helfen ein paar einfache Kommandozeilenbefehle.
+Ich verwende dabei &lt;a href="https://github.com/chmln/sd">sd&lt;/a> und &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a>, die für viele System verfügbar sind.&lt;/p></description><content>&lt;h2 id="das-problem">Das Problem&lt;/h2>
 &lt;p>In einem Software Projekt mit mehreren Beteiligten kommen früher oder später unterschiedliche Coding-Stile zum Einsatz.
 Ob der uneinheitliche &lt;a href="https://de.wikipedia.org/wiki/Zeilenumbruch#Codierung_des_Zeilenumbruchs">Zeilenumbruch&lt;/a>, (versehentliche) Leerzeichen am Ende einer Zeile oder der fehlende Zeilenumbruch am Ende einer Datei: Hier muss man sich auf auf eine gemeinsamen Standard einigen.&lt;/p>
 &lt;h2 id="die-werkzeuge">Die Werkzeuge&lt;/h2>
@@ -21,10 +28,18 @@ Ich verwende dabei &lt;a href="https://github.com/chmln/sd">sd&lt;/a> und &lt;a 
 &lt;p>Für die Zukunft könnten wir einen editor-config checker in unsere CI-Pipeline einbauen, der Änderungen auf unseren Standard gegenprüft.&lt;/p>
 &lt;p>Für jede Sprache sollte jetzt noch ein Linter zur Einhaltung des gleichen Formatierungsstandards eingesetzt werden.&lt;/p>
 &lt;h2 id="fazit">Fazit&lt;/h2>
-&lt;p>Mit den kleinen Reparaturen können wir unser Projekt auf einen einheitlichen Standard heben. Das Editorconfig-Projekt hilft uns diese in der Zukunft einzuhalten.&lt;/p></content></item><item><title>Umbenennen mit dem Lieblingseditor</title><link>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</link><pubDate>Sat, 14 Sep 2019 08:11:33 +0000</pubDate><guid>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</guid><description>Dateien umbenennen ist oft mühsam. Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen. Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein. Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.
-Hier kommt die Werkzeugsammlung renameutils zum Einsatz.
-Installation Installiert wird das ganze aus den üblichen Paketmanagern, also z.B.
-brew install renameutils # macOS / Linuxbrew pacman-S renameutils # Arch based sudo apt install renameutils # Debian based Benutzung Nun gibt es die Befehle: qmv und qcp, mit denen Dateien umbenannt, bzw.</description><content>&lt;p>Dateien umbenennen ist oft mühsam.
+&lt;p>Mit den kleinen Reparaturen können wir unser Projekt auf einen einheitlichen Standard heben. Das Editorconfig-Projekt hilft uns diese in der Zukunft einzuhalten.&lt;/p></content></item><item><title>Umbenennen mit dem Lieblingseditor</title><link>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</link><pubDate>Sat, 14 Sep 2019 08:11:33 +0000</pubDate><guid>https://philipp-weissmann.de/umbenennen-mit-dem-lieblingseditor/</guid><description>&lt;p>Dateien umbenennen ist oft mühsam.
+Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.
+Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.
+Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.&lt;/p>
+&lt;p>Hier kommt die Werkzeugsammlung &lt;code>renameutils&lt;/code> zum Einsatz.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>Installiert wird das ganze aus den üblichen Paketmanagern, also z.B.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>brew install renameutils &lt;span style="color:#75715e"># macOS / Linuxbrew&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman-S renameutils &lt;span style="color:#75715e"># Arch based&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install renameutils &lt;span style="color:#75715e"># Debian based&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="benutzung">Benutzung&lt;/h2>
+&lt;p>Nun gibt es die Befehle: &lt;code>qmv&lt;/code> und &lt;code>qcp&lt;/code>, mit denen Dateien umbenannt, bzw. kopiert werden können.&lt;/p></description><content>&lt;p>Dateien umbenennen ist oft mühsam.
 Wenn man ein Extra-Werkzeug benutzt, muss man es erst lernen.
 Das schreiben eines extra Skriptes kann aber oft zu aufwendig sein.
 Es wäre doch schön, wenn man direkt im Lieblingseditor die Dateinamen verändern könnte.&lt;/p>
@@ -54,13 +69,7 @@ So geht das Umbenennen aller &lt;code>.txt&lt;/code> Dateien in &lt;code>.md&lt;
 Insbesondere, wenn wir keine einfachen Regeln zum Umbenennen formulieren können, helfen uns die &lt;code>renameutils&lt;/code> hier stark weiter.&lt;/p>
 &lt;p>So ist bei mir der Alias&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias ren&lt;span style="color:#f92672">=&lt;/span>qmv --format&lt;span style="color:#f92672">=&lt;/span>destination-only
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>fest in meine Werkzeugkiste eingezogen.&lt;/p></content></item><item><title>ip statt ifconfig unter macOS</title><link>https://philipp-weissmann.de/ip-statt-ifconfig-unter-macos/</link><pubDate>Wed, 28 Aug 2019 12:41:55 +0000</pubDate><guid>https://philipp-weissmann.de/ip-statt-ifconfig-unter-macos/</guid><description>Viele moderne Linux Distributionen bieten mit iproute2 eine einfache Möglichkeit Netzwerkkonfiguration durchzuführen.
-So zeigt z.B.
-ip a s die IP Adresse der Netzwerkschnittstellen an.
-MacOS bietet dieses Tool aber nicht an. Also müssen wir auf ifconfig ausweichen. Blöd, wenn wir zwischen den Systemen wechseln und immer umdenken müssen.
-Installieren wir mit der Hilfe von Homebrew ein kleines Hilfsscript:
-brew install iproute2mac Nun können wir auch mit
-ip a s die konfiguierten Netzwerkgeräte anzeigen.</description><content>&lt;p>Viele moderne Linux Distributionen bieten mit &lt;a href="https://de.wikipedia.org/wiki/Iproute2">iproute2&lt;/a> eine einfache Möglichkeit Netzwerkkonfiguration durchzuführen.&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>fest in meine Werkzeugkiste eingezogen.&lt;/p></content></item><item><title>ip statt ifconfig unter macOS</title><link>https://philipp-weissmann.de/ip-statt-ifconfig-unter-macos/</link><pubDate>Wed, 28 Aug 2019 12:41:55 +0000</pubDate><guid>https://philipp-weissmann.de/ip-statt-ifconfig-unter-macos/</guid><description>&lt;p>Viele moderne Linux Distributionen bieten mit &lt;a href="https://de.wikipedia.org/wiki/Iproute2">iproute2&lt;/a> eine einfache Möglichkeit Netzwerkkonfiguration durchzuführen.&lt;/p>
 &lt;p>So zeigt z.B.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ip a s
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>die IP Adresse der Netzwerkschnittstellen an.&lt;/p>
@@ -69,9 +78,21 @@ ip a s die konfiguierten Netzwerkgeräte anzeigen.</description><content>&lt;p>V
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew install iproute2mac
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nun können wir auch mit&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>ip a s
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>die konfiguierten Netzwerkgeräte anzeigen. Wunderbar!&lt;/p></content></item><item><title>yay mit archarm nutzen</title><link>https://philipp-weissmann.de/yay-mit-archarm-nutzen/</link><pubDate>Tue, 27 Aug 2019 18:28:54 +0000</pubDate><guid>https://philipp-weissmann.de/yay-mit-archarm-nutzen/</guid><description>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen. Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.
-Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: Rolling Releases statt großer Versionssprünge erleichtern den Entwickleralltag. Auch auf dem Raspberry Pi läuft diese Distribution.
-Aus der Community getrieben Pakete können aus dem AUR mit einem beliebigen Tool installiert werden. Derzeit verwende ich dafür gerne yay.</description><content>&lt;p>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>die konfiguierten Netzwerkgeräte anzeigen. Wunderbar!&lt;/p></description><content>&lt;p>Viele moderne Linux Distributionen bieten mit &lt;a href="https://de.wikipedia.org/wiki/Iproute2">iproute2&lt;/a> eine einfache Möglichkeit Netzwerkkonfiguration durchzuführen.&lt;/p>
+&lt;p>So zeigt z.B.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ip a s
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>die IP Adresse der Netzwerkschnittstellen an.&lt;/p>
+&lt;p>MacOS bietet dieses Tool aber nicht an. Also müssen wir auf &lt;code>ifconfig&lt;/code> ausweichen. Blöd, wenn wir zwischen den Systemen wechseln und immer umdenken müssen.&lt;/p>
+&lt;p>Installieren wir mit der Hilfe von Homebrew ein kleines Hilfsscript:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew install iproute2mac
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nun können wir auch mit&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>ip a s
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>die konfiguierten Netzwerkgeräte anzeigen. Wunderbar!&lt;/p></content></item><item><title>yay mit archarm nutzen</title><link>https://philipp-weissmann.de/yay-mit-archarm-nutzen/</link><pubDate>Tue, 27 Aug 2019 18:28:54 +0000</pubDate><guid>https://philipp-weissmann.de/yay-mit-archarm-nutzen/</guid><description>&lt;p>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.
+Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.&lt;/p>
+&lt;p>Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: &lt;a href="https://de.wikipedia.org/wiki/Rolling_Release" title="Rolling Releases">Rolling Releases&lt;/a> statt großer Versionssprünge erleichtern den Entwickleralltag.
+Auch auf dem Raspberry Pi läuft diese Distribution.&lt;/p>
+&lt;p>Aus der Community getrieben Pakete können aus dem &lt;a href="https://wiki.archlinux.org/title/Arch_User_Repository" title="AUR">AUR&lt;/a> mit einem beliebigen Tool installiert werden.
+Derzeit verwende ich dafür gerne &lt;a href="https://github.com/Jguer/yay">yay&lt;/a>.&lt;/p></description><content>&lt;p>Viele Entwickler schätzen es aktuelle Werkzeuge zu nutzen.
 Ob Compiler, Editor oder Shell - neue Versionen haben neue Features, bereinigte Bugs und mehr.&lt;/p>
 &lt;p>Daher ist in den letzten Jahren die Linux Distribution &amp;ldquo;Arch&amp;rdquo; auch sehr beliebt geworden: &lt;a href="https://de.wikipedia.org/wiki/Rolling_Release" title="Rolling Releases">Rolling Releases&lt;/a> statt großer Versionssprünge erleichtern den Entwickleralltag.
 Auch auf dem Raspberry Pi läuft diese Distribution.&lt;/p>
@@ -85,10 +106,14 @@ Derzeit verwende ich dafür gerne &lt;a href="https://github.com/Jguer/yay">yay&
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git clone https://aur.archlinux.org/yay.git
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd yay
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>makepkg -si
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Dann steht der Installation von Paketen aus dem AUR nichts mehr im Wege.&lt;/p></content></item><item><title>Simples deployment via git</title><link>https://philipp-weissmann.de/simples-deployment-via-git/</link><pubDate>Tue, 16 Apr 2019 19:59:37 +0000</pubDate><guid>https://philipp-weissmann.de/simples-deployment-via-git/</guid><description>Das Problem Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute git.
-Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.
-Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:
-Ausgangssituation Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.</description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Dann steht der Installation von Paketen aus dem AUR nichts mehr im Wege.&lt;/p></content></item><item><title>Simples deployment via git</title><link>https://philipp-weissmann.de/simples-deployment-via-git/</link><pubDate>Tue, 16 Apr 2019 19:59:37 +0000</pubDate><guid>https://philipp-weissmann.de/simples-deployment-via-git/</guid><description>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
+&lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
+&lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
+&lt;h1 id="ausgangssituation">Ausgangssituation&lt;/h1>
+&lt;p>Wie haben einen Server (für die Homepage), einen Laptop (für die Entwicklungsarbeit), sowie ein Git-Projekt (z.B. bei Github).
+Auf Github befindet sich unser Projekt.
+Auf Laptop wie auch auf dem Server haben wir uns mit &lt;code>git clone&lt;/code> das Projekt eingerichtet.&lt;/p></description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
 &lt;p>Egal ob Homepage, Konfigurationsdateien oder Programmcode: Für praktisch alle Projekte verwendet man heute &lt;a href="https://de.wikipedia.org/wiki/Git">git&lt;/a>.&lt;/p>
 &lt;p>Möchte man jedoch Versionen automatisch ausrollen (z.B. statische HTML Dateien einer Webseite), benötigt man einige Skripte oder einen Build-Dienst wie z.B. Gitlab-CI, Jenkins oder CircleCI.&lt;/p>
 &lt;p>Oftmals reicht es jedoch die Daten auf das Zielsystem zu kopieren. Aber auch das geht mit git:&lt;/p>
@@ -112,10 +137,14 @@ Auf Laptop wie auch auf dem Server haben wir uns mit &lt;code>git clone&lt;/code
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Es ist sogar möglich mittels &lt;code>push-url&lt;/code> mehrere Ziele auf einmal zu definieren.&lt;/p>
 &lt;h1 id="fazit">Fazit&lt;/h1>
 &lt;p>Natürlich ersetzt unser kleiner Workflow keinen Build-Server oder ausgetüftelte Deployment Prozesse. Aber für Kleinst-Projekte kann das vorgehen mit &lt;code>updateInstead&lt;/code> sehr praktisch sein.&lt;/p>
-&lt;p>&lt;strong>Aber Achtung&lt;/strong>: Verwenden wir diese Möglichkeit um Webseiten zu versionieren: Nicht vergessen, den &lt;code>.git&lt;/code> Ordner nicht auszuliefern.&lt;/p></content></item><item><title>Geräte unter eigenem Namen: udev rules</title><link>https://philipp-weissmann.de/geraete-unter-eigenem-namen-udev-rules/</link><pubDate>Sat, 13 Apr 2019 18:32:50 +0000</pubDate><guid>https://philipp-weissmann.de/geraete-unter-eigenem-namen-udev-rules/</guid><description>Das Problem Unter Linux wird jedem verbundenen Gerät ein Pfad zugeordnet. So erscheint z.B. ein verbundener Esp8266 Microcontroller als (serielle) Schnittstelle /dev/ttyUSB0. Sind noch mehr Geräte verbunden, so erscheinen diese als /dev/ttyUSB1, /dev/ttyUSB2 usw.
-Welches Gerät ist aber nun welche Schnittstelle? Und sind diese nach dem Reboot noch gleich?
-Die Lösung: udev rules Um dies sicher zu stellen erstellt man eine Regel mit udev:
-Zunächst identifizieren wir, welches Gerät wir haben wollen.</description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>&lt;strong>Aber Achtung&lt;/strong>: Verwenden wir diese Möglichkeit um Webseiten zu versionieren: Nicht vergessen, den &lt;code>.git&lt;/code> Ordner nicht auszuliefern.&lt;/p></content></item><item><title>Geräte unter eigenem Namen: udev rules</title><link>https://philipp-weissmann.de/geraete-unter-eigenem-namen-udev-rules/</link><pubDate>Sat, 13 Apr 2019 18:32:50 +0000</pubDate><guid>https://philipp-weissmann.de/geraete-unter-eigenem-namen-udev-rules/</guid><description>&lt;h1 id="das-problem">Das Problem&lt;/h1>
+&lt;p>Unter Linux wird jedem verbundenen Gerät ein Pfad zugeordnet.
+So erscheint z.B. ein verbundener Esp8266 Microcontroller als (serielle) Schnittstelle &lt;code>/dev/ttyUSB0&lt;/code>.
+Sind noch mehr Geräte verbunden, so erscheinen diese als &lt;code>/dev/ttyUSB1&lt;/code>, &lt;code>/dev/ttyUSB2&lt;/code> usw.&lt;/p>
+&lt;p>Welches Gerät ist aber nun welche Schnittstelle? Und sind diese nach dem Reboot noch gleich?&lt;/p>
+&lt;h1 id="die-lösung-udev-rules">Die Lösung: udev rules&lt;/h1>
+&lt;p>Um dies sicher zu stellen erstellt man eine Regel mit &lt;em>udev&lt;/em>:&lt;/p>
+&lt;p>Zunächst identifizieren wir, welches Gerät wir haben wollen. Als Beispiel nutzen wir hier einen Microcontroller, der unter &lt;code>/dev/ttyUSB0&lt;/code> eingehängt ist.&lt;/p></description><content>&lt;h1 id="das-problem">Das Problem&lt;/h1>
 &lt;p>Unter Linux wird jedem verbundenen Gerät ein Pfad zugeordnet.
 So erscheint z.B. ein verbundener Esp8266 Microcontroller als (serielle) Schnittstelle &lt;code>/dev/ttyUSB0&lt;/code>.
 Sind noch mehr Geräte verbunden, so erscheinen diese als &lt;code>/dev/ttyUSB1&lt;/code>, &lt;code>/dev/ttyUSB2&lt;/code> usw.&lt;/p>
@@ -134,13 +163,18 @@ Dies sollte zum eindeutigen Identifizieren des Gerätes ausreichen.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo udevadm trigger
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>und den &lt;code>udev&lt;/code> Dienst neu starten:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl restart udev
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nun sollte unsere Regel angewendet werden und ein neuer Eintrag &lt;code>/dev/ttyUSB_mydevice&lt;/code> angelegt sein. Dieser ist ein Link auf das &amp;ldquo;echte&amp;rdquo; Gerät. Somit können wir uns immer auf den selbstgewählten Namen verlassen - auch wenn sich der automatisch Vergebene Name nach einem Neustart ändern kann.&lt;/p></content></item><item><title>Dateien finden mit fd</title><link>https://philipp-weissmann.de/dateien-finden-mit-fd/</link><pubDate>Thu, 11 Apr 2019 16:00:10 +0000</pubDate><guid>https://philipp-weissmann.de/dateien-finden-mit-fd/</guid><description>Das Tool find ist ein praktisches Programm und Dateien und Ordner zu finden. Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.
-Hier kommt fd ins Spiel:
-Das Open-Source Programm erledigt nahezu alle Aufgaben von find, ist aber einfacher zu bedienen.
-Beispiel1 Finde alle Dateien mit der Zeichenfolge schuh im Namen:
-find:
-find . -iname &amp;#39;*schuh*&amp;#39; fd:
-fd schuh Beispiel 2 Finde alle .</description><content>&lt;p>Das Tool &lt;a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html">find&lt;/a> ist ein praktisches Programm und Dateien und Ordner zu finden.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nun sollte unsere Regel angewendet werden und ein neuer Eintrag &lt;code>/dev/ttyUSB_mydevice&lt;/code> angelegt sein. Dieser ist ein Link auf das &amp;ldquo;echte&amp;rdquo; Gerät. Somit können wir uns immer auf den selbstgewählten Namen verlassen - auch wenn sich der automatisch Vergebene Name nach einem Neustart ändern kann.&lt;/p></content></item><item><title>Dateien finden mit fd</title><link>https://philipp-weissmann.de/dateien-finden-mit-fd/</link><pubDate>Thu, 11 Apr 2019 16:00:10 +0000</pubDate><guid>https://philipp-weissmann.de/dateien-finden-mit-fd/</guid><description>&lt;p>Das Tool &lt;a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html">find&lt;/a> ist ein praktisches Programm und Dateien und Ordner zu finden.
+Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.&lt;/p>
+&lt;p>Hier kommt &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a> ins Spiel:&lt;/p>
+&lt;p>Das Open-Source Programm erledigt nahezu alle Aufgaben von &lt;code>find&lt;/code>, ist aber einfacher zu bedienen.&lt;/p>
+&lt;h1 id="beispiel1">Beispiel1&lt;/h1>
+&lt;p>Finde alle Dateien mit der Zeichenfolge &lt;em>schuh&lt;/em> im Namen:&lt;/p>
+&lt;p>find:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>find . -iname &lt;span style="color:#e6db74">&amp;#39;*schuh*&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>fd:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fd schuh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="beispiel-2">Beispiel 2&lt;/h1>
+&lt;p>Finde alle .jpg Dateien:&lt;/p></description><content>&lt;p>Das Tool &lt;a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html">find&lt;/a> ist ein praktisches Programm und Dateien und Ordner zu finden.
 Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. Leider ist es jedoch nicht allzu einsteigerfreundlich.&lt;/p>
 &lt;p>Hier kommt &lt;a href="https://github.com/sharkdp/fd">fd&lt;/a> ins Spiel:&lt;/p>
 &lt;p>Das Open-Source Programm erledigt nahezu alle Aufgaben von &lt;code>find&lt;/code>, ist aber einfacher zu bedienen.&lt;/p>
@@ -165,14 +199,16 @@ Find kann aber auch komplexere Aktionen wie z.B. mehrere Dateien konvertieren. L
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Konvertiert parallel mehrere Dateien auf einmal&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fd -e png -x convert &lt;span style="color:#f92672">{}&lt;/span> &lt;span style="color:#f92672">{&lt;/span>.&lt;span style="color:#f92672">}&lt;/span>.jpg
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="fazit">Fazit:&lt;/h1>
-&lt;p>Wer &lt;code>find&lt;/code> in- und auswendig beherrscht hat keinen Zwang zu wechseln. Der bequeme Syntax von &lt;code>fd&lt;/code> macht das Leben jedoch leichter. Die Möglichkeit parallel mehrere Dateien zu verarbeiten ist ungemein praktisch. Daher ist &lt;code>fd&lt;/code> für jeden Kommandozeilen-Fan absolut empfehlenswert.&lt;/p></content></item><item><title>Skripte schöner abbrechen</title><link>https://philipp-weissmann.de/skripte-schoener-abbrechen/</link><pubDate>Sat, 09 Mar 2019 12:34:23 +0000</pubDate><guid>https://philipp-weissmann.de/skripte-schoener-abbrechen/</guid><description>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:
-#!/usr/bin/env bash set -Eeuo pipefail Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!</description><content>&lt;p>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:&lt;/p>
+&lt;p>Wer &lt;code>find&lt;/code> in- und auswendig beherrscht hat keinen Zwang zu wechseln. Der bequeme Syntax von &lt;code>fd&lt;/code> macht das Leben jedoch leichter. Die Möglichkeit parallel mehrere Dateien zu verarbeiten ist ungemein praktisch. Daher ist &lt;code>fd&lt;/code> für jeden Kommandozeilen-Fan absolut empfehlenswert.&lt;/p></content></item><item><title>Skripte schöner abbrechen</title><link>https://philipp-weissmann.de/skripte-schoener-abbrechen/</link><pubDate>Sat, 09 Mar 2019 12:34:23 +0000</pubDate><guid>https://philipp-weissmann.de/skripte-schoener-abbrechen/</guid><description>&lt;p>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#!/usr/bin/env bash
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>set -Eeuo pipefail
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!&lt;/p></content></item><item><title>Docker services via docker-compose und systemd template</title><link>https://philipp-weissmann.de/docker-compose_mit_systemd/</link><pubDate>Thu, 21 Dec 2017 21:05:32 +0000</pubDate><guid>https://philipp-weissmann.de/docker-compose_mit_systemd/</guid><description>Docker ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.
-Wie kann man jedoch einen logischen Verbund an Diensten mit dem System zusammen starten?
-Mit der Hilfe von Docker können Anforderungen eines Dienstes (z.B. Gitlab) an die Distribution innerhalb eines Containers befriedigt werden. Das ausführende System aussenherum bleibt davon unberührt und kann auch eine inkompatible Distribution sein.
-In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Diese können mit dem Tool docker-compose beschrieben und gestartet werden.</description><content>&lt;p>&lt;a href="https://www.docker.com/">Docker&lt;/a> ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!&lt;/p></description><content>&lt;p>Statt jede Zeile eines Shell-Skripts auf korrekte Ausführung zu überprüfen und gegebenenfalls abzubrechen, hilft folgendes:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#!/usr/bin/env bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>set -Eeuo pipefail
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Diese Zeile führt beim Fehlerfall einer Zeile zum Abbruch des gesamten Skripts. Praktisch!&lt;/p></content></item><item><title>Docker services via docker-compose und systemd template</title><link>https://philipp-weissmann.de/docker-compose_mit_systemd/</link><pubDate>Thu, 21 Dec 2017 21:05:32 +0000</pubDate><guid>https://philipp-weissmann.de/docker-compose_mit_systemd/</guid><description>&lt;p>&lt;a href="https://www.docker.com/">Docker&lt;/a> ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.&lt;/p>
+&lt;p>Wie kann man jedoch einen logischen Verbund an Diensten mit dem System zusammen starten?&lt;/p>
+&lt;p>Mit der Hilfe von Docker können Anforderungen eines Dienstes (z.B. &lt;a href="https://gitlab.com">Gitlab&lt;/a>) an die Distribution innerhalb eines Containers befriedigt werden. Das ausführende System aussenherum bleibt davon unberührt und kann auch eine inkompatible Distribution sein.&lt;/p>
+&lt;p>In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Diese können mit dem Tool &lt;a href="https://docs.docker.com/compose/">docker-compose&lt;/a> beschrieben und gestartet werden.&lt;/p></description><content>&lt;p>&lt;a href="https://www.docker.com/">Docker&lt;/a> ist das derzeit omnipresente Werkzeug um Dienste in Containern auszuführen.&lt;/p>
 &lt;p>Wie kann man jedoch einen logischen Verbund an Diensten mit dem System zusammen starten?&lt;/p>
 &lt;p>Mit der Hilfe von Docker können Anforderungen eines Dienstes (z.B. &lt;a href="https://gitlab.com">Gitlab&lt;/a>) an die Distribution innerhalb eines Containers befriedigt werden. Das ausführende System aussenherum bleibt davon unberührt und kann auch eine inkompatible Distribution sein.&lt;/p>
 &lt;p>In der Praxis werden jedoch oft mehrere Dienste in einem Verbund benötigt. Diese können mit dem Tool &lt;a href="https://docs.docker.com/compose/">docker-compose&lt;/a> beschrieben und gestartet werden.&lt;/p>
@@ -294,16 +330,19 @@ Wscript.Sleep (6000)
 Loop
 &lt;/code>&lt;/pre>&lt;p>Einfach als &lt;code>schlaflos.vbs&lt;/code> abspeichern und ausführen. Nun wird alle sechs Sekunden die &lt;code>Numlock&lt;/code> zwei Mal gedrückt.
 Nun haben wir ein schlafloses Windows, welches nach dem Beenden des Skriptes, spätestens aber zum nächsten Neustart auch wieder schlafen darf.&lt;/p>
-&lt;p>Gute Nacht Windows!&lt;/p></content></item><item><title>SD Karte beschreiben mit „flash“</title><link>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</link><pubDate>Tue, 29 Nov 2016 08:30:27 +0000</pubDate><guid>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</guid><description>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben. Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.
-Unter Windows bietet sich Win32 Disk Imager an, unter macOS das Tool ApplePi Baker und unter Linux nutzt man einfach dd.
-Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.
-Genau das erledigt das Tool flash.</description><content>&lt;p>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.
+&lt;p>Gute Nacht Windows!&lt;/p></content></item><item><title>SD Karte beschreiben mit „flash“</title><link>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</link><pubDate>Tue, 29 Nov 2016 08:30:27 +0000</pubDate><guid>https://philipp-weissmann.de/sd-karte-beschreiben-mit-flash/</guid><description>&lt;p>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.
 Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.&lt;/p>
 &lt;p>Unter Windows bietet sich &lt;a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager&lt;/a> an,
 unter macOS das Tool &lt;a href="http://www.tweaking4all.com/software/macosx-software/macosx-apple-pi-baker/">ApplePi Baker&lt;/a> und unter Linux nutzt man einfach &lt;code>dd&lt;/code>.&lt;/p>
 &lt;p>Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.&lt;/p>
 &lt;p>Genau das erledigt das Tool &lt;a href="https://github.com/hypriot/flash">flash&lt;/a>.
-Das in &lt;a href="https://de.wikipedia.org/wiki/Bash_(Shell)">bash&lt;/a> geschrieben Werkzeug ist schnell installiert:&lt;/p>
+Das in &lt;a href="https://de.wikipedia.org/wiki/Bash_%28Shell%29">bash&lt;/a> geschrieben Werkzeug ist schnell installiert:&lt;/p></description><content>&lt;p>Um einen Raspberry Pi in Betrieb zu nehmen, ist es notwendig eine SD Karte mit einem Betriebssystem zu beschreiben.
+Dabei ist es in der Regel nicht mit einem einfachen Datei kopieren getan.&lt;/p>
+&lt;p>Unter Windows bietet sich &lt;a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager&lt;/a> an,
+unter macOS das Tool &lt;a href="http://www.tweaking4all.com/software/macosx-software/macosx-apple-pi-baker/">ApplePi Baker&lt;/a> und unter Linux nutzt man einfach &lt;code>dd&lt;/code>.&lt;/p>
+&lt;p>Nun wünscht man sich bei häufiger Nutzung ein einfaches Kommandozeilentool, dass diese Aufgabe komfortabel übernimmt.&lt;/p>
+&lt;p>Genau das erledigt das Tool &lt;a href="https://github.com/hypriot/flash">flash&lt;/a>.
+Das in &lt;a href="https://de.wikipedia.org/wiki/Bash_%28Shell%29">bash&lt;/a> geschrieben Werkzeug ist schnell installiert:&lt;/p>
 &lt;pre>&lt;code>curl -O https://raw.githubusercontent.com/hypriot/flash/master/$(uname -s)/flash
 chmod +x flash
 sudo mv flash /usr/local/bin/flash
@@ -398,16 +437,17 @@ ist &lt;a href="https://github.com/junegunn/fzf">&lt;code>fzf&lt;/code>&lt;/a>:&
 &lt;p>In &lt;a href="http://golang.org">Go&lt;/a> geschrieben und fix installiert (z.B. via Arch Linux Aur, zu Fuß oder als via Vim-Plugin) kann das Werkzeug händisch genutzt werden oder in Verbindung mit &lt;code>tmux&lt;/code> auch die oben genannten Tastaturkürzel übernehmen.&lt;/p>
 &lt;p>Und so sieht das ganze aus:&lt;/p>
 &lt;p>![Interaktives fzf][https://camo.githubusercontent.com/0b07def9e05309281212369b118fcf9b9fc7948e/68747470733a2f2f7261772e6769746875622e636f6d2f6a756e6567756e6e2f692f6d61737465722f667a662e676966]&lt;/p>
-&lt;p>Jetzt erlaubt das Tool interaktiv und komfortabel nach Dateien zu suchen, alte Befehle aufzufinden und damit den Komfort des Arbeitens auf der Kommandozeile deutlich zu steigern.&lt;/p></content></item><item><title>Editor für Hugo</title><link>https://philipp-weissmann.de/editor-fuer-hugo/</link><pubDate>Wed, 13 Apr 2016 14:26:13 +0000</pubDate><guid>https://philipp-weissmann.de/editor-fuer-hugo/</guid><description>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu
-erstellen.
-Die in Go geschriebene Software ermöglicht das einfache
-Nutzen von Templates für neue Beiträge. Ein neuer Beitrag wird auch leichter
-Hand angelegt, z.B. hugo new post/hugo_editor.md.
-Die Datei enthält danach alle Einträge des Templates - teilweise auch schon
-ausgefüllt.
-Eine interessante Konfigurationseinstellung in der config.toml (bzw.
-config.yaml, config.json) ist der Eintrag newContentEditor:
-Gesetzt auf den Editor öffnet sich dieser dem Anlegen der Datei die Schreiberei</description><content>&lt;p>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu&lt;br>
+&lt;p>Jetzt erlaubt das Tool interaktiv und komfortabel nach Dateien zu suchen, alte Befehle aufzufinden und damit den Komfort des Arbeitens auf der Kommandozeile deutlich zu steigern.&lt;/p></content></item><item><title>Editor für Hugo</title><link>https://philipp-weissmann.de/editor-fuer-hugo/</link><pubDate>Wed, 13 Apr 2016 14:26:13 +0000</pubDate><guid>https://philipp-weissmann.de/editor-fuer-hugo/</guid><description>&lt;p>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu&lt;br>
+erstellen.&lt;/p>
+&lt;p>Die in &lt;a href="https://golang.org/">Go&lt;/a> geschriebene Software ermöglicht das einfache&lt;br>
+Nutzen von Templates für neue Beiträge. Ein neuer Beitrag wird auch leichter&lt;br>
+Hand angelegt, z.B. &lt;code>hugo new post/hugo_editor.md&lt;/code>.&lt;/p>
+&lt;p>Die Datei enthält danach alle Einträge des Templates - teilweise auch schon&lt;br>
+ausgefüllt.&lt;/p>
+&lt;p>Eine interessante Konfigurationseinstellung in der &lt;code>config.toml&lt;/code> (bzw.&lt;br>
+&lt;code>config.yaml&lt;/code>, &lt;code>config.json&lt;/code>) ist der Eintrag &lt;code>newContentEditor&lt;/code>:&lt;br>
+Gesetzt auf den Editor öffnet sich dieser dem Anlegen der Datei die Schreiberei&lt;br>
+kann beginnen.&lt;/p></description><content>&lt;p>Hugo ist eine schöne Software um Software um statische Webseiten und Blogs zu&lt;br>
 erstellen.&lt;/p>
 &lt;p>Die in &lt;a href="https://golang.org/">Go&lt;/a> geschriebene Software ermöglicht das einfache&lt;br>
 Nutzen von Templates für neue Beiträge. Ein neuer Beitrag wird auch leichter&lt;br>
@@ -419,11 +459,13 @@ ausgefüllt.&lt;/p>
 Gesetzt auf den Editor öffnet sich dieser dem Anlegen der Datei die Schreiberei&lt;br>
 kann beginnen.&lt;/p>
 &lt;pre>&lt;code>newContentEditor = &amp;quot;vim&amp;quot;
-&lt;/code>&lt;/pre></content></item><item><title>Wget wiederaufnehmen</title><link>https://philipp-weissmann.de/wget-wiederaufnehmen/</link><pubDate>Wed, 13 Apr 2016 05:46:16 +0000</pubDate><guid>https://philipp-weissmann.de/wget-wiederaufnehmen/</guid><description>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.
-Mit dem Download-Werkzeug wget ist dies einfach mit der Kommandozeilenoption -r möglich.
-Damit man jedoch nicht immer daran denken muss, lässt sie dies auch als Standardverhalten einstellen.
-Hierzu tragen wir die die Datei ~/.wgetrc folgendes ein:
-continue = on Ab sofort nimmt wget Downloads automatisch wieder auf.</description><content>&lt;p>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.&lt;/p>
+&lt;/code>&lt;/pre></content></item><item><title>Wget wiederaufnehmen</title><link>https://philipp-weissmann.de/wget-wiederaufnehmen/</link><pubDate>Wed, 13 Apr 2016 05:46:16 +0000</pubDate><guid>https://philipp-weissmann.de/wget-wiederaufnehmen/</guid><description>&lt;p>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.&lt;/p>
+&lt;p>Mit dem Download-Werkzeug &lt;code>wget&lt;/code> ist dies einfach mit der Kommandozeilenoption &lt;code>-r&lt;/code> möglich.&lt;/p>
+&lt;p>Damit man jedoch nicht immer daran denken muss, lässt sie dies auch als Standardverhalten einstellen.&lt;/p>
+&lt;p>Hierzu tragen wir die die Datei &lt;code>~/.wgetrc&lt;/code> folgendes ein:&lt;/p>
+&lt;pre>&lt;code>continue = on
+&lt;/code>&lt;/pre>
+&lt;p>Ab sofort nimmt &lt;code>wget&lt;/code> Downloads automatisch wieder auf.&lt;/p></description><content>&lt;p>Beim Download großer Dateien (z.B. Iso-Images, Podcasts) ist es oft hilfreich einen bereits begonnenen Download weiterführen zu können.&lt;/p>
 &lt;p>Mit dem Download-Werkzeug &lt;code>wget&lt;/code> ist dies einfach mit der Kommandozeilenoption &lt;code>-r&lt;/code> möglich.&lt;/p>
 &lt;p>Damit man jedoch nicht immer daran denken muss, lässt sie dies auch als Standardverhalten einstellen.&lt;/p>
 &lt;p>Hierzu tragen wir die die Datei &lt;code>~/.wgetrc&lt;/code> folgendes ein:&lt;/p>
@@ -440,20 +482,24 @@ Es kann über Rechnergrenzen hinweg eingesetzt werden (z.B. via &lt;code>ssh&lt;
 &lt;/code>&lt;/pre>
 &lt;p>Der Befehl kopiert alle Dateien (mit Ausnahme der Verzeichnisse in der Aufzählung) - und das inkrementell.&lt;br>
 Abbrechen und Wiederaufnehmen ist also problemlos möglich.&lt;/p>
-&lt;p>Damit wird rsync zum perfekten Tool um eine Vollsicherung vor einer Neuinstallation vorzunehmen.&lt;/p></content></item><item><title>Sharpkeys</title><link>https://philipp-weissmann.de/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>https://philipp-weissmann.de/sharpkeys/</guid><description>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.
-Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &amp;ldquo;SharpKeys&amp;rdquo; behelfen.
-Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.
-Tipp: Die Feststelltaste einfach mit Strg (Ctrl) belegen.</description><content>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
+&lt;p>Damit wird rsync zum perfekten Tool um eine Vollsicherung vor einer Neuinstallation vorzunehmen.&lt;/p></content></item><item><title>Sharpkeys</title><link>https://philipp-weissmann.de/sharpkeys/</link><pubDate>Tue, 12 Apr 2016 12:45:03 +0000</pubDate><guid>https://philipp-weissmann.de/sharpkeys/</guid><description>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
 Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &lt;a href="https://github.com/randyrants/sharpkeys">&amp;ldquo;SharpKeys&amp;rdquo;&lt;/a> behelfen.&lt;/p>
 &lt;p>Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.&lt;/p>
-&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></content></item><item><title>Linux Pakete mit fpm bauen</title><link>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</link><pubDate>Tue, 19 May 2015 19:15:13 +0000</pubDate><guid>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</guid><description>Software installieren Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager
-installiert.
-Gerade in der Software-Entwicklung kommt es aber immer wieder dazu, dass
-man selbstkompilierte oder selbstentwickelte Software installieren muss.
-Der übliche &amp;ldquo;Installationsmechanismus&amp;rdquo; via
-./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install führt jedoch dazu, dass die Software unversioniert installiert wird und eine
-Deinstallation nur in mühseliger Handarbeit möglich ist.
-Auch die Installation auf mehreren Rechner erfordert immer wieder den selben</description><content>&lt;h1 id="software-installieren">Software installieren&lt;/h1>
+&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></description><content>&lt;p>Um Tasten wie Shift-Lock (&amp;ldquo;Feststelltaste&amp;rdquo;) sinnvoller zu nutzen kann auch unter Windows die Belegung dieser Taste geändert werden.&lt;br>
+Da Windows leider (noch) kein Werkzeug hierzu mitbringt, kann man sich einfach mit dem Freeware-Werkzeug &lt;a href="https://github.com/randyrants/sharpkeys">&amp;ldquo;SharpKeys&amp;rdquo;&lt;/a> behelfen.&lt;/p>
+&lt;p>Einfach installieren, Taste auswählen, neue Belegung auswählen und nach an- und abmelden ist die Taste neu belegt.&lt;/p>
+&lt;p>&lt;strong>Tipp&lt;/strong>: Die Feststelltaste einfach mit &lt;em>Strg&lt;/em> (Ctrl) belegen.&lt;/p></content></item><item><title>Linux Pakete mit fpm bauen</title><link>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</link><pubDate>Tue, 19 May 2015 19:15:13 +0000</pubDate><guid>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</guid><description>&lt;h1 id="software-installieren">Software installieren&lt;/h1>
+&lt;p>Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager&lt;br>
+installiert.&lt;br>
+Gerade in der Software-Entwicklung kommt es aber immer wieder dazu, dass&lt;br>
+man selbstkompilierte oder selbstentwickelte Software installieren muss.&lt;/p>
+&lt;p>Der übliche &amp;ldquo;Installationsmechanismus&amp;rdquo; via&lt;/p>
+&lt;pre>&lt;code>./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install
+&lt;/code>&lt;/pre>
+&lt;p>führt jedoch dazu, dass die Software unversioniert installiert wird und eine&lt;br>
+Deinstallation nur in mühseliger Handarbeit möglich ist.&lt;br>
+Auch die Installation auf mehreren Rechner erfordert immer wieder den selben&lt;br>
+Aufwand und eine Updatemöglichkeit gibt es ebenfalls nicht.&lt;/p></description><content>&lt;h1 id="software-installieren">Software installieren&lt;/h1>
 &lt;p>Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager&lt;br>
 installiert.&lt;br>
 Gerade in der Software-Entwicklung kommt es aber immer wieder dazu, dass&lt;br>
@@ -709,11 +755,19 @@ Eine &amp;ldquo;eher universale&amp;rdquo; Möglichkeit für X ergibt sich mit f
 &lt;p>Mit geringem Aufwand kann man die &amp;ldquo;nervige&amp;rdquo; Shift-Lock Taste in eine wertvolle Taste&lt;br>
 verwandeln.&lt;br>
 Nach etwas Umgewöhnung nutze ich die &amp;ldquo;normale&amp;rdquo; Control Taste praktisch gar nicht mehr und bei der Nutzung von &lt;code>vim&lt;/code> gehen Shortcuts wie &lt;em>Ctrl+C&lt;/em>&lt;br>
-(in den &lt;em>normal mode&lt;/em> wechseln) und &lt;em>Ctrl+V&lt;/em> (&lt;em>visual block mode&lt;/em>) deutlich leichter von der Hand.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>Einstellungen Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?
-Die Einstellungen!
-Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.
-Doch auch Software hat Einstellungen:
-Welchen Editor setze ich als Standard? Welche Shell-Erweiterungen lade ich in oh-my-zsh? Welches color-theme lade ich in vim? Welche Accounts habe ich in mutt? Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.</description><content>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
+(in den &lt;em>normal mode&lt;/em> wechseln) und &lt;em>Ctrl+V&lt;/em> (&lt;em>visual block mode&lt;/em>) deutlich leichter von der Hand.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
+&lt;p>Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?&lt;br>
+Die Einstellungen!&lt;br>
+Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.&lt;/p>
+&lt;p>Doch auch Software hat Einstellungen:&lt;/p>
+&lt;ul>
+&lt;li>Welchen Editor setze ich als Standard?&lt;/li>
+&lt;li>Welche Shell-Erweiterungen lade ich in &lt;code>oh-my-zsh&lt;/code>?&lt;/li>
+&lt;li>Welches &lt;code>color-theme&lt;/code> lade ich in vim?&lt;/li>
+&lt;li>Welche Accounts habe ich in &lt;code>mutt&lt;/code>?&lt;/li>
+&lt;/ul>
+&lt;p>Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.&lt;br>
+Da ich jedoch regelmässig auf unterschiedlichen Rechnern arbeite, möchte ich diese aktuell halten.&lt;/p></description><content>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
 &lt;p>Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?&lt;br>
 Die Einstellungen!&lt;br>
 Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.&lt;/p>

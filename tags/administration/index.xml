@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Administration on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/administration/</link><description>Recent content in Administration on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Tue, 19 May 2015 19:15:13 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/administration/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux Pakete mit fpm bauen</title><link>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</link><pubDate>Tue, 19 May 2015 19:15:13 +0000</pubDate><guid>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</guid><description>Software installieren Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager
-installiert.
-Gerade in der Software-Entwicklung kommt es aber immer wieder dazu, dass
-man selbstkompilierte oder selbstentwickelte Software installieren muss.
-Der übliche &amp;ldquo;Installationsmechanismus&amp;rdquo; via
-./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install führt jedoch dazu, dass die Software unversioniert installiert wird und eine
-Deinstallation nur in mühseliger Handarbeit möglich ist.
-Auch die Installation auf mehreren Rechner erfordert immer wieder den selben</description><content>&lt;h1 id="software-installieren">Software installieren&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Administration on Philipp Weißmann</title><link>https://philipp-weissmann.de/tags/administration/</link><description>Recent content in Administration on Philipp Weißmann</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Tue, 19 May 2015 19:15:13 +0000</lastBuildDate><atom:link href="https://philipp-weissmann.de/tags/administration/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux Pakete mit fpm bauen</title><link>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</link><pubDate>Tue, 19 May 2015 19:15:13 +0000</pubDate><guid>https://philipp-weissmann.de/linux-pakete-mit-fpm-bauen/</guid><description>&lt;h1 id="software-installieren">Software installieren&lt;/h1>
+&lt;p>Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager&lt;br>
+installiert.&lt;br>
+Gerade in der Software-Entwicklung kommt es aber immer wieder dazu, dass&lt;br>
+man selbstkompilierte oder selbstentwickelte Software installieren muss.&lt;/p>
+&lt;p>Der übliche &amp;ldquo;Installationsmechanismus&amp;rdquo; via&lt;/p>
+&lt;pre>&lt;code>./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install
+&lt;/code>&lt;/pre>
+&lt;p>führt jedoch dazu, dass die Software unversioniert installiert wird und eine&lt;br>
+Deinstallation nur in mühseliger Handarbeit möglich ist.&lt;br>
+Auch die Installation auf mehreren Rechner erfordert immer wieder den selben&lt;br>
+Aufwand und eine Updatemöglichkeit gibt es ebenfalls nicht.&lt;/p></description><content>&lt;h1 id="software-installieren">Software installieren&lt;/h1>
 &lt;p>Unter den meisten Linux Distributionen wird Software zumeist via Paketmanager&lt;br>
 installiert.&lt;br>
 Gerade in der Software-Entwicklung kommt es aber immer wieder dazu, dass&lt;br>
@@ -152,11 +156,19 @@ Nachricht aus, dass ich in dieses Repository nicht pushen möchte.&lt;/p>
 &lt;p>Myrepos ermöglicht das einfache und bequeme Verwalten und Nutzen von vielen&lt;br>
 Repositories. Gerade das Updaten oder initiale Klonen wird damit deutlich&lt;br>
 bequemer. Insbesondere im Zusammenspiel mit VCSH wird eine extrem komfortable&lt;br>
-Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>Einstellungen Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?
-Die Einstellungen!
-Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.
-Doch auch Software hat Einstellungen:
-Welchen Editor setze ich als Standard? Welche Shell-Erweiterungen lade ich in oh-my-zsh? Welches color-theme lade ich in vim? Welche Accounts habe ich in mutt? Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.</description><content>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
+Verwaltung der eigenen Dotfiles (und mehr) möglich.&lt;/p></content></item><item><title>Konfigurationsdateien verwalten mit VCSH</title><link>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</link><pubDate>Sun, 19 Apr 2015 17:32:15 +0000</pubDate><guid>https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/</guid><description>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
+&lt;p>Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?&lt;br>
+Die Einstellungen!&lt;br>
+Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.&lt;/p>
+&lt;p>Doch auch Software hat Einstellungen:&lt;/p>
+&lt;ul>
+&lt;li>Welchen Editor setze ich als Standard?&lt;/li>
+&lt;li>Welche Shell-Erweiterungen lade ich in &lt;code>oh-my-zsh&lt;/code>?&lt;/li>
+&lt;li>Welches &lt;code>color-theme&lt;/code> lade ich in vim?&lt;/li>
+&lt;li>Welche Accounts habe ich in &lt;code>mutt&lt;/code>?&lt;/li>
+&lt;/ul>
+&lt;p>Praktischerweise liegen all diese Einstellungen in Dateien (sogenannten &amp;ldquo;Dotfiles&amp;rdquo;), welche sich einfach von A nach B kopieren lassen.&lt;br>
+Da ich jedoch regelmässig auf unterschiedlichen Rechnern arbeite, möchte ich diese aktuell halten.&lt;/p></description><content>&lt;h1 id="einstellungen">Einstellungen&lt;/h1>
 &lt;p>Was ist der erste Schritt bei der Benutzung eines Autos, einer Stereoanlage oder eines Schreibtischstuhls?&lt;br>
 Die Einstellungen!&lt;br>
 Natürlich will man gut aus dem Fahrzeug sehen können, der Lieblings-Musik lauschen und bequem sitzen.&lt;/p>
