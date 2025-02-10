@@ -41,8 +41,7 @@ Nach erfolgreicher Installation durch den Paketmanager des Vertrauens, können R
 &lt;p>Dabei übernimmt &lt;code>flash&lt;/code> das entpacken (bzw. Download) der Datei und fordert den Benutzer anschließend auf, die SD Karte einzulegen. Nach Identifizieren des Speichermediums braucht man lediglich selbiges zu bestätigen und der Schreibeprozess beginnt.&lt;/p>
 &lt;p>Zum Abschluss des Ganzen werden auch alle Dateisystem ausgehängt und die Speicherkarte kann in den Raspberry Pi wandern.&lt;/p>
 &lt;p>Für mich ist &lt;code>flash&lt;/code> &lt;em>das&lt;/em> Werkzeug zum Schreiben von SD Karten geworden.
-Minimalistisch, komfortabel und einfach zu handhaben erleichtert mit das kleine Helferlein den Alltag.&lt;/p></content></item><item><title>Touch Display auf Raspberry Pi mit Arch Linux</title><link>https://philipp-weissmann.de/touch-display-auf-raspberry-pi-mit-arch-linux/</link><pubDate>Sun, 12 Apr 2015 12:28:29 +0000</pubDate><guid>https://philipp-weissmann.de/touch-display-auf-raspberry-pi-mit-arch-linux/</guid><description>&lt;p>Auf der Suche nach einem kleinen Display bin ich auf ein &lt;a href="https://github.com/watterott/RPi-Display">Display von Watterott&lt;/a> gestoßen.&lt;br>
-Um das Gerät auf dem &lt;a href="https://www.raspberrypi.org/">Raspberry Pi&lt;/a> unter &lt;a href="http://archlinuxarm.org/">Arch Linux&lt;/a> zu betreiben sind einige Schritte notwendig.&lt;/p></description><content>&lt;p>Auf der Suche nach einem kleinen Display bin ich auf ein &lt;a href="https://github.com/watterott/RPi-Display">Display von Watterott&lt;/a> gestoßen.&lt;br>
+Minimalistisch, komfortabel und einfach zu handhaben erleichtert mit das kleine Helferlein den Alltag.&lt;/p></content></item><item><title>Touch Display auf Raspberry Pi mit Arch Linux</title><link>https://philipp-weissmann.de/touch-display-auf-raspberry-pi-mit-arch-linux/</link><pubDate>Sun, 12 Apr 2015 12:28:29 +0000</pubDate><guid>https://philipp-weissmann.de/touch-display-auf-raspberry-pi-mit-arch-linux/</guid><description>&lt;p>Auf der Suche nach einem kleinen Display bin ich auf ein &lt;a href="https://github.com/watterott/RPi-Display">Display von Watterott&lt;/a> gestoßen.
 Um das Gerät auf dem &lt;a href="https://www.raspberrypi.org/">Raspberry Pi&lt;/a> unter &lt;a href="http://archlinuxarm.org/">Arch Linux&lt;/a> zu betreiben sind einige Schritte notwendig.&lt;/p>
 &lt;ol>
 &lt;li>
@@ -52,57 +51,84 @@ Um das Gerät auf dem &lt;a href="https://www.raspberrypi.org/">Raspberry Pi&lt;
 &lt;p>&amp;ldquo;Normale&amp;rdquo; Arch Linux &lt;a href="http://web.archive.org/web/20150412224859/archlinuxarm.org/platforms/armv6/raspberry-pi">Installation auf dem Raspberry Pi durchführen&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Hilfswerkzeug &lt;code>rpi-update&lt;/code> installieren:&lt;!-- raw HTML omitted -->
-curl -L &amp;ndash;output /usr/bin/rpi-update &lt;a href="https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update">https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update&lt;/a> &amp;amp;&amp;amp; sudo chmod +x /usr/bin/rpi-update&lt;/p>
+&lt;p>Hilfswerkzeug &lt;code>rpi-update&lt;/code> installieren:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span>sudo chmod +x /usr/bin/rpi-update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Kernel mit passenden Treibern installieren:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>REPO_URI&lt;span style="color:#f92672">=&lt;/span>&amp;lt;https://github.com/notro/rpi-firmware&amp;gt; rpi-update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>X installieren:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Optional: Tool zur Kalibrierung des Touch-Displays installieren&lt;/p></description><content>&lt;p>Auf der Suche nach einem kleinen Display bin ich auf ein &lt;a href="https://github.com/watterott/RPi-Display">Display von Watterott&lt;/a> gestoßen.
+Um das Gerät auf dem &lt;a href="https://www.raspberrypi.org/">Raspberry Pi&lt;/a> unter &lt;a href="http://archlinuxarm.org/">Arch Linux&lt;/a> zu betreiben sind einige Schritte notwendig.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Für alle Schritte nehme ich als User &lt;code>root&lt;/code> an&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Kernel mit passenden Treibern installieren&lt;!-- raw HTML omitted -->
-REPO_URI=https://github.com/notro/rpi-firmware rpi-update&lt;/p>
+&lt;p>&amp;ldquo;Normale&amp;rdquo; Arch Linux &lt;a href="http://web.archive.org/web/20150412224859/archlinuxarm.org/platforms/armv6/raspberry-pi">Installation auf dem Raspberry Pi durchführen&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>X installieren&lt;!-- raw HTML omitted -->
-pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils&lt;/p>
-&lt;/li>
+&lt;p>Hilfswerkzeug &lt;code>rpi-update&lt;/code> installieren:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span>sudo chmod +x /usr/bin/rpi-update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;li>
-&lt;p>Optional: Tool zur Kalibrierung des Touch-Displays installieren&lt;!-- raw HTML omitted -->
-pacman -S xinput_calibrator&lt;/p>
-&lt;/li>
+&lt;p>Kernel mit passenden Treibern installieren:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>REPO_URI&lt;span style="color:#f92672">=&lt;/span>&amp;lt;https://github.com/notro/rpi-firmware&amp;gt; rpi-update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;li>
-&lt;p>Konfigurationsdateien:&lt;br>
-7.1. Am Ende &lt;code>/boot/config.txt:&lt;/code> einfügen:&lt;!-- raw HTML omitted -->
-dtparam=spi=on
-dtoverlay=rpi-display&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;pre>&lt;code>7.2. Am Ende von `/etc/modules-load.d/raspberrypi.conf` einfügen:
-snd-bcm2835
-spi_bcm2708
-fbtft_device
-7.3. Datei `/etc/modprobe.d/fbtft.conf` anlegen und folgenden Inhalt
-einfügen:
-options fbtft_device name=mi0283qt-9a gpios=reset:23,led:18 speed=32000000 rotate=270
-Achtung: Je nach Ausführung des Displays unterscheiden sich die
-Parameter - einfach in die [Liste aufGithub][5]
-schauen.
-Achtung: Mit dem Parameter `rotate=270` dreht sich die Ausrichtung
-des Displays
-7.4. Datei `/etc/X11/xorg.conf.d/99-fbturbo.conf` anlegen und
-folgenden Inhalt einfügen:
-Section &amp;quot;Device&amp;quot;
-Identifier &amp;quot;Allwinner A10/A13 FBDEV&amp;quot;
-Driver &amp;quot;fbturbo&amp;quot;
-Option &amp;quot;fbdev&amp;quot; &amp;quot;/dev/fb0&amp;quot;
-Option &amp;quot;SwapbuffersWait&amp;quot; &amp;quot;true&amp;quot;
+&lt;p>X installieren:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Optional: Tool zur Kalibrierung des Touch-Displays installieren&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -S xinput_calibrator
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Konfigurationsdateien:&lt;/p>
+&lt;p>7.1. Am Ende &lt;code>/boot/config.txt:&lt;/code> einfügen:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">dtparam&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">spi=on&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">dtoverlay&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">rpi-display&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>7.2. Am Ende von &lt;code>/etc/modules-load.d/raspberrypi.conf&lt;/code> einfügen:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">snd-bcm2835&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">spi_bcm2708&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">fbtft_device&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>7.3. Datei &lt;code>/etc/modprobe.d/fbtft.conf&lt;/code> anlegen und folgenden Inhalt
+einfügen:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">options fbtft_device name&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">mi0283qt-9a gpios=reset:23,led:18 speed=32000000 rotate=270&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Achtung: Je nach Ausführung des Displays unterscheiden sich die
+Parameter - einfach in die &lt;a href="https://github.com/watterott/RPi-Display/blob/5aa1b9b6c947f9e8350cb87eb8870e14a49e2450/docu/FBTFT-Install.md">Liste auf Github&lt;/a>
+schauen.&lt;/p>
+&lt;p>Achtung: Mit dem Parameter &lt;code>rotate=270&lt;/code> dreht sich die Ausrichtung
+des Displays&lt;/p>
+&lt;p>7.4. Datei &lt;code>/etc/X11/xorg.conf.d/99-fbturbo.conf&lt;/code> anlegen und
+folgenden Inhalt einfügen:&lt;/p>
+&lt;pre tabindex="0">&lt;code>Section &amp;#34;Device&amp;#34;
+Identifier &amp;#34;Allwinner A10/A13 FBDEV&amp;#34;
+Driver &amp;#34;fbturbo&amp;#34;
+Option &amp;#34;fbdev&amp;#34; &amp;#34;/dev/fb0&amp;#34;
+Option &amp;#34;SwapbuffersWait&amp;#34; &amp;#34;true&amp;#34;
 EndSection
-7.5 Ans Ende der vorhandenen Datei `/etc/X11/xinit/xinitrc`
-einfügen:
-xinput --set-prop 'ADS7846 Touchscreen' 'Evdev Axes Swap' 1
-xinput --set-prop 'ADS7846 Touchscreen' 'Evdev Axis Inversion' 0 1
-Achtung: Hiermit dreht sich die Ausrichtung des Touch-Displays
-passend zu den oben eingestellten 270 Grad; &amp;lt;/li&amp;gt;
-* Reboot&amp;lt;/p&amp;gt;
-reboot
-* Nach dem Ausführen von&amp;lt;/p&amp;gt;
-startx
-sollte nun eine grafische Oberfläche auf dem kleinen Display laufen. &amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt;
-&lt;/code>&lt;/pre></content></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;p>7.5 Ans Ende der vorhandenen Datei &lt;code>/etc/X11/xinit/xinitrc&lt;/code>
+einfügen:&lt;/p>
+&lt;pre tabindex="0">&lt;code>xinput --set-prop &amp;#39;ADS7846 Touchscreen&amp;#39; &amp;#39;Evdev Axes Swap&amp;#39; 1
+xinput --set-prop &amp;#39;ADS7846 Touchscreen&amp;#39; &amp;#39;Evdev Axis Inversion&amp;#39; 0 1
+&lt;/code>&lt;/pre>&lt;p>Achtung: Hiermit dreht sich die Ausrichtung des Touch-Displays
+passend zu den oben eingestellten 270 Grad;&lt;/p>
+&lt;ul>
+&lt;li>Reboot&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo reboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Nach dem Ausführen von&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>startx
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>sollte nun eine grafische Oberfläche auf dem kleinen Display laufen.&lt;/p>
+&lt;/li>
+&lt;/ol></content></item></channel></rss>

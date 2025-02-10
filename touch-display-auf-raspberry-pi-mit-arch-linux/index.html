@@ -1,58 +1,47 @@
 <!doctype html><html lang=de><head><title>Touch Display auf Raspberry Pi mit Arch Linux :: Philipp Weißmann</title>
-<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Auf der Suche nach einem kleinen Display bin ich auf ein Display von Watterott gestoßen.
-Um das Gerät auf dem Raspberry Pi unter Arch Linux zu betreiben sind einige Schritte notwendig.
-"><meta name=keywords content><meta name=robots content="noodp"><link rel=canonical href=https://philipp-weissmann.de/touch-display-auf-raspberry-pi-mit-arch-linux/><link rel=stylesheet href=https://philipp-weissmann.de/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css><link rel=stylesheet href=https://philipp-weissmann.de/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css><link rel=stylesheet href=https://philipp-weissmann.de/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css><link rel=stylesheet href=https://philipp-weissmann.de/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css><link rel=stylesheet href=https://philipp-weissmann.de/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css><link rel=stylesheet href=https://philipp-weissmann.de/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css><link rel=stylesheet href=https://philipp-weissmann.de/css/main.min.fe8dc560fccb53a458b0db19ccb7b265764ac46b68596b7e099c6793054dd457.css><link rel=stylesheet href=https://philipp-weissmann.de/css/menu.min.83637a90d903026bc280d3f82f96ceb06c5fc72b7c1a8d686afb5bbf818a29f7.css><link rel=stylesheet href=https://philipp-weissmann.de/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css><link rel=stylesheet href=https://philipp-weissmann.de/css/post.min.fc74ca360273c1d828da3c02b8174eba435607b369d98418ccc6f2243cd4e75d.css><link rel=stylesheet href=https://philipp-weissmann.de/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css><link rel=stylesheet href=https://philipp-weissmann.de/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css><link rel=stylesheet href=https://philipp-weissmann.de/css/terminal.min.4b367d85d0d0061435650561285afed36c46a7cf8dc6d7ed5642d98e589fa622.css><link rel=stylesheet href=https://philipp-weissmann.de/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css><link rel="shortcut icon" href=https://philipp-weissmann.de/favicon.png><link rel=apple-touch-icon href=https://philipp-weissmann.de/apple-touch-icon.png><meta name=twitter:card content="summary"><meta property="og:locale" content="de"><meta property="og:type" content="article"><meta property="og:title" content="Touch Display auf Raspberry Pi mit Arch Linux"><meta property="og:description" content="Auf der Suche nach einem kleinen Display bin ich auf ein Display von Watterott gestoßen.
-Um das Gerät auf dem Raspberry Pi unter Arch Linux zu betreiben sind einige Schritte notwendig.
+<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Auf der Suche nach einem kleinen Display bin ich auf ein Display von Watterott gestoßen. Um das Gerät auf dem Raspberry Pi unter Arch Linux zu betreiben sind einige Schritte notwendig.
+Für alle Schritte nehme ich als User root an
+&ldquo;Normale&rdquo; Arch Linux Installation auf dem Raspberry Pi durchführen
+Hilfswerkzeug rpi-update installieren:
+curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && \ sudo chmod +x /usr/bin/rpi-update Kernel mit passenden Treibern installieren:
+REPO_URI=<https://github.com/notro/rpi-firmware> rpi-update X installieren:
+pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils Optional: Tool zur Kalibrierung des Touch-Displays installieren
+"><meta name=keywords content><meta name=robots content="noodp"><link rel=canonical href=https://philipp-weissmann.de/touch-display-auf-raspberry-pi-mit-arch-linux/><link rel=stylesheet href=https://philipp-weissmann.de/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css><link rel=stylesheet href=https://philipp-weissmann.de/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css><link rel=stylesheet href=https://philipp-weissmann.de/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css><link rel=stylesheet href=https://philipp-weissmann.de/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css><link rel=stylesheet href=https://philipp-weissmann.de/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css><link rel=stylesheet href=https://philipp-weissmann.de/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css><link rel=stylesheet href=https://philipp-weissmann.de/css/main.min.fe8dc560fccb53a458b0db19ccb7b265764ac46b68596b7e099c6793054dd457.css><link rel=stylesheet href=https://philipp-weissmann.de/css/menu.min.83637a90d903026bc280d3f82f96ceb06c5fc72b7c1a8d686afb5bbf818a29f7.css><link rel=stylesheet href=https://philipp-weissmann.de/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css><link rel=stylesheet href=https://philipp-weissmann.de/css/post.min.fc74ca360273c1d828da3c02b8174eba435607b369d98418ccc6f2243cd4e75d.css><link rel=stylesheet href=https://philipp-weissmann.de/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css><link rel=stylesheet href=https://philipp-weissmann.de/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css><link rel=stylesheet href=https://philipp-weissmann.de/css/terminal.min.4b367d85d0d0061435650561285afed36c46a7cf8dc6d7ed5642d98e589fa622.css><link rel=stylesheet href=https://philipp-weissmann.de/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css><link rel="shortcut icon" href=https://philipp-weissmann.de/favicon.png><link rel=apple-touch-icon href=https://philipp-weissmann.de/apple-touch-icon.png><meta name=twitter:card content="summary"><meta property="og:locale" content="de"><meta property="og:type" content="article"><meta property="og:title" content="Touch Display auf Raspberry Pi mit Arch Linux"><meta property="og:description" content="Auf der Suche nach einem kleinen Display bin ich auf ein Display von Watterott gestoßen. Um das Gerät auf dem Raspberry Pi unter Arch Linux zu betreiben sind einige Schritte notwendig.
+Für alle Schritte nehme ich als User root an
+&ldquo;Normale&rdquo; Arch Linux Installation auf dem Raspberry Pi durchführen
+Hilfswerkzeug rpi-update installieren:
+curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && \ sudo chmod +x /usr/bin/rpi-update Kernel mit passenden Treibern installieren:
+REPO_URI=<https://github.com/notro/rpi-firmware> rpi-update X installieren:
+pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils Optional: Tool zur Kalibrierung des Touch-Displays installieren
 "><meta property="og:url" content="https://philipp-weissmann.de/touch-display-auf-raspberry-pi-mit-arch-linux/"><meta property="og:site_name" content="Philipp Weißmann"><meta property="og:image" content="https://philipp-weissmann.de/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="627"><meta property="article:section" content="Uncategorized"><meta property="article:published_time" content="2015-04-12 12:28:29 +0000 UTC"></head><body><div class=container><header class=header><div class=header__inner><div class=header__logo><a href=/><div class=logo>Philipp Weißmann</div></a></div><ul class="menu menu--mobile"><li class=menu__trigger>Menu&nbsp;▾</li><li><ul class=menu__dropdown><li><a href=/impressum>Impressum</a></li></ul></li></ul></div><nav class=navigation-menu><ul class="navigation-menu__inner menu--desktop"><li><a href=/impressum>Impressum</a></li></ul></nav></header><div class=content><article class=post><h1 class=post-title><a href=https://philipp-weissmann.de/touch-display-auf-raspberry-pi-mit-arch-linux/>Touch Display auf Raspberry Pi mit Arch Linux</a></h1><div class=post-meta><time class=post-date>2015-04-12&nbsp;[Updated: 2015-04-12]</time><span class=post-author>Philipp Weißmann</span></div><span class=post-tags>#<a href=https://philipp-weissmann.de/tags/linux/>Linux</a>&nbsp;
-#<a href=https://philipp-weissmann.de/tags/raspberry-pi/>Raspberry Pi</a>&nbsp;</span><div class=table-of-contents><h2>Table of Contents</h2><nav id=TableOfContents></nav></div><div class=post-content><div><p>Auf der Suche nach einem kleinen Display bin ich auf ein <a href=https://github.com/watterott/RPi-Display>Display von Watterott</a> gestoßen.<br>Um das Gerät auf dem <a href=https://www.raspberrypi.org/>Raspberry Pi</a> unter <a href=http://archlinuxarm.org/>Arch Linux</a> zu betreiben sind einige Schritte notwendig.</p><ol><li><p>Für alle Schritte nehme ich als User <code>root</code> an</p></li><li><p>&ldquo;Normale&rdquo; Arch Linux <a href=http://web.archive.org/web/20150412224859/archlinuxarm.org/platforms/armv6/raspberry-pi>Installation auf dem Raspberry Pi durchführen</a></p></li><li><p>Hilfswerkzeug <code>rpi-update</code> installieren:
-curl -L &ndash;output /usr/bin/rpi-update <a href=https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update>https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update</a> && sudo chmod +x /usr/bin/rpi-update</p></li><li><p>Kernel mit passenden Treibern installieren
-REPO_URI=https://github.com/notro/rpi-firmware rpi-update</p></li><li><p>X installieren
-pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils</p></li><li><p>Optional: Tool zur Kalibrierung des Touch-Displays installieren
-pacman -S xinput_calibrator</p></li><li><p>Konfigurationsdateien:<br>7.1. Am Ende <code>/boot/config.txt:</code> einfügen:
-dtparam=spi=on
-dtoverlay=rpi-display</p></li></ol><pre><code>7.2. Am Ende von `/etc/modules-load.d/raspberrypi.conf` einfügen:
-
-    snd-bcm2835
-    spi_bcm2708
-    fbtft_device
-
-7.3. Datei `/etc/modprobe.d/fbtft.conf` anlegen und folgenden Inhalt  
-einfügen:
-
-    options fbtft_device name=mi0283qt-9a gpios=reset:23,led:18 speed=32000000 rotate=270
-
-Achtung: Je nach Ausführung des Displays unterscheiden sich die  
-Parameter - einfach in die [Liste aufGithub][5]  
-schauen.
-
-Achtung: Mit dem Parameter `rotate=270` dreht sich die Ausrichtung  
-des Displays
-
-7.4. Datei `/etc/X11/xorg.conf.d/99-fbturbo.conf` anlegen und  
-folgenden Inhalt einfügen:
-
-    Section &quot;Device&quot;
-    Identifier &quot;Allwinner A10/A13 FBDEV&quot;
-    Driver &quot;fbturbo&quot;
-    Option &quot;fbdev&quot; &quot;/dev/fb0&quot;
-    Option &quot;SwapbuffersWait&quot; &quot;true&quot;
-    EndSection
-
-7.5 Ans Ende der vorhandenen Datei `/etc/X11/xinit/xinitrc`  
-einfügen:
-
-    xinput --set-prop 'ADS7846 Touchscreen' 'Evdev Axes Swap' 1
-    xinput --set-prop 'ADS7846 Touchscreen' 'Evdev Axis Inversion' 0 1
-
-Achtung: Hiermit dreht sich die Ausrichtung des Touch-Displays  
-passend zu den oben eingestellten 270 Grad; &lt;/li&gt; 
-
-  * Reboot&lt;/p&gt; 
-        reboot
-
-  * Nach dem Ausführen von&lt;/p&gt; 
-        startx
-    
-    sollte nun eine grafische Oberfläche auf dem kleinen Display laufen. &lt;/li&gt; &lt;/ol&gt;
-</code></pre></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h></span><hr></div><div class=pagination__buttons><a href=https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/ class="button inline prev">Konfigurationsdateien verwalten mit VCSH</a></div></div></article></div><footer class=footer><div class=footer__inner><div class=copyright><span>© 2025 Powered by <a href=https://gohugo.io>Hugo</a></span>
+#<a href=https://philipp-weissmann.de/tags/raspberry-pi/>Raspberry Pi</a>&nbsp;</span><div class=table-of-contents><h2>Table of Contents</h2><nav id=TableOfContents></nav></div><div class=post-content><div><p>Auf der Suche nach einem kleinen Display bin ich auf ein <a href=https://github.com/watterott/RPi-Display>Display von Watterott</a> gestoßen.
+Um das Gerät auf dem <a href=https://www.raspberrypi.org/>Raspberry Pi</a> unter <a href=http://archlinuxarm.org/>Arch Linux</a> zu betreiben sind einige Schritte notwendig.</p><ol><li><p>Für alle Schritte nehme ich als User <code>root</code> an</p></li><li><p>&ldquo;Normale&rdquo; Arch Linux <a href=http://web.archive.org/web/20150412224859/archlinuxarm.org/platforms/armv6/raspberry-pi>Installation auf dem Raspberry Pi durchführen</a></p></li><li><p>Hilfswerkzeug <code>rpi-update</code> installieren:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>sudo chmod +x /usr/bin/rpi-update
+</span></span></code></pre></div></li><li><p>Kernel mit passenden Treibern installieren:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>REPO_URI<span style=color:#f92672>=</span>&lt;https://github.com/notro/rpi-firmware&gt; rpi-update
+</span></span></code></pre></div></li><li><p>X installieren:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
+</span></span></code></pre></div></li><li><p>Optional: Tool zur Kalibrierung des Touch-Displays installieren</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>pacman -S xinput_calibrator
+</span></span></code></pre></div></li><li><p>Konfigurationsdateien:</p><p>7.1. Am Ende <code>/boot/config.txt:</code> einfügen:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=display:flex><span><span style=color:#a6e22e>dtparam</span><span style=color:#f92672>=</span><span style=color:#e6db74>spi=on</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>dtoverlay</span><span style=color:#f92672>=</span><span style=color:#e6db74>rpi-display</span>
+</span></span></code></pre></div><p>7.2. Am Ende von <code>/etc/modules-load.d/raspberrypi.conf</code> einfügen:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=display:flex><span><span style=color:#a6e22e>snd-bcm2835</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>spi_bcm2708</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>fbtft_device</span>
+</span></span></code></pre></div><p>7.3. Datei <code>/etc/modprobe.d/fbtft.conf</code> anlegen und folgenden Inhalt
+einfügen:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=display:flex><span><span style=color:#a6e22e>options fbtft_device name</span><span style=color:#f92672>=</span><span style=color:#e6db74>mi0283qt-9a gpios=reset:23,led:18 speed=32000000 rotate=270</span>
+</span></span></code></pre></div><p>Achtung: Je nach Ausführung des Displays unterscheiden sich die
+Parameter - einfach in die <a href=https://github.com/watterott/RPi-Display/blob/5aa1b9b6c947f9e8350cb87eb8870e14a49e2450/docu/FBTFT-Install.md>Liste auf Github</a>
+schauen.</p><p>Achtung: Mit dem Parameter <code>rotate=270</code> dreht sich die Ausrichtung
+des Displays</p><p>7.4. Datei <code>/etc/X11/xorg.conf.d/99-fbturbo.conf</code> anlegen und
+folgenden Inhalt einfügen:</p><pre tabindex=0><code>Section &#34;Device&#34;
+Identifier &#34;Allwinner A10/A13 FBDEV&#34;
+Driver &#34;fbturbo&#34;
+Option &#34;fbdev&#34; &#34;/dev/fb0&#34;
+Option &#34;SwapbuffersWait&#34; &#34;true&#34;
+EndSection
+</code></pre><p>7.5 Ans Ende der vorhandenen Datei <code>/etc/X11/xinit/xinitrc</code>
+einfügen:</p><pre tabindex=0><code>xinput --set-prop &#39;ADS7846 Touchscreen&#39; &#39;Evdev Axes Swap&#39; 1
+xinput --set-prop &#39;ADS7846 Touchscreen&#39; &#39;Evdev Axis Inversion&#39; 0 1
+</code></pre><p>Achtung: Hiermit dreht sich die Ausrichtung des Touch-Displays
+passend zu den oben eingestellten 270 Grad;</p><ul><li>Reboot</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo reboot
+</span></span></code></pre></div><ul><li>Nach dem Ausführen von</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>startx
+</span></span></code></pre></div><p>sollte nun eine grafische Oberfläche auf dem kleinen Display laufen.</p></li></ol></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h></span><hr></div><div class=pagination__buttons><a href=https://philipp-weissmann.de/konfigurationsdateien-verwalten-mit-vcsh/ class="button inline prev">Konfigurationsdateien verwalten mit VCSH</a></div></div></article></div><footer class=footer><div class=footer__inner><div class=copyright><span>© 2025 Powered by <a href=https://gohugo.io>Hugo</a></span>
 <span>:: <a href=https://github.com/panr/hugo-theme-terminal target=_blank>Theme</a> made by <a href=https://github.com/panr target=_blank>panr</a></span></div></div></footer><script type=text/javascript src=/bundle.min.js></script></div></body></html>
