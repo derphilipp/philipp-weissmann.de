@@ -1,9 +1,9 @@
 baseURL = 'https://philipp-weissmann.de/'
 name = 'Philipp Weißmann'
 title = 'Philipp Weißmann'
-locale = 'de-de'
 defaultContentLanguage = 'de'
 theme = "terminal"
+enableGitInfo = true # show real last-commit date as "Updated" (requires full git history in CI)
 pagination.pagerSize = 5
 
 [params]

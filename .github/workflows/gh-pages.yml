@@ -6,6 +6,13 @@ on:
       - main # Set a branch that will trigger a deployment
   pull_request:
 
+permissions:
+  contents: write # required to push the built site to the gh-pages branch
+
+concurrency:
+  group: pages
+  cancel-in-progress: true # never run two deploys against gh-pages at once
+
 jobs:
   deploy:
     # Pinned: ubuntu-latest migrates to Ubuntu 26.04 (actions/runner-images#14748)
@@ -23,7 +30,9 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: |
+          find static -name '.DS_Store' -delete
+          hugo --gc --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
