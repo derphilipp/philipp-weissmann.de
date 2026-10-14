@@ -1,7 +1,7 @@
 baseURL = 'https://philipp-weissmann.de/'
 name = 'Philipp Weißmann'
 title = 'Philipp Weißmann'
-languageCode = 'de-de'
+locale = 'de-de'
 defaultContentLanguage = 'de'
 theme = "terminal"
 pagination.pagerSize = 5
@@ -60,7 +60,7 @@ TocTitle = "Table of Contents" # default
 
 [languages]
 [languages.de]
-languageName = "Deutsch"
+label = "Deutsch"
 title = "Philipp Weißmann"
 subtitle = ""
 owner = "Philipp Weißmann"
